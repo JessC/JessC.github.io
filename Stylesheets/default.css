@@ -1,0 +1,15 @@
+h3 {
+	font-size: 18px;
+}
+
+.class { 
+font-size: 24;
+}
+
+.ResizeImage {
+	width: 100px;
+	height: 200px;
+}
+.info_links {
+	text-decoration: none;
+}
