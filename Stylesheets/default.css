@@ -1,15 +1,43 @@
-h3 {
-	font-size: 18px;
+
+.categories {
+	text-align: center;
 }
 
-.class { 
-font-size: 24;
+#title { 
+font-size: 60px;
 }
 
 .ResizeImage {
-	width: 100px;
-	height: 200px;
+	width: 300px;
+	height: 450px;
+	transform: scal;
 }
-.info_links {
-	text-decoration: none;
+
+.row_position {
+	text-align: center;
+
+}
+ul > li {
+	list-style-type: none;
+	word-spacing: 30px;
+}
+
+table {
+	background-color: #8888FF;
+	width: 100%;
+}
+
+h2 { 
+background-color: #9966FF;
+font-family: Past Due;
+}
+
+body {
+	background-color: black;
+}
+
+.menu > li {
+	display: inline;
+	font-size: 24px;
+	word-spacing: 100px;
 }
