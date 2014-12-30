@@ -1,13 +1,50 @@
 
-.categories {
+.buttons {
+	font-family: Amatic SC, cursive;
+}
+
+.navbar {
 	text-align: center;
+}
+
+nav li {
+	padding-right: 50px;
+	padding-left: 50px;
+	font-family: Amatic SC, cursive;
+
 }
 
 #title { 
 font-size: 60px;
+text-align: center;
 }
 
-.ResizeImage {
+navbar {
+	display: inline-block;
+	position: relative;
+	top: 11px;
+}
+
+ul li {
+	list-style-type: none;
+	display: inline;
+
+}
+
+h2 { 
+background-color: #9966FF;
+font-family: Past Due;
+
+.profilepic {
+
+}
+
+#nav li a:hover {
+	text-transform: none;
+
+}
+
+/*.ResizeImage {
 	width: 300px;
 	height: 450px;
 	transform: scal;
@@ -27,9 +64,9 @@ table {
 	width: 100%;
 }
 
-h2 { 
-background-color: #9966FF;
-font-family: Past Due;
+
+
+border-radius: 25%;
 }
 
 body {
@@ -40,4 +77,4 @@ body {
 	display: inline;
 	font-size: 24px;
 	word-spacing: 100px;
-}
+}/*
