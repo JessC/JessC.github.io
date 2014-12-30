@@ -1,80 +1,53 @@
 
-.buttons {
-	font-family: Amatic SC, cursive;
-}
 
-.navbar {
-	text-align: center;
-}
 
 nav li {
 	padding-right: 50px;
 	padding-left: 50px;
 	font-family: Amatic SC, cursive;
+	text-decoration: none;
+	display: inline;
+	font-size: 18px;
+	font-weight: bold;
+	/*Adjust the Links at top of page*/
+}
 
+.navbar {
+	text-align: center;
+	top: 10px;
+}
+
+a {
+	text-decoration:none;
+	color:black;
+	/*adjust how links are displayed*/
 }
 
 #title { 
-font-size: 60px;
-text-align: center;
+font-size: 50px;
 }
 
-navbar {
-	display: inline-block;
-	position: relative;
-	top: 11px;
+tr.social {
+    position: absolute;
+    right: 80px;
 }
 
-ul li {
-	list-style-type: none;
-	display: inline;
-
+tr.social td ul li {
+	 padding: 10px 5px 10px 5px;
+	 list-style-type: none; 
 }
-
-h2 { 
-background-color: #9966FF;
-font-family: Past Due;
 
 .profilepic {
-
+	height: 50px;
+	width: 50px;
+	border-radius: 100px;
+	float: left;
+	
 }
 
-#nav li a:hover {
-	text-transform: none;
-
-}
-
-/*.ResizeImage {
-	width: 300px;
-	height: 450px;
-	transform: scal;
-}
-
-.row_position {
-	text-align: center;
-
-}
-ul > li {
-	list-style-type: none;
-	word-spacing: 30px;
-}
-
-table {
-	background-color: #8888FF;
-	width: 100%;
+h2 {
+	display:center;
+/*Changes my name at top of page*/
 }
 
 
-
-border-radius: 25%;
-}
-
-body {
-	background-color: black;
-}
-
-.menu > li {
-	display: inline;
-	font-size: 24px;
-	word-spacing: 100px;
-}/*
