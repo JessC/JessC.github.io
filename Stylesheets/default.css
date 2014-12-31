@@ -37,9 +37,19 @@ nav ul li a:hover {
 
 }
 
+.main {
+
+}
+
 .navbar {
 	text-align: center;
 	top: 10px;
+}
+
+.divider {
+	height: 10px;
+	border: 1px solid black;
+	padding: 0px;
 }
 
 a {
@@ -50,32 +60,38 @@ a {
 
 #title { 
 font-size: 50px;
+padding-left: 10px;
 }
 
 tr.social {
-    position: absolute;
-    right: 80px;
-  
+	position: absolute;
+	right:30px;
+}
+
+
+tr.social td ul li img {
+	list-style-type: none; 
+	border-radius: 5px 5px 5px 5px;
+	margin: 0px 2px 2px 0px;
+	/*changes the individual social buttons*/
 }
 
 tr.social td ul li {
-	padding: 10px 2px 2px 10px;
-	list-style-type: none; 
-	border-radius: 5px 5px 5px 5px;
-	border: 1px solid black;
-	margin: 0px 15px 15px 0px;
+	list-style-type: none;
+} /*changes the list of social buttons look like*/
+
+footer {
+	border-top: 1px solid;
+	text-align: center;
 }
 
 footer {
-
-	position:center;
+	
 }
 
-.divider {
-	height: 10px;
-	border: 1px solid black;
-	padding: 0px;
+#mainimage {
+	position: left -1px;
+	height: 400px;
+	width: auto;
+	overflow: scroll;
 }
-
-
-
