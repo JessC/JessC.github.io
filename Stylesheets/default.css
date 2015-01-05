@@ -99,10 +99,14 @@ footer {
 
 }
 
-.blogindex {
+.blog {
 	margin-bottom: 75px;
 	text-align: center;
 	position: inherit;
+	padding-left: 100px;
+	padding-right: 100px;
 }
+
+
 
 
