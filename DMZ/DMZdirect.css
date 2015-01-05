@@ -31,8 +31,9 @@ table {
 h2 { 
 background-color: #9966FF;
 font-family: Past Due;
+padding: 5px;
 
-border-radius: 25%;
+border-radius: 5px;
 }
 
 body {
