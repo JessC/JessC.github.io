@@ -44,10 +44,36 @@
 
     
         <h2>Enumberable Methods</h2><h4>Jan 17, 2015</h4>
-ADD BLOG CONTENT HERE
+        <p>
+I'm going to try and explain enumerables as simply as possible in this post. When going through Ruby challenges kept coming across this word 'Enumerable'. I looked up the definition but didn't find anything that quickly made sense of it. I asked a couple others and they felt unclear. 
+So I'm purposefully not going to make a long drawn out explanation. The reason being that in my prior research and the research leading up to this, I felt that there was plenty of lengthy explanations.
+I often notice when coding that definitions can be very complex.
+</p>
+<p>
+So lets start out by explaning what an Enumerable is. In my research...and I did a lot...an Enumerable is a built in method that iterates or loops through an array. 
+When writing my first codes that iterate through an array I always used the word .each. In the example below, we would set a place holder to x then tell x to do something. By using .each, the first element in the array would be put in place of x and execute the equation. Then it would go to the next element in the array and do the same thing...until 'each' element in the array had looped through. 
 
+</p>
 
-    </p>
+<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/each_method.png"/>
+
+<p>
+  Cool, so what's an Enumerable again?? It would be .each since it's the method that calls for the code to loop through each element in the array. 
+  But .each just commands that we loop through the array without actually doing anything.
+What if we want it to do something to each element in the array, for example, just count the total. We can just use .count as seen below.
+</p>
+<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/count.png"/>
+<p>
+  Let's look at how .map and .each are different. Well, as I mentioned earlier, .each just iterates through the array without changing it.
+  Alternatively, .map takes the value to that element in the array and iterates over it. It saves the results and moves on to the next one. It then returns the result. You can see the difference between the two  below.
+
+</p>
+  <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/map_vs_each.png"/>
+
+  
+
+    <p> 
+      So as you can see Enumerables can be very powerful. They can quickly save us time by requiring less lines of code. I would suggest taking a look at <a href="http://ruby-doc.org/core-2.2.0/Enumerable.html#M003162">Enumerables</a> to learn more.
       </div>
     </section>
   
