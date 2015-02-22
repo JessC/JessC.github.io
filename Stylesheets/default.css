@@ -113,4 +113,26 @@ p > img {
 	padding: 20px;
 }
 
+#cheat_sheet_header {
+	text-align: center;
+}
 
+#cheat_sheet_section {
+	width: 300px;
+	border: 1px solid black;
+	border-radius: 5px;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+#cheat_sheet_main {
+	width: 990px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.cheat_title {
+	text-align: center
+}

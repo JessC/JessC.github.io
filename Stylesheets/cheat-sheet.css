@@ -1,8 +1,8 @@
-header {
+#cheat_sheet_header {
 	text-align: center;
 }
 
-section {
+#cheat_sheet_section {
 	width: 300px;
 	border: 1px solid black;
 	border-radius: 5px;
@@ -10,10 +10,14 @@ section {
 	margin-left: 20px;
 }
 
-main {
+#cheat_sheet_main {
 	width: 990px;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 
+}
+
+.cheat_title {
+	text-align: center
 }
