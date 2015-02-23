@@ -78,14 +78,12 @@ a {
 	float: right;
 }
 
-
 ul li img{
 	border-radius: 5px 5px 5px 5px;
 	margin: 0px 2px 2px 0px;
 	border: none;
 	/*changes the individual social buttons*/
 }
-
 
 footer {
 	display: inline-block;
@@ -96,7 +94,6 @@ footer {
    clear: both;
    width: 100%;
    /* Height of the footer */ 
-
 }
 
 .blog {
@@ -130,9 +127,46 @@ p > img {
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-
 }
 
 .cheat_title {
 	text-align: center
 }
+
+.about {
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 17px;
+	width: 800px;
+}
+
+#index {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	width: 450px;
+	font-size: 18px;
+}
+
+#follow_main {
+	width: auto;
+	position: relative;
+	
+}
+
+#follow_section {
+	width: 550px;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+#follow_sentence {
+	margin-top: auto;
+	margin-bottom: 100px;
+	margin-left: 200px;
+	float: right;
+
+}
+
+
+
