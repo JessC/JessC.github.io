@@ -9,9 +9,13 @@ body {
 	border-radius: 100px;
 }
 
-h2 {
+.blog-title {
+text-align: center;
+}
+
+h4 	{
 	display:center;
-/*Changes my name at top of page*/
+
 }
 
 h2 img {
@@ -87,6 +91,7 @@ ul li img{
 
 footer {
 	display: inline-block;
+	margin-top: 65px;
 	border-top: 1px solid;
 	text-align: center; /*footer design*/
 	position: inherit;
@@ -96,9 +101,9 @@ footer {
    /* Height of the footer */ 
 }
 
-.blog {
-	margin-bottom: 75px;
-	text-align: center;
+.blog-body {
+	margin-bottom: 15px;
+
 	position: inherit;
 	padding-left: 100px;
 	padding-right: 100px;

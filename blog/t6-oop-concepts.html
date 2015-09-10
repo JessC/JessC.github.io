@@ -3,68 +3,67 @@
 <head>
   <title>My DBC Website</title>
   <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../Stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../Stylesheets/default.css">
 </head>
 
 <body>
 
  <header>
-    <h2>
-      <a href="../index.html"><img class="profilpic" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Profile%20Crop.png" style="width:125px;height:125px"/></a><br>
-      <span id="title">Jesse Callwood</span>
-    </h2>
-  </header>
+  <h2>
+    <a href="../index.html"><img class="profilpic" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Profile%20Crop.png" style="width:125px;height:125px"/></a><br>
+    <span id="title">Jesse Callwood</span>
+  </h2>
+</header>
 
-  <nav class="navbar">
-    <ul id="nav">
-      <li>
-        <a href="../About.html">About Me</a>
-      </li>
-      <li class="divider"></li>
-      <li>
-        <a href="../Blog.html">Blog</a>
-      </li>
-      <li class="divider"></li>
-      <li>
-        <a href="../cheat-sheet.html">Resources</a>
-      </li>
-      <li class="divider"></li>
-      <li>
-        <a href="../Contact.html">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  
+<nav class="navbar">
+  <ul id="nav">
+    <li>
+      <a href="../About.html">About Me</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../Blog.html">Blog</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../cheat-sheet.html">Resources</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../Contact.html">Contact</a>
+    </li>
+  </ul>
+</nav>
+<main>
  <section>
-       <img id="mcway" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Mcway_Cove_Panorama.jpg"/>
+   <img id="mcway" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Mcway_Cove_Panorama.jpg"/>
 
-<div style="text-align: center" class="blog">
-      <h2></h2>
-      <main>
+   <div class="blog-title">
 
+    <div class="blog-title">    
+      <h2>Object Oriented Programming Concepts - Ruby Variables</h2><h4>Jan 31, 2015</h4>
+    </div>
+    <p>
+      When first getting started in ruby, you might just start out writing one or two lines of code. Maybe something that will complete a simple math equation. After that you're likely to start defining methods. At this point you'll be getting some experience creating simple variables like:
+    </p>
+    <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/variable1.png"/>
+    <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/variable2.png"/>
+    <p>
+      But before you know it, you'll start creating classes where you'll be defining multiple methods inside. Sometimes those variables need to be access throughout you're class. Lets say I have a class that holds information about people. When I call an instance of that class, I may want to use a persons name throughout multiple methods. I could do that by simple using an '@' in front of the variable. So if I have a variable called 'name' I could set it to be used throughout the instance of that class by doing @name = name.
+      If I were called up multiple instances of a class but wanted the variable to be the same throught all of them I would use '@@'' instead of a single '@'
+    </p>
+    <p>
+      Eventually you'll be making larger more complicated programs. Now, lets say you want to have a username for the person running that program. In this case you'll want to use a global variable that's visable throughout the programs. To do this, a '$' preceeds the variable. If the program has variables set to fixed data such as profits you write the variable in uppercase to make it a constant. So this would be $global and this would be CONSTANT. The only real difference is that a CONSTANT variable will return a warning if the code tries to change it.  
+    </p>
+    <p>
+      It's important to know the difference between the variables and when to use the different scopes. Keeping variables local is beneficial when you want to keep using generic names like num and x inside your methods. But enlarging the scope to instance, class, or global can help cut down redundancy by being able to define a variable the least amount of times possible.
+    </p>
     
-        <h2>Object Oriented Programming Concepts - Ruby Variables</h2><h4>Jan 31, 2015</h4>
-        <p>
-When first getting started in ruby, you might just start out writing one or two lines of code. Maybe something that will complete a simple math equation. After that you're likely to start defining methods. At this point you'll be getting some experience creating simple variables like:
-</p>
-<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/variable1.png"/>
-<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/variable2.png"/>
-<p>
-But before you know it, you'll start creating classes where you'll be defining multiple methods inside. Sometimes those variables need to be access throughout you're class. Lets say I have a class that holds information about people. When I call an instance of that class, I may want to use a persons name throughout multiple methods. I could do that by simple using an '@' in front of the variable. So if I have a variable called 'name' I could set it to be used throughout the instance of that class by doing @name = name.
-If I were called up multiple instances of a class but wanted the variable to be the same throught all of them I would use '@@'' instead of a single '@'
-</p>
-<p>
-Eventually you'll be making larger more complicated programs. Now, lets say you want to have a username for the person running that program. In this case you'll want to use a global variable that's visable throughout the programs. To do this, a '$' preceeds the variable. If the program has variables set to fixed data such as profits you write the variable in uppercase to make it a constant. So this would be $global and this would be CONSTANT. The only real difference is that a CONSTANT variable will return a warning if the code tries to change it.  
-</p>
-<p>
-It's important to know the difference between the variables and when to use the different scopes. Keeping variables local is beneficial when you want to keep using generic names like num and x inside your methods. But enlarging the scope to instance, class, or global can help cut down redundancy by being able to define a variable the least amount of times possible.
-  </p>
-      
-</div>
-    </section>
-  
-   <footer>
-        <a href="JessC.github.io/LICENSE">Copyright (c) 2015 Jesse C </a>
-  </footer>
-  </body>
+  </div>
+</section>
+</main>
+<footer>
+  <a href="JessC.github.io/LICENSE">Copyright (c) 2015 Jesse C </a>
+</footer>
+</body>
 </html>

@@ -3,82 +3,82 @@
 <head>
   <title>My DBC Website</title>
   <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../Stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../Stylesheets/default.css">
 </head>
 
 <body>
 
  <header>
-    <h2>
-      <a href="../index.html"><img class="profilpic" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Profile%20Crop.png" style="width:125px;height:125px"/></a><br>
-      <span id="title">Jesse Callwood</span>
-    </h2>
-  </header>
+  <h2>
+    <a href="../index.html"><img class="profilpic" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Profile%20Crop.png" style="width:125px;height:125px"/></a><br>
+    <span id="title">Jesse Callwood</span>
+  </h2>
+</header>
 
-  <nav class="navbar">
-    <ul id="nav">
-      <li>
-        <a href="../About.html">About Me</a>
-      </li>
-      <li class="divider"></li>
-      <li>
-        <a href="../Blog.html">Blog</a>
-      </li>
-      <li class="divider"></li>
-      <li>
-        <a href="../cheat-sheet.html">Resources</a>
-      </li>
-      <li class="divider"></li>
-      <li>
-        <a href="../Contact.html">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  
+<nav class="navbar">
+  <ul id="nav">
+    <li>
+      <a href="../About.html">About Me</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../Blog.html">Blog</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../cheat-sheet.html">Resources</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../Contact.html">Contact</a>
+    </li>
+  </ul>
+</nav>
+<main>
  <section>
-       <img id="mcway" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Mcway_Cove_Panorama.jpg"/>
+   <img id="mcway" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Mcway_Cove_Panorama.jpg"/>
 
-<div style="text-align: center" class="blog">
-      <h2></h2>
-      <main>
+   <div class="blog-title">
+
+    <div class="blog-title">
+      <h2>Enumberable Methods</h2><h4>Jan 17, 2015</h4>
+    </div>
+    <p>
+      I'm going to try and explain enumerables as simply as possible in this post. When going through Ruby challenges kept coming across this word 'Enumerable'. I looked up the definition but didn't find anything that quickly made sense of it. I asked a couple others and they felt unclear. 
+      So I'm purposefully not going to make a long drawn out explanation. The reason being that in my prior research and the research leading up to this, I felt that there was plenty of lengthy explanations.
+      I often notice when coding that definitions can be very complex.
+    </p>
+    <p>
+      So lets start out by explaning what an Enumerable is. In my research...and I did a lot...an Enumerable is a built in method that iterates or loops through an array. 
+      When writing my first codes that iterate through an array I always used the word .each. In the example below, we would set a place holder to x then tell x to do something. By using .each, the first element in the array would be put in place of x and execute the equation. Then it would go to the next element in the array and do the same thing...until 'each' element in the array had looped through. 
+
+    </p>
+
+    <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/each_method.png"/>
+
+    <p>
+      Cool, so what's an Enumerable again?? It would be .each since it's the method that calls for the code to loop through each element in the array. 
+      But .each just commands that we loop through the array without actually doing anything.
+      What if we want it to do something to each element in the array, for example, just count the total. We can just use .count as seen below.
+    </p>
+    <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/count.png"/>
+    <p>
+      Let's look at how .map and .each are different. Well, as I mentioned earlier, .each just iterates through the array without changing it.
+      Alternatively, .map takes the value to that element in the array and iterates over it. It saves the results and moves on to the next one. It then returns the result. You can see the difference between the two  below.
+
+    </p>
+    <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/map_vs_each.png"/>
 
     
-        <h2>Enumberable Methods</h2><h4>Jan 17, 2015</h4>
-        <p>
-I'm going to try and explain enumerables as simply as possible in this post. When going through Ruby challenges kept coming across this word 'Enumerable'. I looked up the definition but didn't find anything that quickly made sense of it. I asked a couple others and they felt unclear. 
-So I'm purposefully not going to make a long drawn out explanation. The reason being that in my prior research and the research leading up to this, I felt that there was plenty of lengthy explanations.
-I often notice when coding that definitions can be very complex.
-</p>
-<p>
-So lets start out by explaning what an Enumerable is. In my research...and I did a lot...an Enumerable is a built in method that iterates or loops through an array. 
-When writing my first codes that iterate through an array I always used the word .each. In the example below, we would set a place holder to x then tell x to do something. By using .each, the first element in the array would be put in place of x and execute the equation. Then it would go to the next element in the array and do the same thing...until 'each' element in the array had looped through. 
-
-</p>
-
-<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/each_method.png"/>
-
-<p>
-  Cool, so what's an Enumerable again?? It would be .each since it's the method that calls for the code to loop through each element in the array. 
-  But .each just commands that we loop through the array without actually doing anything.
-What if we want it to do something to each element in the array, for example, just count the total. We can just use .count as seen below.
-</p>
-<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/count.png"/>
-<p>
-  Let's look at how .map and .each are different. Well, as I mentioned earlier, .each just iterates through the array without changing it.
-  Alternatively, .map takes the value to that element in the array and iterates over it. It saves the results and moves on to the next one. It then returns the result. You can see the difference between the two  below.
-
-</p>
-  <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/map_vs_each.png"/>
-
-  
 
     <p> 
       So as you can see Enumerables can be very powerful. They can quickly save us time by requiring less lines of code. I would suggest taking a look at <a href="http://ruby-doc.org/core-2.2.0/Enumerable.html#M003162"><b>Enumerables</b></a> to learn more.
-      </div>
-    </section>
-  
-   <footer>
-        <a href="JessC.github.io/LICENSE">Copyright (c) 2015 Jesse C </a>
-  </footer>
-  </body>
+    </p>
+  </div>
+</section>
+</main>
+<footer>
+  <a href="JessC.github.io/LICENSE">Copyright (c) 2015 Jesse C </a>
+</footer>
+</body>
 </html>

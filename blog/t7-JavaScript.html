@@ -3,84 +3,83 @@
 <head>
   <title>My DBC Website</title>
   <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../Stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../Stylesheets/default.css">
 </head>
 
 <body>
 
  <header>
-    <h2>
-      <a href="../index.html"><img class="profilpic" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Profile%20Crop.png" style="width:125px;height:125px"/></a><br>
-      <span id="title">Jesse Callwood</span>
-    </h2>
-  </header>
+  <h2>
+    <a href="../index.html"><img class="profilpic" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Profile%20Crop.png" style="width:125px;height:125px"/></a><br>
+    <span id="title">Jesse Callwood</span>
+  </h2>
+</header>
 
-  <nav class="navbar">
-    <ul id="nav">
-      <li>
-        <a href="../About.html">About Me</a>
-      </li>
-      <li class="divider"></li>
-      <li>
-        <a href="../Blog.html">Blog</a>
-      </li>
-      <li class="divider"></li>
-      <li>
-        <a href="../Resources.html">Resources</a>
-      </li>
-      <li class="divider"></li>
-      <li>
-        <a href="../Contact.html">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  
+<nav class="navbar">
+  <ul id="nav">
+    <li>
+      <a href="../About.html">About Me</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../Blog.html">Blog</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../Resources.html">Resources</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../Contact.html">Contact</a>
+    </li>
+  </ul>
+</nav>
+<main>
  <section>
-       <img id="mcway" src="http://upload.wikimedia.org/wikipedia/commons/3/32/Mcway_Cove_Panorama.jpg"/>
+   <img id="mcway" src="http://upload.wikimedia.org/wikipedia/commons/3/32/Mcway_Cove_Panorama.jpg"/>
 
-<div style="text-align: center" class="blog">
-      <h2></h2>
-      <main>
+   <div class="blog-title">
 
-    
-        <h2>JavaScript vs Ruby - Hashes</h2><h4>Feb 8, 2015</h4>
-        <p>
-        	<b>**Take note...I originally war going to do state abbreviations but changed it to capitals everywhere in the code, except for the actually value thats stored. "CA" should be "Sacramento" </b>
-        	<br>
-        	Over the past couple months we have been getting familiar with Ruby. So far we've been using two ways to store multiple values to one variable. Those two things are arrays and hashes. Arrays are a bit more simple because there values are always indexed by integers starting from 0. If you were to think of an array as a hash, then the idex number would be called the key and the value stored would be called the value. 
-        	But the difference between the two is that the key in hashes does not have to be an integer, it can be pretty much anything you choose. For example, if I was storing state capitals, I could have a key of California that has a value of Sacramento. See the pictures below for examples:
-</p>
-<br>
-        	<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash.png"/>
-        	
-        	<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash1.png"/>
-        	<br>
-        	<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash2.png"/>
-        	
-        	<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash3.png"/>
-        	<br>
-        	<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash4.png"/>
-        	<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash5.png"/>
-        	<br>
-<p>
-		In JavaScript, an 'object" is that same as a Ruby 'hash'. They both hold keys and values as explained above. 
-		Below, I've shown how to do the same code in JavaScript as I previously did in Ruby.
-	</p>
-	<br>
-	<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/jsobject.png"/>
-	<img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/jsobject1.png"/>
-	<br>
-	<p>
-		But in Javascript, when you call the key, it returns the value. So far I haven't found a way to print just the key or just the value. When I do, I'll update this blog.
-		I have noticed that adding and deleting seems very intuitive in JavaScript. If we want to delete our key/value pair we could simply write:
-		delete stateCapitals.California
+    <div class="blog-title">
+      <h2>JavaScript vs Ruby - Hashes</h2><h4>Feb 8, 2015</h4>
+    </div>
+    <p>
+     <b>**Take note...I originally war going to do state abbreviations but changed it to capitals everywhere in the code, except for the actually value thats stored. "CA" should be "Sacramento" </b>
+     <br>
+     Over the past couple months we have been getting familiar with Ruby. So far we've been using two ways to store multiple values to one variable. Those two things are arrays and hashes. Arrays are a bit more simple because there values are always indexed by integers starting from 0. If you were to think of an array as a hash, then the idex number would be called the key and the value stored would be called the value. 
+     But the difference between the two is that the key in hashes does not have to be an integer, it can be pretty much anything you choose. For example, if I was storing state capitals, I could have a key of California that has a value of Sacramento. See the pictures below for examples:
+   </p>
+   <br>
+   <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash.png"/>
+   
+   <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash1.png"/>
+   <br>
+   <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash2.png"/>
+   
+   <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash3.png"/>
+   <br>
+   <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash4.png"/>
+   <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/rbhash5.png"/>
+   <br>
+   <p>
+    In JavaScript, an 'object" is that same as a Ruby 'hash'. They both hold keys and values as explained above. 
+    Below, I've shown how to do the same code in JavaScript as I previously did in Ruby.
+  </p>
+  <br>
+  <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/jsobject.png"/>
+  <img src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/jsobject1.png"/>
+  <br>
+  <p>
+    But in Javascript, when you call the key, it returns the value. So far I haven't found a way to print just the key or just the value. When I do, I'll update this blog.
+    I have noticed that adding and deleting seems very intuitive in JavaScript. If we want to delete our key/value pair we could simply write:
+    delete stateCapitals.California
 
-</p>  
+  </p>  
 </div>
-    </section>
-  
-   <footer>
-        <a href="JessC.github.io/LICENSE">Copyright (c) 2015 Jesse C </a>
-  </footer>
-  </body>
+</section>
+</main>
+<footer>
+  <a href="JessC.github.io/LICENSE">Copyright (c) 2015 Jesse C </a>
+</footer>
+</body>
 </html>
