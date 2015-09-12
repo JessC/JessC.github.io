@@ -10,7 +10,7 @@ body {
 }
 
 .blog-title {
-text-align: center;
+	text-align: center;
 }
 
 h4 	{
@@ -24,159 +24,159 @@ h2 img {
 
 ul {
 	list-style-type: none;
-} /*changes the list of social buttons look like*/
+	} /*changes the list of social buttons look like*/
 
-#title { 
-font-size: 50px;
-padding-left: 10px;
-}
+	#title { 
+		font-size: 50px;
+		padding-left: 10px;
+	}
 
-nav li {
-	padding-right: 10px;
-	padding-left: 10px;
-	font-family: Amatic SC, cursive;
-	text-decoration: none;
-	display: inline;
-	font-size: 18px;
-	font-weight: bold;
-	margin: 50px 0px 0px 50px;
-	/*Adjust the Links at top of page*/
-}
+	nav li {
+		padding-right: 10px;
+		padding-left: 10px;
+		font-family: Amatic SC, cursive;
+		text-decoration: none;
+		display: inline;
+		font-size: 18px;
+		font-weight: bold;
+		margin: 50px 0px 0px 50px;
+		/*Adjust the Links at top of page*/
+	}
 
-nav ul li a:hover {
-	border: 1px solid black;
-	border-radius: 4px;
-}
+	nav ul li a:hover {
+		border: 1px solid black;
+		border-radius: 4px;
+	}
 
-.navbar {
-	text-align: center;
-	top: 10px;
-}
+	.navbar {
+		text-align: center;
+		top: 10px;
+	}
 
-.divider {
-	height: 10px;
-	border: 1px solid black;
-	padding: 0px;
-}
+	.divider {
+		height: 10px;
+		border: 1px solid black;
+		padding: 0px;
+	}
 
-a {
-	text-decoration:none;
-	color:black;
-	/*adjust how links are displayed*/
-}
+	a {
+		text-decoration:none;
+		color:black;
+		/*adjust how links are displayed*/
+	}
 
-#mcway {
-	display: block;
-	margin-left: auto;
-    margin-right: auto;
-	height: 400px;
-	width: auto;
-} /*beach picture info*/
-
-
-#follow {
-	position: inherit;
-	right:30px;
-	z-index: 1;
-	margin: 20px;
-	float: right;
-}
-
-ul li img{
-	border-radius: 5px 5px 5px 5px;
-	margin: 0px 2px 2px 0px;
-	border: none;
-	/*changes the individual social buttons*/
-}
-
-footer {
-	display: inline-block;
-	margin-top: 65px;
-	border-top: 1px solid;
-	text-align: center; /*footer design*/
-	position: inherit;
-   bottom: 0;
-   clear: both;
-   width: 100%;
-   /* Height of the footer */ 
-}
-
-.blog-body {
-	margin-bottom: 15px;
-
-	position: inherit;
-	padding-left: 100px;
-	padding-right: 100px;
-}
+	#mcway {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 400px;
+		width: auto;
+		} /*beach picture info*/
 
 
-p > img {
-	clear: both;
-	padding: 20px;
-}
+		#follow {
+			position: inherit;
+			right:30px;
+			z-index: 1;
+			margin: 20px;
+			float: right;
+		}
 
-#cheat_sheet_header {
-	text-align: center;
-}
+		ul li img{
+			border-radius: 5px 5px 5px 5px;
+			margin: 0px 2px 2px 0px;
+			border: none;
+			/*changes the individual social buttons*/
+		}
 
-#cheat_sheet_section {
-	width: 300px;
-	border: 1px solid black;
-	border-radius: 5px;
-	display: inline-block;
-	margin-left: 20px;
-}
+		footer {
+			display: inline-block;
+			margin-top: 65px;
+			border-top: 1px solid;
+			text-align: center; /*footer design*/
+			position: inherit;
+			bottom: 0;
+			clear: both;
+			width: 100%;
+			/* Height of the footer */ 
+		}
 
-#cheat_sheet_main {
-	width: 990px;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-}
+		.blog-body {
+			margin-bottom: 15px;
 
-.cheat_title {
-	text-align: center
-}
+			position: inherit;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
 
-.about {
-	margin-right: auto;
-	margin-left: auto;
-	font-size: 17px;
-	width: 800px;
-}
 
-#index {
-	margin-right: auto;
-	margin-left: auto;
-	text-align: center;
-	width: 450px;
-	font-size: 18px;
-}
+		p > img {
+			clear: both;
+			padding: 20px;
+		}
 
-#follow_main {
-	width: auto;
-	position: relative;
-	
-}
+		#cheat_sheet_header {
+			text-align: center;
+		}
 
-#follow_section {
-	width: 550px;
-	display: inline-block;
-	margin-left: 20px;
-}
+		#cheat_sheet_section {
+			width: 300px;
+			border: 1px solid black;
+			border-radius: 5px;
+			display: inline-block;
+			margin-left: 20px;
+		}
 
-#follow_sentence {
-	margin-top: auto;
-	margin-bottom: 100px;
-	margin-left: 200px;
-	float: right;
+		#cheat_sheet_main {
+			width: 990px;
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
-}
+		.cheat_title {
+			text-align: center
+		}
 
-.disclaimer {
-	margin: auto;
-	width: 700px;
-}
+		.about {
+			margin-right: auto;
+			margin-left: auto;
+			font-size: 17px;
+			width: 800px;
+		}
+
+		#index {
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+			width: 450px;
+			font-size: 18px;
+		}
+
+		#follow_main {
+			width: auto;
+			position: relative;
+			
+		}
+
+		#follow_section {
+			width: 550px;
+			display: inline-block;
+			margin-left: 20px;
+		}
+
+		#follow_sentence {
+			margin-top: auto;
+			margin-bottom: 100px;
+			margin-left: 200px;
+			float: right;
+
+		}
+
+		.disclaimer {
+			margin: auto;
+			width: 700px;
+		}
 
 
 
