@@ -6,35 +6,18 @@
   <link rel="stylesheet" type="text/css" href="../Stylesheets/default.css">
 </head>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $(function() {
+    $("#header").load("/header.html");
+    $("#footer").load("/footer.html"); 
+      });
+  </script> 
+
 <body>
+  <div id="header">  
+</div>
 
- <header>
-  <h2>
-    <a href="../index.html"><img class="profilpic" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Profile%20Crop.png" style="width:125px;height:125px"/></a><br>
-    <span id="title">Jesse Callwood</span>
-  </h2>
-</header>
-
-<nav class="navbar">
-  <ul id="nav">
-    <li>
-      <a href="../About.html">About Me</a>
-    </li>
-    <li class="divider"></li>
-    <li>
-      <a href="../Blog.html">Blog</a>
-    </li>
-    <li class="divider"></li>
-    <li>
-      <a href="../cheat-sheet.html">Resources</a>
-    </li>
-    <li class="divider"></li>
-    <li>
-      <a href="../Contact.html">Contact</a>
-    </li>
-  </ul>
-</nav>
-<main>
  <section>
   <img id="mcway" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Mcway_Cove_Panorama.jpg"/>
 
@@ -57,10 +40,10 @@
    </p>
  </div>
 </section>
-</main>
-<footer>
-  <a href="JessC.github.io/LICENSE">Copyright (c) 2015 Jesse C </a>
-</footer>
+
+<div id="footer">
+</div>
+
 </body>
 </html>
 
