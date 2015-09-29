@@ -48,6 +48,10 @@ ul {
 		border-radius: 4px;
 	}
 
+	li {
+    list-style-type: none;
+}
+
 	.navbar {
 		text-align: center;
 		top: 10px;
