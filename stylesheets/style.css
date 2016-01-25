@@ -108,7 +108,7 @@ footer {
 header,
 .projects,
 .contact {
-	height: 550px;
+	height: 700px;
 }
 
 .about,
@@ -168,17 +168,17 @@ header {
 }
 
 /*.description {
-	background: url("images/jump.mp4") center no-repeat;
+	background: url("images/**PROFILE PIC**.mp4") center no-repeat;
 	background-size: 350px 490px;
 }*/
 
 #vid-background {
     position: fixed;
-    top: 70%;
+    top: 73%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
+    width: auto
     height: auto;
     z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
