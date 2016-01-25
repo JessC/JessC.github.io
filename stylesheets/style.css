@@ -1,0 +1,319 @@
+
+/* Global -------> */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Advent Pro', garamond, georgia, arial;
+}
+
+/* Headings -------> */
+h1 {
+	padding: 10px 0px 0px;
+	color: #82F939;
+}
+
+.blog h1 {
+	color: black;
+}
+
+/* Paragraphs -------> */
+p {
+	padding: 0% 4% 0% 4%;
+	font-size: 1.875em;
+	color: black;
+}
+
+header p,
+.projects p,
+.contact p {
+	color: white;
+}
+
+header p {
+	font-size: 1.5em;
+}
+
+header p span {
+	font-family: 'Give You Glory';
+	font-size: 1.7em;
+	color: #82F939;
+}
+
+footer p {
+	padding: 5px;
+	font-size: 1em;
+}
+
+/* Links -------> */
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: #82F939;
+	text-decoration: none;
+}
+
+/* About & Contact Links -------> */
+.contact a {
+	color: #82F939;
+	border-radius: 5px;
+}
+
+.contact a:hover {
+	color: white;
+	background: none;
+}
+
+
+
+/* Home & Footer Links -------> */
+li:first-child a,
+footer a {
+	color: #82F939;
+}
+
+li:first-child a:hover,
+footer a:hover {
+	color: black;
+}
+
+/* Layout -------> */
+nav,
+header,
+.about,
+.projects,
+.blog,
+.contact,
+footer {
+	width: 100%;
+}
+
+header,
+.about,
+.projects,
+.blog,
+.contact,
+footer {
+	margin: 0px;
+}
+
+.about,
+.blog {
+	height: 600px;
+}
+
+header,
+.projects,
+.contact {
+	height: 550px;
+}
+
+.about,
+.projects,
+.blog,
+.contact {
+	padding: 70px 10px 10px;
+}
+
+/* Nav Bar -------> */
+nav {
+	padding: 10px .5% 10px .5%;
+	background: white;
+	background-image: url("../images/paper.jpg");
+	position: fixed;
+	z-index: 1;
+	border-bottom: solid 1px;
+    -webkit-box-shadow: 0 8px 6px -6px gray;
+       -moz-box-shadow: 0 8px 6px -6px gray;
+            box-shadow: 0 8px 6px -6px gray;
+	opacity: .95;
+	display: none;
+}
+  		
+nav ul  {
+	list-style-type: none;
+	padding-right: 4%;
+	font-size: 1.25em; 
+}		
+
+nav li {
+	display: inline;
+	float: left;
+	padding: .5% 2% 1.5% 2%;
+	}
+
+li:nth-last-child(-n+3) {
+	color: red;
+	float: right;
+}
+
+/* Header -------> */
+header {
+	padding: 100px 10px 10px 10px;
+	background: black;
+	background-image: url("../images/mcway_cove_panorama.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/* About Section -------> */
+.about {
+	background: white;
+	background-image: url("../images/.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/*.description {
+	background: url("images/jump.mp4") center no-repeat;
+	background-size: 350px 490px;
+}*/
+
+#vid-background {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(paper.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* Projects Section -------> */
+.projects {
+	background: tomato;
+	background-image: url("../images/mcway_black_and_white.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/* Blog Section -------> */
+.blog {
+	//background: grey;
+	//background-image: url("../images/paper.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/* Contact Section -------> */
+.contact {
+	background: tomato;
+	background-image: url("../images/mcway_black_and_white.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/* Footer -------> */
+footer {
+	height: 75px;
+	padding: 5px 10px;
+	border-top: solid 1px;
+	background: grey;
+	background-image: url("../images/paper.jpg");
+}
+
+
+
+/* iPhone -------> */
+@media only screen and (max-device-width : 480px) {
+	p {
+		font-size: 1.5em;
+	}
+	
+	header,
+	.projects,
+	.contact {
+	background-attachment: scroll; 
+	background-size: auto;
+	height: 500px; 
+	}
+	
+	.description {
+		background-size: 290px 400px;
+	}	
+}
+
+/* iPad -------> */
+@media only screen  and (max-device-width : 768px) and (max-device-width : 1024px) {
+	p {
+		font-size: 1.5em;
+	}
+	
+	header,
+	.projects,
+	.contact {
+	background-attachment: scroll;
+	background-size: auto;
+	height: 500px; 
+	}
+	
+	.about {
+		height: 500px;
+	}
+	
+	.description {
+		background-size: 290px 400px;
+	}
+}
+
+/* Smaller Screens - 600px Breakpoint -------> */
+@media screen and (max-width : 600px) {
+	p {
+		font-size: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	nav {
+		padding: 1% 0% 2.5% 0%;
+	}
+  		
+	nav ul  {
+		padding-right: 10px;
+		padding-left: 10px;
+		font-size: 20px; 
+	}		
+
+	nav li {
+		padding: .5% 1.5% 1.5% 1.5%;
+	}
+	
+	.about {
+		height: 500px;
+	}
+	
+	.description {
+		background-size: 290px 400px;
+	}
+
+	footer p {
+		font-size: 15px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.twitter {
+		max-width: 300px;
+	}
+	
+}
+
+/* Smaller Screens - 450px Breakpoint -------> */
+@media screen and (max-width : 450px) {
+
+	li:nth-last-child(-n+3) {
+		display: none;
+	}
+	
+	nav {
+		padding-left: 10%;
+	}
+}

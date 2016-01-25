@@ -1,49 +1,163 @@
 <!DOCTYPE html>
+
+
 <html>
+
 <head>
-  <title>My DBC Website</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="Stylesheets/default.css">
+
+  <meta charset=utf-8>
+  <meta name="keywords" content="web development, programming, tech, html5, software engineering, css3, tech blog, ruby on rails, ruby, sinatra, rails, travel, korea, html, ajax, css, bay area, jquery"/>
+  <meta name="description" content="aspiring web developer.">
+  
+  <title>Jesse Callwood - Web Developer</title>
+  
+  <link rel="stylesheet" href="normalize.css">
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!--     <link rel="stylesheet" type="text/css" href="stylesheets/default.css">        -->
+
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=
+Advent+Pro">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=
+Give+You+Glory">
+
+
 </head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script>
-    $(function() {
-    $("#header").load("/header.html");
-    $("#footer").load("/footer.html"); 
-      });
-  </script> 
-
 <body>
-  <div id="header">  
-</div>
 
-<section>
-  <img id="mcway" src="https://raw.githubusercontent.com/JessC/JessC.github.io/master/blog/Mcway_Cove_Panorama.jpg"/>
-  <br>
-  <br>
-  <br>
-  <div id="index">
-    <h3><b>Welcome to my blog</b></h3>
-    <p>
-      I started this blog mid december 2014. It mostly consists of blog entries I wrote during Phase 0 of Dev Bootcamp. Those blog entries, which were usually written in under an hour, document my progression and understanding of new things presented to us. 
-      Go to the <a href="About.html">About Me</a> section to read a brief summary of my life and how it led me to becoming a developer.
-    </p>
-    <br><br>
-  </div>
-  <div class="disclaimer">
-    <p>
-      <b>
-        ****DISCLAIMER - I made this website my 2nd week of DBC. The first week was mostly introduction and computer set up, so this was the first real thing I did. There's no Javascript, AJAX, or cool frameworks...it doesn't even scale. I decided to leave it like this for now because it reminds me of where I started...and I was pretty damn proud of it at the time!****
-      </b>
-    </p>
-  </div>
-</section>
-<br>
-<br>
-<br>
-  <div id="footer">  
-</div>
+  <nav>
 
-</body>
-</html>
+    <ul>
+      <li><a href="http://jessc.github.com">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="http://jessc.github.io/blog.html">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://angel.co/jesse-callwood" target="_blank">
+        <img src="images/angel.png" alt="Twitter" width="25" height="25"/></a></li>
+        <li><a href="http://www.linkedin.com/in/jessecallwood" target="_blank">
+          <img src="images/linkedin.png" alt="LinkedIn" width="25" height="25"/></a></li>
+          <li><a href="http://github.com/jessc" target="_blank">
+            <img src="images/github.png" alt="Github" width="25" height="25"/></a></li>
+
+          </ul>
+
+        </nav>
+
+        <header>
+
+          <center>
+
+            <p><span>Jesse Callwood</span></br>Software Engineer / Web Developer</p>
+
+          </center>
+
+        </header>
+
+        <div class="about" id="about">
+              
+          <center>
+
+            <div class="description">
+
+                <h1>About</h1>
+
+                <p></br></br></p>
+                <p>I'm a Software Engineer / Web Developer living in the Bay Area.</p>
+                <p><b>Skills:</b> Ruby, HTML5, CSS3, JavaScript/jQuery, AJAX, AWS (Elastic Beanstalk, RDS, EC2, S3) Git, SQL, Oauth, APIs</p>
+                <p><b>Currently:</b> Working on applications employing new and relevant technologies and solidifying ones I'm already familiar with </p>
+                <p></br></br></p> 
+              </div>
+
+            </center>
+
+          </div>
+
+          <div class="projects" id="projects">
+
+            <center>
+
+              <h1>Projects</h1>
+
+              <p>Coming soon!<br>
+                (for now, see them through any link at the top right)</p>
+
+            </center>
+
+          </div>
+
+          <div class="blog" id="blog">
+            <video autoplay loop muted poster="../images/paper.jpg" id="vid-background">
+              <source src="images/jump.mp4" type="video/mp4">
+              </video>
+            <center>
+
+              <h1>Blogs</h1>
+
+              <p> Coming soon too!</p>
+
+            </center>
+
+          </div>
+
+          <div class="contact" id="contact">
+
+            <center>
+
+              <h1>Contact</h1>
+
+              <p>Yep...also coming soon</p>
+
+             <!--  <p>For more information, please complete the <a href="http://jesse.com/contact" 
+                target="_blank">contact form</a> on my blog </p> -->
+
+
+                  </div>
+
+                </center>
+
+              </div>
+
+              <footer>  
+
+                <center>
+
+                  <p>Copyright <a href="github.com/JessC">Jesse Callwood</a> 2016 | California</br>Uses HTML5, CSS3 & JavaScript</p>
+
+                </center>
+
+              </footer>
+
+              <!-- <script type="text/javascript" src="../../code.jquery.com/jquery-2.2.0.min.js"></script>-->
+
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+              <script type="text/javascript">
+
+    // $(document).ready(function(){alert("This is a JQuery test!")});
+    
+    (function($) {
+      $(document).ready(function(){
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 150) {
+            $('nav').fadeIn(500);
+          } else {
+            $('nav').fadeOut(500);
+          }
+        });
+      });
+    })(jQuery);
+    
+    $("header p").hide().fadeIn(2000);
+    </script>
+
+  </body>
+
+  </html>
