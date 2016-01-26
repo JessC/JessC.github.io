@@ -102,13 +102,13 @@ footer {
 
 .about,
 .blog {
-	height: 600px;
+	height: 725px;
 }
 
 header,
 .projects,
 .contact {
-	height: 750px;
+	height: 650px;
 }
 
 .about,
@@ -161,15 +161,14 @@ header {
 
 /* About Section -------> */
 .about {
-	background: white;
-	background-image: url("../images/.jpg");
+	//background: white;
+	//background-image: url("../images/.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 }
 
 #more-text {
 	display: none;
-	font-size: 1.875em;
 }
 
 #more:hover #more-text {
@@ -182,12 +181,13 @@ header {
 }*/
 
 #vid-background {
+		opacity: .5;
     position: fixed;
     top: 73%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto
+    width: auto;
     height: auto;
     z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
@@ -206,7 +206,7 @@ header {
 
 /* Blog Section -------> */
 .blog {
-	//background: grey;
+	background: grey;
 	//background-image: url("../images/paper.jpg");
 	background-attachment: fixed;
 	background-size: cover;
