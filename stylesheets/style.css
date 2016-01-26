@@ -186,7 +186,7 @@ header {
     top: 73%;
     left: 50%;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 120%;
     width: auto;
     height: auto;
     z-index: -100;
@@ -207,7 +207,7 @@ header {
 /* Blog Section -------> */
 .blog {
 	background: grey;
-	//background-image: url("../images/paper.jpg");
+	background-image: url("../images/bubble_gum.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 }
