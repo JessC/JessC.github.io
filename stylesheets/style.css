@@ -108,7 +108,7 @@ footer {
 header,
 .projects,
 .contact {
-	height: 700px;
+	height: 750px;
 }
 
 .about,
@@ -165,6 +165,15 @@ header {
 	background-image: url("../images/.jpg");
 	background-attachment: fixed;
 	background-size: cover;
+}
+
+#more-text {
+	display: none;
+	font-size: 1.875em;
+}
+
+#more:hover #more-text {
+	display: block;
 }
 
 /*.description {
