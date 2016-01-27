@@ -13,9 +13,22 @@ h1 {
 	color: #82F939;
 }
 
-.blog h1 {
+/*.blog h1 {
 	color: black;
+}*/
+
+#blog-title {
+  color: white;
+ font-size: 2.5em;
+  //mix-blend-mode: exclusion;
 }
+
+#comming-soon {
+	color: white;
+ font-size: 2em;
+  mix-blend-mode: difference;
+}
+
 
 /* Paragraphs -------> */
 p {
