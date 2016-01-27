@@ -211,11 +211,126 @@ header {
 
 /* Projects Section -------> */
 .projects {
-	background: tomato;
+	background: grey;
 	background-image: url("../images/mcway_black_and_white.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 }
+
+#projects-container {
+    margin:0 auto;
+    visibility:hidden;
+}
+
+#projects-container .indiv-project{
+    display:block;
+    position:relative;
+    margin:0;
+    width:370px;
+    margin-bottom:25px;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity:1;
+    filter:alpha(opacity=100);
+    overflow:hidden;
+    z-index:10;
+	-webkit-backface-visibility: hidden;
+}
+
+#projects-container .indiv-project.filtered{
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    transform:scale(0);
+    opacity:0;
+    filter:alpha(opacity=0);
+    z-index:0;
+	-webkit-backface-visibility: hidden;
+}
+
+.indiv-project:hover{
+	cursor:pointer;
+}
+
+.indiv-project img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition:none;
+    transition:none;
+	-webkit-backface-visibility: hidden;
+}
+
+.indiv-project:hover img {
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+    -webkit-transition:-webkit-transform 4s ease-in;
+    transition:transform 4s linear;
+}
+
+.indiv-project .hover-mask {
+    position:absolute;
+    padding:0;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:#AE76B7;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    -webkit-transition:all 0.3s ease-out;
+    transition:all 0.3s ease-out;
+}
+
+.indiv-project:hover .hover-mask {
+    opacity: .95;
+    filter:alpha(opacity=95);
+}
+
+.indiv-project .hover-mask .project-title {
+    color:#fff;
+    margin:90px 0 0;
+    padding:10px;
+    font-size:30px;
+    line-height:34px;
+    font-weight:400;
+    text-align:center;
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    -webkit-transition:all 0.5s ease-out;
+    transition:all 0.5s ease-out;
+}
+
+.indiv-project:hover .hover-mask .project-title {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.indiv-project .hover-mask p {
+    margin:0;
+    font-size:16px;
+    line-height:24px;
+    font-weight:400;
+    text-transform:uppercase;
+    text-align:center;
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    -webkit-transition:all 0.3s ease-out 0s;
+    transition:all 0.3s ease-out 0s;
+}
+
+.indiv-project:hover .hover-mask p {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-transition:all 0.3s ease-out .2s;
+    transition:all 0.3s ease-out .2s;
+}
+
 
 /* Blog Section -------> */
 .blog {
