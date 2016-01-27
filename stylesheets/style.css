@@ -165,7 +165,7 @@ li:nth-last-child(-n+3) {
 
 /* Header -------> */
 header {
-	padding: 100px 10px 10px 10px;
+	padding: 100px 10px 175px 10px;
 	background: black;
 	background-image: url("../images/mcway_cove_panorama.jpg");
 	background-attachment: fixed;
