@@ -73,7 +73,7 @@ Give+You+Glory">
                 <h1>About</h1>
 
                 <br>
-                <p>I'm a Software Developer living in the Bay Area</p>
+                <p>I'm a Software Developer living in the Bay Area <span style="font-size: .5em">(relocation ok)</span></p>
                 <p><b>Skills:</b> Ruby, HTML5, CSS3, JavaScript/jQuery, AJAX, AWS (Elastic Beanstalk, RDS, EC2, S3) Git, SQL, Oauth, APIs</p>
                 <p><b>Currently:</b> Working on applications employing new and relevant technologies and solidifying ones I'm already familiar with </p>
                 <br>
@@ -104,7 +104,7 @@ Give+You+Glory">
                   <div id="projects-container" style="visibility: visible; position: relative; height: 1656px; width: 1160px;" >
 
                     <!-- INSTOGRAPH PROJECT -->
-                    <article class="indiv-project" style="position: absolute; top: 0px; left: 0px;">
+                    <article class="indiv-project get-color" style="position: absolute; top: 0px; left: 0px;">
 
                       <img class="project-image" src="images/instograph.png">
 
@@ -118,7 +118,7 @@ Give+You+Glory">
                     </article>
 
                     <!-- HITCH PROJECT -->
-                    <article class="indiv-project" style="position: absolute; top: 0px; left: 395px;">
+                    <article class="indiv-project get-color" style="position: absolute; top: 0px; left: 395px;">
 
                       <img class="project-image" src="images/hitch.png">
 
@@ -132,7 +132,7 @@ Give+You+Glory">
                     </article>
 
                   <!--   CCVALID PROJECT -->
-                    <article class="indiv-project" style="position: absolute; top: 0px; left: 790px;">
+                    <article class="indiv-project get-color" style="position: absolute; top: 0px; left: 790px;">
 
                       <img class="project-image" src="images/ccvalid.png">
 
@@ -172,7 +172,7 @@ Give+You+Glory">
 
               <h1>Contact</h1>
 
-              <p>Also coming soon<br>
+              <p>Coming 2/1/16<br>
                 <span style="font-size: .5em;">
                 (for now, please use the links at the top right)</span></p>
 
@@ -200,7 +200,7 @@ Give+You+Glory">
 
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-              <script type="text/javascript">
+  <script type="text/javascript">
 
     // $(document).ready(function(){alert("This is a JQuery test!")});
     
@@ -217,6 +217,21 @@ Give+You+Glory">
     })(jQuery);
     
     $("header p").hide().fadeIn(2000);
+
+
+
+
+
+    $('.get-color').hover(function() {
+      var rand = Math.floor(Math.random() * 10);
+      console.log(rand);
+      var color = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+         //console.log(color); //SHOW RANDOM HEX COLOR
+         $('.hover-mask').css({background: [color]})
+       });
+
+
+
     </script>
 
   </body>

@@ -19,13 +19,13 @@ h1 {
 
 #blog-title {
   color: white;
- font-size: 2.5em;
+  font-size: 2.5em;
   //mix-blend-mode: exclusion;
 }
 
 #comming-soon {
 	color: white;
- font-size: 2em;
+  font-size: 2em;
   mix-blend-mode: difference;
 }
 
@@ -276,7 +276,7 @@ header {
     height:100%;
     top:0;
     left:0;
-    background:#AE76B7;
+    //background: #AE76B7;
     opacity: 0;
     filter:alpha(opacity=0);
     -webkit-transition:all 0.3s ease-out;
