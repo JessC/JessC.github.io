@@ -11,7 +11,7 @@
   
   <title>Jesse Callwood - Web Developer</title>
   
-  <link rel="stylesheet" href="normalize.css">
+  <!-- <link rel="stylesheet" href="stylesheets/normalize.css"> -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -19,8 +19,7 @@
 <!--     <link rel="stylesheet" type="text/css" href="stylesheets/default.css">        -->
 
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-<link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen">
-<link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
+
 
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=
 Advent+Pro">
@@ -62,7 +61,7 @@ Give+You+Glory">
         </header>
 
         <div class="about" id="about">
-             <video autoplay loop muted poster="../images/paper.jpg" id="vid-background">
+             <video autoplay loop muted poster="images/paper.jpg" id="vid-background">
               <source src="images/jump_720p_low.mp4" type="video/mp4">
               </video>           
 
@@ -80,7 +79,7 @@ Give+You+Glory">
                 <div id="more"><p>
                   more...</p>
                   <span id="more-text"><p>
-                  I love having fun if you hadn't noticed! I'm also extremely competitive always trying to produce better than expected results. Fortunately, it's usually internalized so I come off very laid back, and I am for the most part. It's not about winning but the satisfaction that comes with the ability to help others reach their goals too. </p></span>
+                  I love having fun if you hadn't noticed! I'm also extremely competitive always trying to produce better than expected results. Fortunately, it's usually internalized so I come off very laid back, and I am for the most part. It's not about winning but the satisfaction that comes with my ability to help others reach their goals too. </p></span>
                 </div>
                  
               </div>
@@ -221,13 +220,11 @@ Give+You+Glory">
 
 
 
-
+    // CREATE RANDOM COLORS ON PROJECT HOVER
     $('.get-color').hover(function() {
-      var rand = Math.floor(Math.random() * 10);
-      console.log(rand);
-      var color = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+      var randomcolor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
          //console.log(color); //SHOW RANDOM HEX COLOR
-         $('.hover-mask').css({background: [color]})
+         $('.hover-mask').css({background: [randomcolor]})
        });
 
 
