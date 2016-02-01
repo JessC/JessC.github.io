@@ -170,7 +170,7 @@ li:nth-last-child(-n+3) {
 header {
 	padding: 100px 10px 175px 10px;
 	background: black;
-	background-image: url("../images/mcway_cove_panorama.jpg");
+	background-image: url("../images/mcway_cove.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 }
@@ -217,7 +217,7 @@ header {
 /* PROJECTS SECTION -------> */
 .projects {
 	background: grey;
-	background-image: url("../images/mcway_black_and_white.jpg");
+	background-image: url("../images/mcway_cove_black_and_white.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 }
@@ -411,7 +411,7 @@ header {
 /* CONTACT SECTION -------> */
 .contact {
 	background: tomato;
-	background-image: url("../images/mcway_black_and_white.jpg");
+	background-image: url("../images/mcway_cove_black_and_white.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 }
