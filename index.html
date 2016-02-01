@@ -24,7 +24,10 @@
 
     <link href='https://fonts.googleapis.com/css?family=Advent+Pro' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+
+    <!-- <link rel="stylesheet" href="stylesheets/font-awesome.min.css"> -->
   </head>
 
   <body>
@@ -130,7 +133,7 @@
 
                         <p>Built with Ruby on Rails, JavaScript, jQuery, AJAX, Bootstrap, OAuth2, Instagram API, Google Maps API, AWS Elastic Beanstalk, EC2, S3, RDS, Postgres</p>
 
-                        <p class="text-right"><a class="btn btn-color1" href="http://instograph.elasticbeanstalk.com" target="_blank">Visit Website</a></p>
+                        <p><a class="btn btn-color1" href="http://instograph.elasticbeanstalk.com" target="_blank">Visit Website</a></p>
 
                       </div>
                     </article>
@@ -153,7 +156,7 @@
 
                         <p>Built with Ruby on Rails, JavaScript, jQuery, AJAX, Devise, HTML5, CSS3, SQL, Heroku</p>
 
-                        <p class="text-right"><a class="btn btn-color1" href="hitch-coupled.herokuapp.com" target="_blank">Visit Website</a></p>
+                        <p><a class="btn btn-color1" href="hitch-coupled.herokuapp.com" target="_blank">Visit Website</a></p>
 
                       </div>
                     </article>
@@ -176,7 +179,7 @@
 
                         <p>Built with JavaScript, jQuery, CSS3, HTML</p>
 
-                        <p class="text-right"><a class="btn btn-color1" href="http://instograph.elasticbeanstalk.com/main/ccvalid" target="_blank">Visit Website</a></p>
+                        <p><a class="btn btn-color1" href="http://instograph.elasticbeanstalk.com/main/ccvalid" target="_blank">Visit Website</a></p>
 
                       </div>
                     </article>
@@ -206,14 +209,70 @@
 
               <center>
 
-                <h1>Contact</h1>
+                <h1>Contact Me</h1>
 
-                <p>Coming 2/1/16<br>
-                  <span style="font-size: .5em;">
-                    (for now, please use the links at the top right)</span></p>
+<!-- ==============================================
+    CONTACT
+    =============================================== -->
+    <section id="contact" class="add-padding">
+    
+      <div class="contact-container text-center">
+        
+        <div class="row">
+        
+          <div class="contact-column text-right">
+          
+<!--             <h1 class="big-text">Contact Me</h1>
+ -->            
+            <p>Software Engineer<br>Experienced Manager | Educater | Sales</p>
 
-             <!--  <p>For more information, please complete the <a href="http://jesse.com/contact" 
-             target="_blank">contact form</a> on my blog </p> -->
+            <p>Sinatra, Ruby on Rails, JavaScript, jQuery, AJAX, HTML5, CSS3, SASS, SQL, APIs, Git, GitHub, Heroku</p>
+
+            <p>Please feel free to contact me with questions, comments, or collaborations.</p>
+
+            <p>For more information, <a href="http://github.com/jessc" target="_blank">visit github.</a></p>
+          
+          </div>
+        
+          <!--=== Contact Form ===-->
+
+          <form id="contact-form" class="form-column" action="contact.php" method="post" novalidate>
+            
+            <div class="form-group">
+              <label class="control-label" for="contact-name">Name</label>
+              <div class="controls">
+              <input id="contact-name" name="contactName" placeholder="Your name" class="form-control requiredField" data-new-placeholder="Your name" type="text" data-error-empty="Please enter your name">
+              <i class="fa fa-user"></i>
+              </div>
+            </div><!-- End name input -->
+            
+            <div class="form-group">
+              <label class="control-label" for="contact-mail">Email</label>
+              <div class="controls">
+              <input id="contact-mail" name="email" placeholder="Your email" class="form-control requiredField" data-new-placeholder="Your email" type="email" data-error-empty="Please enter your email" data-error-invalid="Invalid email address">
+              <i class="fa fa-envelope"></i>
+              </div>
+            </div><!-- End email input -->
+            
+            <div class="form-group">
+              <label class="control-label" for="contact-message">Message</label>
+              <div class="controls">
+                <textarea id="contact-message" name="comments"  placeholder="Your message" class="form-control requiredField" data-new-placeholder="Your message" rows="6" data-error-empty="Please enter your message"></textarea>
+                <i class="fa fa-comment"></i>
+
+              </div>
+            </div><!-- End textarea -->
+            <br>
+            <button name="submit" type="submit" id="contact-button" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="fa fa-paper-plane"></i>Send Message</button>
+            <input type="hidden" name="submitted" id="submitted" value="true" />
+            
+          </form><!-- End contact-form -->
+          
+        </div>
+        
+      </div>
+    
+    </section>
 
 
            </div>
