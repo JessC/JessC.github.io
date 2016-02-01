@@ -50,14 +50,11 @@ $(window).load(function(){
 			$('.container').animate({'opacity':1},300);	
 		},300);
 		
-		// setTimeout(function(){
-		// 	$('#projects-container').masonry('reload');
-		// },500)
-}
+	}
 
-$('.close-preview').click(function(){
-	closeProject();
-})
+	$('.close-preview').click(function(){
+		closeProject();
+	})
 
 
 });
