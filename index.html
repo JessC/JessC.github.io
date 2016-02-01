@@ -16,58 +16,57 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<!--     <link rel="stylesheet" type="text/css" href="stylesheets/default.css">        -->
+    <!--     <link rel="stylesheet" type="text/css" href="stylesheets/default.css">        -->
 
-<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 
+    <link href='https://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=
-Advent+Pro">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=
-Give+You+Glory">
+    <link href='https://fonts.googleapis.com/css?family=Advent+Pro' rel='stylesheet' type='text/css'>
 
 
-</head>
+  </head>
 
-<body>
+  <body>
 
-  <nav>
+    <nav>
 
-    <ul>
-      <li><a href="http://jessc.github.com">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="http://jessc.github.io/Blog.html">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="https://angel.co/jesse-callwood" target="_blank">
-        <img src="images/angel.png" alt="Twitter" width="25" height="25"/></a></li>
-        <li><a href="http://www.linkedin.com/in/jessecallwood" target="_blank">
-          <img src="images/linkedin.png" alt="LinkedIn" width="25" height="25"/></a></li>
-          <li><a href="http://github.com/jessc" target="_blank">
-            <img src="images/github.png" alt="Github" width="25" height="25"/></a></li>
+      <ul>
+        <li><a href="http://jessc.github.com">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="http://jessc.github.io/Blog.html">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://angel.co/jesse-callwood" target="_blank">
+          <img src="images/angel.png" alt="Twitter" width="25" height="25"/></a></li>
+          <li><a href="http://www.linkedin.com/in/jessecallwood" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn" width="25" height="25"/></a></li>
+            <li><a href="http://github.com/jessc" target="_blank">
+              <img src="images/github.png" alt="Github" width="25" height="25"/></a></li>
 
-          </ul>
+            </ul>
 
-        </nav>
+          </nav>
 
-        <header>
+          <header>
 
-          <center>
+            <center>
 
-            <p><span>Jesse Callwood</span></br>Software Engineer | Web Developer</p>
+              <p><span>Jesse Callwood</span></br>Software Engineer | Web Developer</p>
 
-          </center>
+            </center>
 
-        </header>
+          </header>
 
-        <div class="about" id="about">
-             <video autoplay loop muted poster="images/paper.jpg" id="vid-background">
-              <source src="images/jump_720p_low.mp4" type="video/mp4">
-              </video>           
+          <div class="about" id="about">
 
-          <center>
+           <video autoplay loop muted poster="images/paper.jpg" id="vid-background">
+            <source src="images/jump_720p_low.mp4" type="video/mp4">
+            </video>           
 
-            <div class="description">
+            <center>
+
+              <div class="description">
 
                 <h1>About</h1>
 
@@ -79,69 +78,107 @@ Give+You+Glory">
                 <div id="more"><p>
                   more...</p>
                   <span id="more-text"><p>
-                  I love having fun if you hadn't noticed! I'm also extremely competitive always trying to produce better than expected results. Fortunately, it's usually internalized so I come off very laid back, and I am for the most part. It's not about winning but the satisfaction that comes with my ability to help others reach their goals too. </p></span>
+                    I love having fun! I'm also extremely competitive and that competition to produce the best results is what drives me. Fortunately, it's usually internalized so I come off very laid back, and I am for the most part. It's not about winning but the satisfaction that comes with my ability to help others reach their goals too. </p></span>
+                  </div>
+
                 </div>
-                 
-              </div>
 
-            </center>
+              </center>
 
-          </div>
+            </div>
 
-          <div class="projects" id="projects">
+            <div class="projects" id="projects">
 
-            <center>
+              <center>
 
-              <h1> Projects </h1>
-              <br>
-              <p>
-                <!-- Recent applications I've built -->
-              </p>
+            <div id="project-preview"> 
+        <!-- JS function adds OPEN .class changes .container opacity -->
+          <span class="close-preview">&times;</span>
+        
+          <div id="project-image"></div>
+          
+            <!-- <h1 id="project-title"></h1> -->        
+          <div id="project-content"></div>
+        
+        </div>
 
-                <div class="container ">
-                
+                <!-- <span class="close-preview">X</span> -->
+
+                <div class="container">
+                <br><br><br>
+                       <h1> Projects </h1>
+                <br>
+      
+
                   <div id="projects-container" style="visibility: visible; position: relative; height: 1656px; width: 1160px;" >
 
                     <!-- INSTOGRAPH PROJECT -->
                     <article class="indiv-project get-color" style="position: absolute; top: 0px; left: 0px;">
 
-                      <img class="project-image" src="images/instograph.png">
+                      <img class="project-thumb" src="images/instograph.png">
 
                       <div class="hover-mask">
-
                         <h2 class="project-title"> Instograph</h2>
                         <p>Rails | JavaScript | AWS</p>
+                      </div>
+                      <!-- INSTOGRAPH POP UP PREVIEW -->
+                      <div class="sr-only project-description">
+
+                        <img class="project-image" src="images/instograph-large.png">
+
+                        <p>INSTOGRAPH lets Instagram browse their friends visually by location. If a photo is geo tagged it will appear on Google maps according to location.</p>
+
+                        <p>Built with Ruby on Rails, JavaScript, jQuery, AJAX, Bootstrap, OAuth2, Instagram API, Google Maps API, AWS Elastic Beanstalk, EC2, S3, RDS, Postgres</p>
+
+                        <p class="text-right"><a class="btn btn-color1" href="http://instograph.elasticbeanstalk.com" target="_blank">Visit Website</a></p>
 
                       </div>
-
                     </article>
 
                     <!-- HITCH PROJECT -->
                     <article class="indiv-project get-color" style="position: absolute; top: 0px; left: 395px;">
 
-                      <img class="project-image" src="images/hitch.png">
+                      <img class="project-thumb" src="images/hitch.png">
 
                       <div class="hover-mask">
-
                         <h2 class="project-title"> Hitch</h2>
                         <p>Rails | JavaScript | Heroku</p>
+                      </div>
+                      <!-- HITCH POP UP PREVIEW -->
+                      <div class="sr-only project-description" data-images="../images/hitch.png">
+
+                        <img class="project-image" src="images/hitch-large.png">
+
+                        <p>HITCH is a long distance ride sharing app. Drivers post their trip details including start and end location and number of seats available. Riders can then request to be added to a trip.</p>
+
+                        <p>Built with Ruby on Rails, JavaScript, jQuery, AJAX, Devise, HTML5, CSS3, SQL, Heroku</p>
+
+                        <p class="text-right"><a class="btn btn-color1" href="hitch-coupled.herokuapp.com" target="_blank">Visit Website</a></p>
 
                       </div>
-
                     </article>
 
-                  <!--   CCVALID PROJECT -->
+                    <!--   CCVALID PROJECT -->
                     <article class="indiv-project get-color" style="position: absolute; top: 0px; left: 790px;">
 
-                      <img class="project-image" src="images/ccvalid.png">
+                      <img class="project-thumb" src="images/ccvalid.png">
 
                       <div class="hover-mask">
-
                         <h2 class="project-title"> CC Valid</h2>
                         <p>JavaScript | HTML5 | CSS3</p>
+                      </div>
+                      <!-- CCVALID POP UP PREVIEW -->
+                      <div class="sr-only project-description" src="/images/ccvalid.png">
+
+                        <img class="project-image" src="images/ccvalid-large.png">
+
+                        <p>CCValid Simply lets you know if a number could be a valid credit card number. Users simple input a number. The number is input into the Luhn algorithm written in Javascript on the front end. A failure alert is output if it doesn't pass. If it passes, a success alert is output including the card type. ex: Visa </p>
+
+                        <p>Built with JavaScript, jQuery, CSS3, HTML</p>
+
+                        <p class="text-right"><a class="btn btn-color1" href="http://instograph.elasticbeanstalk.com/main/ccvalid" target="_blank">Visit Website</a></p>
 
                       </div>
-
                     </article>
 
 
@@ -149,57 +186,59 @@ Give+You+Glory">
 
                 </div>
 
-            </center>
+              </center>
 
-          </div>
+            </div>
 
-          <div class="blog" id="blog">
+            <div class="blog" id="blog">
 
-            <center>
+              <center>
 
-              <h1 id="blog-title">Blogs</h1>
+                <h1 id="blog-title">Blogs</h1>
 
-              <p id="comming-soon"> Coming soonish</p>
+                <p id="comming-soon"> Coming soonish</p>
 
-            </center>
+              </center>
 
-          </div>
+            </div>
 
-          <div class="contact" id="contact">
+            <div class="contact" id="contact">
 
-            <center>
+              <center>
 
-              <h1>Contact</h1>
+                <h1>Contact</h1>
 
-              <p>Coming 2/1/16<br>
-                <span style="font-size: .5em;">
-                (for now, please use the links at the top right)</span></p>
+                <p>Coming 2/1/16<br>
+                  <span style="font-size: .5em;">
+                    (for now, please use the links at the top right)</span></p>
 
              <!--  <p>For more information, please complete the <a href="http://jesse.com/contact" 
-                target="_blank">contact form</a> on my blog </p> -->
+             target="_blank">contact form</a> on my blog </p> -->
 
 
-                  </div>
+           </div>
 
-                </center>
+         </center>
 
-              </div>
+       </div>
 
-              <footer>  
+       <footer>  
 
-                <center>
+        <center>
 
-                  <p>Copyright <a href="github.com/JessC">Jesse Callwood</a> 2016 | California</br>Uses HTML5, CSS3 & JavaScript</p>
+          <p>Copyright <a href="github.com/JessC">Jesse Callwood</a> 2016 | California</br>Uses HTML5, CSS3 & JavaScript</p>
 
-                </center>
+        </center>
 
-              </footer>
+      </footer>
 
-               <script type="text/javascript" src="javascripts/libs/jquery.min.js"></script>
+      <script type="text/javascript" src="javascripts/libs/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script src="javascripts/scripts.js"></script>
 
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-  <script type="text/javascript">
+
+      <script type="text/javascript">
 
     // $(document).ready(function(){alert("This is a JQuery test!")});
     
@@ -216,16 +255,6 @@ Give+You+Glory">
     })(jQuery);
     
     $("header p").hide().fadeIn(2000);
-
-
-
-
-    // CREATE RANDOM COLORS ON PROJECT HOVER
-    $('.get-color').hover(function() {
-      var randomcolor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-         //console.log(color); //SHOW RANDOM HEX COLOR
-         $('.hover-mask').css({background: [randomcolor]})
-       });
 
 
 

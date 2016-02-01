@@ -124,14 +124,17 @@ header,
 	height: 650px;
 }
 
+.projects {
+	padding: 25px 10px 10px;
+}
+
 .about,
-.projects,
 .blog,
 .contact {
 	padding: 70px 10px 10px;
 }
 
-/* Nav Bar -------> */
+/* NAV BAR -------> */
 nav {
 	padding: 10px .5% 10px .5%;
 	background: white;
@@ -163,7 +166,7 @@ li:nth-last-child(-n+3) {
 	float: right;
 }
 
-/* Header -------> */
+/* HEADER -------> */
 header {
 	padding: 100px 10px 175px 10px;
 	background: black;
@@ -172,7 +175,7 @@ header {
 	background-size: cover;
 }
 
-/* About Section -------> */
+/* ABOUT SECTION -------> */
 .about {
 	//background: white;
 	//background-image: url("../images/.jpg");
@@ -188,11 +191,13 @@ header {
 	display: block;
 }
 
+/*Puts picture behind personal info instead of video*/
 /*.description {
 	background: url("images/**PROFILE PIC**.mp4") center no-repeat;
 	background-size: 350px 490px;
 }*/
 
+/* Video attributes ---------> */
 #vid-background {
 		opacity: .5;
     position: fixed;
@@ -209,7 +214,7 @@ header {
     background-size: cover;
 }
 
-/* Projects Section -------> */
+/* PROJECTS SECTION -------> */
 .projects {
 	background: grey;
 	background-image: url("../images/mcway_black_and_white.jpg");
@@ -331,8 +336,71 @@ header {
     transition:all 0.3s ease-out .2s;
 }
 
+/*Projects Preview --------> */
+#project-preview {
+    display: none;
+    position: relative;
+    max-width: 940px;
+    margin: 25px auto 0;
+    font-weight: 400;
+    opacity: 0;
+    letter-spacing: 0.02em;
+    overflow: visible !important;
+  	padding: 20px;
+  	background: rgb(34,34,34); /* for IE */
+  	background: rgba(34,34,34,0.75);
+}
 
-/* Blog Section -------> */
+.close-preview{
+    position: absolute;
+    padding:0 5px;
+    right: 0px;
+    top:-5px;
+    font-size: 60px;
+    line-height: 30px;
+    cursor: pointer;
+    color: #82F939;
+}
+
+#project-preview p{
+    margin-bottom:20px;
+}
+
+#project-title{
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    word-spacing: 0.15em;
+}
+
+#project-preview{
+	opacity: 1 !important;
+}
+
+#project-preview h1, 
+#project-preview p {
+    color: #82F939;
+    font-size: 1.2em;
+}
+
+.project-image {
+	width: 675px;
+	height: 380px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+
+/* BLOG SECTION -------> */
 .blog {
 	background: grey;
 	background-image: url("../images/bubble_gum.jpg");
@@ -340,7 +408,7 @@ header {
 	background-size: cover;
 }
 
-/* Contact Section -------> */
+/* CONTACT SECTION -------> */
 .contact {
 	background: tomato;
 	background-image: url("../images/mcway_black_and_white.jpg");
@@ -348,7 +416,7 @@ header {
 	background-size: cover;
 }
 
-/* Footer -------> */
+/* FOOTER -------> */
 footer {
 	height: 75px;
 	padding: 5px 10px;
@@ -362,7 +430,7 @@ footer {
 /* iPhone -------> */
 @media only screen and (max-device-width : 480px) {
 	p {
-		font-size: 1.5em;
+		font-size: 1.3em;
 	}
 	
 	header,
