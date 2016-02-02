@@ -22,6 +22,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Advent+Pro' rel='stylesheet' type='text/css'>
 
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="stylesheets/font-awesome.min.css"> -->
 
@@ -74,7 +76,7 @@
 
               <div class="description">
 
-                <h1>About</h1>
+                <h1 class="section-heading">About</h1>
 
                 <br>
                 <p>I'm a Software Developer living in the Bay Area <span style="font-size: .5em">(relocation ok)</span></p>
@@ -100,12 +102,11 @@
               <center>
 
             <div id="project-preview"> 
-        <!-- JS function adds OPEN .class changes .container opacity -->
+
           <span class="close-preview">&times;</span>
         
           <div id="project-image"></div>
           
-            <!-- <h1 id="project-title"></h1> -->        
           <div id="project-content"></div>
         
         </div>
@@ -114,7 +115,7 @@
 
                 <div class="container">
                 <br><br><br>
-                       <h1> Projects </h1>
+                       <h1 class="section-heading"> Projects </h1>
                 <br>      
 
                   <div id="projects-container" style="visibility: visible; position: relative; height: 1656px; width: 1160px;" >
@@ -203,7 +204,7 @@
 
               <center>
 
-                <h1 id="blog-title">Blogs</h1>
+                <h1 class="section-heading" id="blog-title">Blogs</h1>
 
                 <p id="comming-soon"> Coming soonish</p>
 
@@ -217,7 +218,7 @@
 
               <center>
 
-                <h1>Contact Me</h1>
+                <h1 class="section-heading">Contact Me</h1>
 
     <section id="contact" class="add-padding">
     
@@ -229,13 +230,13 @@
           
 <!--             <h1 class="big-text">Contact Me</h1>
  -->            
-            <p>Software Engineer<br>Experienced Manager | Educater | Sales</p>
+            <p>Software Engineer with a background in Management, Sales, and Education</p><br>
 
-            <p>Sinatra, Ruby on Rails, JavaScript, jQuery, AJAX, HTML5, CSS3, SASS, SQL, APIs, Git, GitHub, Heroku</p>
+            <p style="font-size: 1.5em;">Sinatra, Ruby on Rails, JavaScript, jQuery, AJAX, HTML5, CSS3, SASS, SQL, APIs, Git, GitHub, Heroku, AWS, Elastic Beanstalk, RDS, EC2, S3</p><br>
 
-            <p>Please feel free to contact me with questions, comments, or collaborations.</p>
+            <p style="font-size: 1.5em;">Please feel free to contact me with questions, comments, or collaborations.</p>
 
-            <p>For more information, <a href="http://github.com/jessc" target="_blank">visit github.</a></p>
+        <!--     <p>For more information, <a href="http://github.com/jessc" target="_blank">visit github.</a></p> -->
           
           </div>
         
@@ -308,13 +309,11 @@
       <script type="text/javascript" src="javascripts/libs/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
       <script src="javascripts/scripts.js"></script>
-
+      <script src="javascripts/contact.js"></script>
 
 
       <script type="text/javascript">
-
     // $(document).ready(function(){alert("This is a JQuery test!")});
-    
     (function($) {
       $(document).ready(function(){
         $(window).scroll(function(){
@@ -326,12 +325,9 @@
         });
       });
     })(jQuery);
-    
     $("header p").hide().fadeIn(2000);
-
-
-
     </script>
+
 
   </body>
 
