@@ -553,7 +553,7 @@ header {
     transition:border-color .3s ease-in;
 }
 
-/*#contact-form .error-message {
+#contact-form .error-message {
     padding:5px 0;
     position:absolute;
     top:-30px;
@@ -562,14 +562,14 @@ header {
     font-weight:300;
     color:#ff0000;
     z-index:10;
-}*/
+}
 
-/*#contact-form .error-message:before {
+#contact-form .error-message:before {
     content:"\00d7";
     font-size: 21px;
     line-height: 21px;
     margin-right: 5px;
-}*/
+}
 
 
 @media (min-width: 768px)
@@ -607,32 +607,20 @@ header {
 #contact-button:hover {
     opacity: 0.8;
 }
-/*.fa-envelope:before {
-    content: "\f0e0";
-}
-.fa-user:before {
-    content: "\f007";
-}*/
 
 .fa {
 	font: normal normal normal 14px/1 FontAwesome;
 }
 
-/*.add-padding {
+.add-padding {
     padding-top: 50px;
     padding-bottom: 50px;
-}*/
+}
 
 /*section {
     display: block;
 }*/
-/*body {
-    font-family: Raleway, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: #6d6d6d;
-    overflow-x: hidden;
-}*/
+
 
 /* FOOTER -------> */
 footer {
