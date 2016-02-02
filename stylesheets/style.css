@@ -23,13 +23,6 @@ html, body {
   //mix-blend-mode: exclusion;
 }
 
-#comming-soon {
-  color: white;
-  font-size: 2em;
-  mix-blend-mode: difference;
-}
-
-
 /* Paragraphs -------> */
 p {
 	padding: 0% 4% 0% 4%;
@@ -406,6 +399,17 @@ header {
 	background-image: url("../images/bubble_gum.jpg");
 	background-attachment: fixed;
 	background-size: cover;
+}
+
+#comming-soon {
+  color: white;
+  font-size: 1.7em;
+  //mix-blend-mode: difference;
+}
+
+#comming-soon a {
+  color: white;
+  mix-blend-mode: difference;
 }
 
 /* CONTACT SECTION -------> */
