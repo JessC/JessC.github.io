@@ -7,6 +7,7 @@ html, body {
     font-family: 'Advent Pro', garamond, georgia, arial;
 }
 
+
 /* Headings -------> */
 .section-heading {
 	padding: 10px 0px 0px;
@@ -629,6 +630,38 @@ header {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+
+
+#resume-popup {
+    display: none;
+    position: relative;
+    max-width: 940px;
+    margin: 25px auto 0;
+    font-weight: 400;
+    opacity: 0;
+    letter-spacing: 0.02em;
+    overflow: visible !important;
+    padding: 20px;
+    background: rgb(34,34,34); /* for IE */
+    background: rgba(34,34,34,0.75);
+}
+
+#resume-preview{
+    opacity: 1 !important;
+}
+
+#resume-preview h1, 
+#resume-preview p {
+    color: #82F939;
+    font-size: 1.2em;
+}
+
+.resume-image {
+    width: 675px;
+    height: 380px;
+}
+
 
 /*section {
     display: block;

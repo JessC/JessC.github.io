@@ -25,6 +25,8 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 
+    <link rel="stylesheet" href="stylesheets/resume-popup.css">
+
     <link href='https://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
 
     <link href='https://fonts.googleapis.com/css?family=Advent+Pro' rel='stylesheet' type='text/css'>
@@ -227,6 +229,16 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 
               <center>
 
+          <div id="resume-preview"> 
+
+          <span class="close-preview">&times;</span>
+        
+          <div id="resume-image"></div>
+        
+        </div>
+
+<div class="container">
+
                 <h1 class="section-heading">Contact Me</h1>
 
     <section id="contact" class="add-padding">
@@ -245,10 +257,19 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 
             <p style="font-size: 1.5em;">Please feel free to contact me with questions, comments, or collaborations.</p>
 
-        <!--     <p>For more information, <a href="http://github.com/jessc" target="_blank">visit github.</a></p> -->
-          
-          </div>
-        
+<!-- LINK TO OPEN RESUME -->
+<!--       <p style="font-size: 1.3em;">For more information <a class="resume-link">see resume</a></p> -->
+
+<!--           <article  style="position: absolute; top: 0px; left: 0px;">
+
+        <div class="sr-only resume-description">
+
+          <img class="resume-image" src="images/resume.jpg">
+
+        </div>
+      </article> -->
+
+    </div>    
           <!--======Contact Form ======-->
           <!-- ****BASIC FORM FOR TESTING**** -->
 <!--           <form action="mail.php" method="POST">
@@ -296,7 +317,7 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
     
     </section>
 
-
+</div>
            </div>
 
          </center>
@@ -317,6 +338,8 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
 
       <script type="text/javascript" src="javascripts/libs/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <!-- Magnific Popup core JS file -->
+<script src="javascripts/libs/jquery.magnific-popup.js"></script>
       <script src="javascripts/scripts.js"></script>
       <script src="javascripts/contact.js"></script>
 
@@ -336,7 +359,6 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
     })(jQuery);
     $("header p").hide().fadeIn(2000);
     </script>
-
 
   </body>
 
