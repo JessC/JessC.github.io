@@ -632,8 +632,7 @@ header {
 }
 
 
-
-#resume-popup {
+/*#resume-popup {
     display: none;
     position: relative;
     max-width: 940px;
@@ -643,11 +642,10 @@ header {
     letter-spacing: 0.02em;
     overflow: visible !important;
     padding: 20px;
-    background: rgb(34,34,34); /* for IE */
     background: rgba(34,34,34,0.75);
 }
-
-#resume-preview{
+*/
+/*#resume-preview{
     opacity: 1 !important;
 }
 
@@ -660,7 +658,7 @@ header {
 .resume-image {
     width: 675px;
     height: 380px;
-}
+}*/
 
 
 /*section {
