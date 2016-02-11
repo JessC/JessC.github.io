@@ -57,46 +57,46 @@ $(window).load(function(){
 	})
 //*******************************************************
 //FINISH LATER IF YOU WANT TO ADD RESUME
-    $('.resume-link').click(function(e){
-    	e.preventDefault();
+ //    $('.resume-link').click(function(e){
+ //    	e.preventDefault();
 
-    	//     	var elem = $(this),
-    	// image = elem.find('.resume-image').html(),
-    	// descr = elem.find('.resume-description').html(),
-    	// elemDataCont = elem.find('.resume-description');
+ //    	//     	var elem = $(this),
+ //    	// image = elem.find('.resume-image').html(),
+ //    	// descr = elem.find('.resume-description').html(),
+ //    	// elemDataCont = elem.find('.resume-description');
 
-    	$('#resume-image').html('.resume-image');
-    	openResume();
+ //    	$('#resume-image').html('.resume-image');
+ //    	openResume();
 
-    });
+ //    });
 
-    function openResume(){
+ //    function openResume(){
 
-		$('#resume-preview').addClass('open');    //Makes prject div appear
-		$('.container').animate({'opacity':0},300);//Makes projects disappear
+	// 	$('#resume-preview').addClass('open');    //Makes prject div appear
+	// 	$('.container').animate({'opacity':0},300);//Makes projects disappear
 		
-		setTimeout(function(){
-			$('#resume-preview').slideDown();
-			$('.container').slideUp();	
-		},300);
-	}
+	// 	setTimeout(function(){
+	// 		$('#resume-preview').slideDown();
+	// 		$('.container').slideUp();	
+	// 	},300);
+	// }
 	
-	function closeProject(){
+	// function closeProject(){
 
-		$('#resume-preview').removeClass('open');
-		$('#resume-preview').animate({'opacity':0},300);
+	// 	$('#resume-preview').removeClass('open');
+	// 	$('#resume-preview').animate({'opacity':0},300);
 		
-		setTimeout(function(){
-			$('.container').slideDown();
-			$('#resume-preview').slideUp();
+	// 	setTimeout(function(){
+	// 		$('.container').slideDown();
+	// 		$('#resume-preview').slideUp();
 
-			$('.container').animate({'opacity':1},300);	
-		},300);
+	// 		$('.container').animate({'opacity':1},300);	
+	// 	},300);
 		
-	}
+	// }
 
-	$('.close-preview').click(function(){
-		closeProject();
-	})
+	// $('.close-preview').click(function(){
+	// 	closeProject();
+	// })
 
 });
