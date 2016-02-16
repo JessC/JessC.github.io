@@ -219,12 +219,13 @@ header {
 #projects-container {
     margin:0 auto;
     visibility: hidden;
+    margin: 0px auto;
 }
 
 #projects-container .indiv-project{
     display: block;
     position: relative;
-    margin: 0;
+    //margin: 0;
     width: 370px;
     margin-bottom: 25px;
     -webkit-transform: scale(1);
@@ -249,6 +250,11 @@ header {
 	-webkit-backface-visibility: hidden;
 }
 
+#projects-container-inner {
+    margin: 0 auto;
+    width: 950px;
+}
+
 .indiv-project:hover{
 	cursor: pointer;
 }
@@ -262,24 +268,11 @@ header {
 }
 
 .indiv-project:hover img {
+    height: 100%;
     -webkit-transform: scale(1.6);
     transform: scale(1.6);
     -webkit-transition: -webkit-transform 4s ease-in;
     transition: transform 4s linear;
-}
-
-.indiv-project .hover-mask {
-    position: absolute;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    //background: #AE76B7;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
 }
 
 .indiv-project:hover .hover-mask {
@@ -308,8 +301,12 @@ header {
     opacity: 1;
 }
 
+.indiv-project{ 
+margin-right: 50px;
+margin-left: 50px;
+}
+
 .indiv-project .hover-mask p {
-    margin: 0;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -320,6 +317,20 @@ header {
     transform: translateY(100px);
     -webkit-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
+}
+
+.indiv-project .hover-mask {
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #AE76B7;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .indiv-project:hover .hover-mask p {
