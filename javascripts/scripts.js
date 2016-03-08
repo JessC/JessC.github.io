@@ -52,8 +52,20 @@ $(window).load(function(){
 		
 	}
 
+//HIDE PROJECT DIV IF CLICK OUTSIDE PROJECT
+// function hideDiv(e) {
+//     if (!$(e.target).is('#project-preview') && !$(e.target).parents().is('#project-preview')) {
+//         closeProject();
+//         // $('#project-preview').hide();
+//     }
+// }
+// $(document).on('click', function(e) {
+//     hideDiv(e);
+// });
+
 	$('.close-preview').click(function(){
 		closeProject();
+
 	})
 //*******************************************************
 //FINISH LATER IF YOU WANT TO ADD RESUME
