@@ -279,21 +279,26 @@
 
       <center>
 
-        <h1 class="section-heading" id="blog-title">Gum Wall</h1>
 
-        <p id="comming-soon"> Under Construction (3/17) <br>
+        <div id="gumballmachine-outside">
+          <div id="gumballmachine-inside">
+                    <h1 class="section-heading" id="blog-title">Gum Wall</h1>
+
+        <p id="comming-soon"> Under Construction (3/23) <br>
           <a href="http://jessc.github.io/Blog.html">(old blog page here)</a>
         </p>
 
-<img class="gum" id="bluegum" src="images/blue_gum.png">
+<div id="gum-packet">
+<div class="gum-wrapper"><img class="gum" id="bluegum" src="images/blue_gum.png"></div>
 
-<img class="gum" id="pinkgum" src="images/pink_gum.png">
+<div class="gum-wrapper"><img class="gum" id="pinkgum" src="images/pink_gum.png"></div>
 
-<img class="gum" id="whitegum" src="images/white_gum.png">
+<div class="gum-wrapper"><img class="gum" id="whitegum" src="images/white_gum.png"></div>
 
-<img class="gum" id="yellowgum" src="images/yellow_gum.png">
+<div class="gum-wrapper"><img class="gum" id="yellowgum" src="images/yellow_gum.png"></div>
 
-
+</div>
+</div>
 
     </center>
 
@@ -419,7 +424,7 @@
     <script src="javascripts/scripts.js"></script>
     <script src="javascripts/contact.js"></script>
 
-
+    <!-- CONTROLS NAV BAR FADE ON SCROLL -->
     <script type="text/javascript">
     // $(document).ready(function(){alert("This is a JQuery test!")});
     (function($) {
@@ -434,6 +439,22 @@
       });
     })(jQuery);
     $("header p").hide().fadeIn(2000);
+    </script>
+
+    <!-- PLACES GUM PIECES IN RANDOM PLACES ON WALL -->
+    <script>
+    $.each($('.gum'), function() {
+      $(this).css({
+        position: 'absolute', 
+        // change to fixed after adjusting z-index on other elements
+        top:  generateRandom() + 20 + 'px',
+        left: generateRandom() + 5 + 'px',
+      });
+    });
+
+      function generateRandom() {
+  return Math.floor(Math.random() * 200);
+};
     </script>
 
   </body>

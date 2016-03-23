@@ -1,4 +1,5 @@
-
+/*div { border: dotted 1px pink; }
+*/
 /* Global -------> */
 html, body {
     margin: 0;
@@ -217,9 +218,8 @@ header {
 }
 
 #projects-container {
-    margin:0 auto;
+    margin: 0 auto;
     visibility: hidden;
-    margin: 0px auto;
 }
 
 #projects-container .indiv-project{
@@ -424,6 +424,30 @@ margin-left: 50px;
   mix-blend-mode: difference;
 }
 
+
+.gum {
+    max-height: 100px;
+    max-width: 100px;
+    padding: 25px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+#gumballmachine-inside {
+position: absolute;
+max-width: 100%;
+height: 700px;
+}
+
+
+#gumballmachine-inside {
+position: relative;
+max-width: 95%;
+height: 699px;
+}
+
 /* CONTACT SECTION -------> */
 .contact {
 	background: grey;
@@ -432,6 +456,19 @@ margin-left: 50px;
 	background-size: cover;
 }
 
+#gum-packet {
+    width: 90%;
+    height: 400px;
+}
+
+.gum-wrapper {
+    float: left;
+    width: 270px;
+    height: 375px;
+    position: relative;
+
+
+}
 /*.contact-container .text-center{
     padding-right: 15px;
     padding-left: 15px;
