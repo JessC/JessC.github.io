@@ -116,7 +116,7 @@ footer {
 header,
 .projects,
 .contact {
-	height: 650px;
+	height: 805px;
 }
 
 .projects {
@@ -225,9 +225,8 @@ header {
 #projects-container .indiv-project{
     display: block;
     position: relative;
-    //margin: 0;
     width: 370px;
-    margin-bottom: 25px;
+    margin: 35px;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -346,7 +345,7 @@ margin-left: 50px;
     display: none;
     position: relative;
     max-width: 940px;
-    margin: 25px auto 0;
+    margin: 75px auto 0;
     font-weight: 400;
     opacity: 0;
     letter-spacing: 0.02em;
@@ -429,6 +428,7 @@ margin-left: 50px;
     max-height: 100px;
     max-width: 100px;
     padding: 25px;
+    position: fixed;
 }
 
 ul li {
@@ -436,14 +436,12 @@ ul li {
 }
 
 #gumballmachine-inside {
-position: absolute;
 max-width: 100%;
 height: 700px;
 }
 
 
 #gumballmachine-inside {
-position: relative;
 max-width: 95%;
 height: 699px;
 }
@@ -675,7 +673,7 @@ height: 699px;
 }
 
 .add-padding {
-    padding-top: 50px;
+    padding-top: 75px;
     padding-bottom: 50px;
 }
 
