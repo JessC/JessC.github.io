@@ -460,7 +460,8 @@ height: 699px;
 }
 
 .gum-wrapper {
-    float: left;
+    //float: left;
+    display: inline-block;
     width: 270px;
     height: 375px;
     position: relative;
@@ -817,3 +818,35 @@ footer {
 		padding-left: 10%;
 	}
 }
+
+
+
+    /* Outer div - needs to be relative so we can use absolute positioning */
+    #showInfo {
+        position: relative;
+    }
+    /* When clicking outer div, make inner div visible */
+    #showInfo:active #info { display: block; }
+    /* And hold by staying visible on hover */
+ 
+    /* General settings for popup */
+    #info {
+        //position: absolute;
+        top: -5;
+        display: none;
+        z-index: 100;
+        background-color: white;
+        box-shadow: 5px 5px 2px #aaa;
+        border: 1px solid grey;
+        padding: 8px;
+        width: 200px;
+        height: 200px;
+    }
+    /* If we want clicking on the popup to close, use this */
+    #info:active {
+ /* Doesn't work because DCEvent is :active as well */
+        height: 0px;
+        width: 0px;
+        left: -1000px;
+        top: -1000px;
+    }
