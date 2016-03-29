@@ -465,8 +465,16 @@ height: 699px;
     width: 270px;
     height: 375px;
     position: relative;
+}
 
 
+.info-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
 }
 /*.contact-container .text-center{
     padding-right: 15px;
@@ -831,7 +839,7 @@ footer {
  
     /* General settings for popup */
     #info {
-        //position: absolute;
+        position: absolute;
         top: -5;
         display: none;
         z-index: 100;

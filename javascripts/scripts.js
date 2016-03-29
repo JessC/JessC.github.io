@@ -63,10 +63,20 @@ $(window).load(function(){
 //     hideDiv(e);
 // });
 
-	$('.close-preview').click(function(){
-		closeProject();
 
-	})
+$('.open-popup-link').magnificPopup({
+  type:'inline',
+  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+});
+
+$('.blowbubble').magnificPopup({
+  items: {
+      src: '#yellowgum',
+      type: 'inline'
+  },
+  closeBtnInside: true
+});
+
 //*******************************************************
 //FINISH LATER IF YOU WANT TO ADD RESUME
  //    $('.resume-link').click(function(e){
