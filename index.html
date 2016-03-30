@@ -12,16 +12,10 @@
     window.location.protocol = "https";
   </script>
 
-  <script>
-    $(function() {
-    $("#gumpieces").load("/gumpieces.html");
-    $("#faqs").load("/faqs.html");
-    $("#about").load("/aboutthispage.html"); 
-      });
-  </script>
 
 
-  <meta charset=utf-8>
+
+  <meta charset="UTF-8">
   <meta name="keywords" content="web development, programming, tech, html5, software engineering, css3, tech blog, ruby on rails, ruby, sinatra, rails, travel, korea, html, ajax, css, bay area, jquery"/>
   <meta name="jessc" content="software engineer personal site">
   
@@ -49,13 +43,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="stylesheets/font-awesome.min.css"> -->
 
-    <script>
-    $('.open-popup-link').magnificPopup({
-  type:'inline',
-  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-});
-    </script>
-
+  <script>
+    $(function() {
+    $("#gumpieces").load("/gumpieces.html");
+    $("#faqs").load("/faqs.html");
+    $("#about").load("/aboutthispage.html"); 
+      });
+  </script>
   </head>
 
   <body>
@@ -289,45 +283,48 @@
 <!-- ==============================================
     BLOG
 ============================================== -->
-    <div class="blog" id="blog" data-role="page">
+<div class="blog" id="blog">
 
-<!-- ******************************************
- -->
- <div id="test-popup" class="white-popup mfp-hide">
-  Popup content
-</div>
-
-
-<div id="gumpieces">
-
-</div>
 
       <center>
+
+<div class="info-popup mfp-hide" id="bluepiece">FAQS FROM RECRUITERS
+  <div id="gumpieces">
+    </div>
+</div>
+
+<div class="info-popup mfp-hide" id="yellowpiece">
+ABOUT THIS HERE PAGE
+</div>
+
+<div class="info-popup mfp-hide" id="pinkpiece">
+  TECH RELATED ACRONYMS
+</div>
 
 <div id="gumballmachine-outside">
           <div id="gumballmachine-inside">
                     <h1  class="section-heading" id="blog-title"><img style="height: 1.3em; " src="images/gum-wall.png"></h1>
 
-        <p id="comming-soon"> Under Construction (3/23) <br>
+        <p id="comming-soon"> Under Construction (3/29) <br>
           <a href="http://jessc.github.io/Blog.html">(old blog page here)</a>
         </p>
 
 <div id="gum-packet">
 
 <!-- FAQ -->
-<div class="gum-wrapper"><img class="gum" id="bluegum" src="images/blue_gum.png"></div>
+<div class="gum-wrapper"><img class="gum" id="bluebubble" src="images/blue_gum.png"></div>
 <!-- ABOUT -->
-<div class="gum-wrapper"><img class="gum blowbubble" id="yellowgum" src="images/yellow_gum.png"></div>
+<div class="gum-wrapper"><img class="gum" id="yellowbubble" src="images/yellow_gum.png"></div>
 <!-- ACRONYM -->
 <div class="gum-wrapper">
-    <img src="images/pink_gum.png" class="gum" id="pinkgum"/></a>
+    <img src="images/pink_gum.png" class="gum" id="pinkbubble"/></a>
 </div>
 <!-- RESUME -->
 <div class="gum-wrapper">
   <a href="https://www.dropbox.com/sh/thd3kbyigli97o4/AACZSLVaqTbPaYZam7BuRNH6a?dl=0" target="_blank"/>
   <img class="gum" id="whitegum" src="images/white_gum.png"></a>
 </div>
-<div class="info-popup mfp-hide" id='purplegum'>SOME HIDDEN SHIT</div>'
+
 </div>
 </div>
 

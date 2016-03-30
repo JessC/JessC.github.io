@@ -473,8 +473,9 @@ height: 699px;
   background: #FFF;
   padding: 20px;
   width: auto;
-  max-width: 500px;
+  max-width: 800px;
   margin: 20px auto;
+  border-radius: 12px;
 }
 /*.contact-container .text-center{
     padding-right: 15px;

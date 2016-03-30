@@ -64,19 +64,31 @@ $(window).load(function(){
 // });
 
 
-$('.open-popup-link').magnificPopup({
-  type:'inline',
-  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-});
 
-$('.blowbubble').magnificPopup({
+
+$('#bluebubble').magnificPopup({
   items: {
-      src: '#yellowgum',
+      src: '#bluepiece',
       type: 'inline'
   },
   closeBtnInside: true
 });
 
+$('#yellowbubble').magnificPopup({
+  items: {
+      src: '#yellowpiece',
+      type: 'inline'
+  },
+  closeBtnInside: true
+});
+
+$('#pinkbubble').magnificPopup({
+  items: {
+      src: '#pinkpiece',
+      type: 'inline'
+  },
+  closeBtnInside: true
+});
 //*******************************************************
 //FINISH LATER IF YOU WANT TO ADD RESUME
  //    $('.resume-link').click(function(e){
