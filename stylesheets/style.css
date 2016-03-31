@@ -446,6 +446,25 @@ max-width: 95%;
 height: 699px;
 }
 
+#answer, #question {
+    padding: 5px;
+    text-align: center;
+    //background-color: #e5eecc;
+    //border: solid 1px #c3c3c3;
+}
+
+#answer {
+    font-size: .5em;
+    padding: 10px;
+    display: none;
+}
+
+#faqs h4    { cursor:pointer; }
+//#faqs h4.active { color:#d74646; }
+#faqs div { height:0; overflow:hidden; position:relative; }
+#faqs div p { padding:0; margin-bottom:5px; } 
+
+
 /* CONTACT SECTION -------> */
 .contact {
 	background: grey;

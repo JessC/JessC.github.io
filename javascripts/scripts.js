@@ -52,6 +52,13 @@ $(window).load(function(){
 		
 	}
 
+	$('.close-preview').click(function(){
+		closeProject();
+
+	})
+
+
+
 //HIDE PROJECT DIV IF CLICK OUTSIDE PROJECT
 // function hideDiv(e) {
 //     if (!$(e.target).is('#project-preview') && !$(e.target).parents().is('#project-preview')) {
@@ -63,32 +70,37 @@ $(window).load(function(){
 //     hideDiv(e);
 // });
 
-
-
-
-$('#bluebubble').magnificPopup({
-  items: {
-      src: '#bluepiece',
-      type: 'inline'
-  },
-  closeBtnInside: true
+$('#yellowbubble').magnificPopup({
+	items: {
+		src: '#yellowpiece',
+		type: 'inline'
+	},
+	closeBtnInside: true
 });
 
-$('#yellowbubble').magnificPopup({
-  items: {
-      src: '#yellowpiece',
-      type: 'inline'
-  },
-  closeBtnInside: true
+$('#bluebubble').magnificPopup({
+	items: {
+		src: '#bluepiece',
+		type: 'inline'
+	},
+	closeBtnInside: true
 });
 
 $('#pinkbubble').magnificPopup({
-  items: {
-      src: '#pinkpiece',
-      type: 'inline'
-  },
-  closeBtnInside: true
+	items: {
+		src: '#pinkpiece',
+		type: 'inline'
+	},
+	closeBtnInside: true
 });
+
+$("#question").click(function(){
+	$("#answer").slideToggle("fast");
+});
+
+function toggleFAQ(obj) {
+  obj.style.display = (obj.style.display == "none") ? "" : "none";
+}
 //*******************************************************
 //FINISH LATER IF YOU WANT TO ADD RESUME
  //    $('.resume-link').click(function(e){
@@ -108,7 +120,7 @@ $('#pinkbubble').magnificPopup({
 
 	// 	$('#resume-preview').addClass('open');    //Makes prject div appear
 	// 	$('.container').animate({'opacity':0},300);//Makes projects disappear
-		
+
 	// 	setTimeout(function(){
 	// 		$('#resume-preview').slideDown();
 	// 		$('.container').slideUp();	
@@ -119,14 +131,14 @@ $('#pinkbubble').magnificPopup({
 
 	// 	$('#resume-preview').removeClass('open');
 	// 	$('#resume-preview').animate({'opacity':0},300);
-		
+
 	// 	setTimeout(function(){
 	// 		$('.container').slideDown();
 	// 		$('#resume-preview').slideUp();
 
 	// 		$('.container').animate({'opacity':1},300);	
 	// 	},300);
-		
+
 	// }
 
 	// $('.close-preview').click(function(){
