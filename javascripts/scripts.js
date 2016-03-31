@@ -94,13 +94,26 @@ $('#pinkbubble').magnificPopup({
 	closeBtnInside: true
 });
 
-$("#question").click(function(){
-	$("#answer").slideToggle("fast");
-});
+// $("#question").click(function(){
+// 	$("#answer").slideToggle("fast");
+// });
 
-function toggleFAQ(obj) {
-  obj.style.display = (obj.style.display == "none") ? "" : "none";
-}
+$(document).ready(function() {
+    $('#faqs h4').each(function() {
+        var tis = $(this), 
+            state = false, 
+            answer = tis.next('div')
+                        .hide()
+                        .css('height','auto')
+                        .slideUp();
+
+            tis.click(function() {
+                state = !state;
+                answer.slideToggle(state);
+                tis.toggleClass('active',state);
+            });
+    });
+});
 //*******************************************************
 //FINISH LATER IF YOU WANT TO ADD RESUME
  //    $('.resume-link').click(function(e){
