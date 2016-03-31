@@ -459,10 +459,10 @@ height: 699px;
     display: none;
 }
 
-#faqs h4    { cursor:pointer; }
-//#faqs h4.active { color:#d74646; }
-#faqs div { height:0; overflow:hidden; position:relative; }
-#faqs div p { padding:0; margin-bottom:5px; } 
+#faqs-container h4    { cursor:pointer; }
+//#faqs-container h4.active { color:#d74646; }
+#faqs-container div { height:0; overflow:hidden; position:relative; }
+#faqs-container div p { padding:0; margin-bottom:5px; } 
 
 
 /* CONTACT SECTION -------> */

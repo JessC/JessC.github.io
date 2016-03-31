@@ -99,7 +99,7 @@ $('#pinkbubble').magnificPopup({
 // });
 
 $(document).ready(function() {
-    $('#faqs h4').each(function() {
+    $('#faqs-container h4').each(function() {
         var tis = $(this), 
             state = false, 
             answer = tis.next('div')
