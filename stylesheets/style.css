@@ -461,7 +461,7 @@ height: 699px;
 }
 
 #faqs-container h4    { cursor:pointer; }
-//#faqs-container h4.active { color:#d74646; }
+#faqs-container h4.active { color:#0000ff; }
 #faqs-container div { height:0; overflow:hidden; position:relative; }
 #faqs-container div p { padding:0; margin-bottom:5px; } 
 
