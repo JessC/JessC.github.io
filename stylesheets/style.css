@@ -156,10 +156,10 @@ nav li {
 	padding: .5% 2% 1.5% 2%;
 	}
 
-li:nth-last-child(-n+3) {
+/*li:nth-last-child(-n+3) {
 	color: red;
 	float: right;
-}
+}*/
 
 /* HEADER -------> */
 header {
@@ -454,11 +454,14 @@ height: 699px;
     //border: solid 1px #c3c3c3;
 }
 
-#answer p {
+#answer {
     font-size: .5em;
     //padding: 10px;
     display: none;
-    color: grey;
+}
+
+#anwser p {
+  color: grey;
 }
 
 #faqs-container h4    { cursor:pointer; }
