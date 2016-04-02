@@ -458,10 +458,11 @@ height: 699px;
     font-size: .5em;
     //padding: 10px;
     display: none;
+    color: grey;
 }
 
 #faqs-container h4    { cursor:pointer; }
-#faqs-container h4.active { color:#0000ff; }
+#faqs-container h4.active { color: tomato; }
 #faqs-container div { height:0; overflow:hidden; position:relative; }
 #faqs-container div p { padding:0; margin-bottom:5px; } 
 
