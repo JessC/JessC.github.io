@@ -156,10 +156,10 @@ nav li {
 	padding: .5% 2% 1.5% 2%;
 	}
 
-/*li:nth-last-child(-n+3) {
-	color: red;
+li:nth-last-child(-n+3) {
+	//color: red;
 	float: right;
-}*/
+}
 
 /* HEADER -------> */
 header {
