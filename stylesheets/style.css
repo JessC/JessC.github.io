@@ -454,7 +454,7 @@ height: 699px;
     //border: solid 1px #c3c3c3;
 }
 
-#answer {
+#answer p {
     font-size: .5em;
     //padding: 10px;
     display: none;
