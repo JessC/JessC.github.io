@@ -98,7 +98,7 @@ $('#pinkbubble').magnificPopup({
 // 	$("#answer").slideToggle("fast");
 // });
 
-$(document).ready(function() {
+
     $('#faqs-container h3').each(function() {
         var tis = $(this), 
             state = false, 
@@ -113,7 +113,6 @@ $(document).ready(function() {
                 tis.toggleClass('active',state);
             });
     });
-});
 //*******************************************************
 //FINISH LATER IF YOU WANT TO ADD RESUME
  //    $('.resume-link').click(function(e){
