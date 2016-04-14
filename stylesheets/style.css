@@ -61,7 +61,7 @@ a {
 }
 
 a:hover {
-	color: #82F939;
+	color: grey;
 	text-decoration: none;
 }
 
@@ -81,7 +81,7 @@ a:hover {
 /* Home & Footer Links -------> */
 li:first-child a,
 footer a {
-	color: #82F939;
+	color: grey;
 }
 
 li:first-child a:hover,
