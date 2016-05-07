@@ -13,11 +13,11 @@ $(window).load(function(){
     $('#more').hover(
 				function() {
     		$('#about').css({background: 'none'})
-    },
+        },
     		function() {
     		$('#about').css({background: 'grey'})
-    }
-    );
+        }
+     );
 
     $('.indiv-project').click(function(e){
     	e.preventDefault();
