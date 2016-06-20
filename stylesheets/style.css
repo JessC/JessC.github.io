@@ -132,9 +132,9 @@ header,
 
 /* NAV BAR -------> */
 nav {
-	padding: 10px .5% 10px .5%;
-	background: white;
-	background-image: url("../images/paper.jpg");
+	//padding: 10px .5% 10px .5%;
+	background: lightgrey;
+	//background-image: url("../images/paper.jpg");
 	position: fixed;
 	z-index: 11;
 	border-bottom: solid 1px;
@@ -752,8 +752,8 @@ footer {
 	height: 75px;
 	padding: 5px 10px;
 	border-top: solid 1px;
-	background: grey;
-	background-image: url("../images/paper.jpg");
+	background: lightgrey;
+	//background-image: url("../images/paper.jpg");
 }
 
 
