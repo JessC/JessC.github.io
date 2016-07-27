@@ -220,7 +220,15 @@ header {
 
 #projects-container {
     margin: 0 auto;
-    visibility: hidden;
+/*  visibility: hidden;*/  
+    visibility: visible;
+    position: relative;
+    width: 1160px;
+    height: 600px;
+    /* overflow: hidden; */
+    /* position: fixed; */
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #projects-container .indiv-project{
