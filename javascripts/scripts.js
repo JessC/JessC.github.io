@@ -15,7 +15,7 @@ $(window).load(function(){
     		$('#about').css({background: 'none'})
         },
     		function() {
-    		$('#about').css({background: 'grey'})
+    		$('#about').css({background: 'black'})
         }
      );
 
