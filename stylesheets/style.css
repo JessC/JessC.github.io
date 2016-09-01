@@ -134,6 +134,30 @@ header,
     padding: 70px 10px 10px;
 }
 
+.popup {
+    position: relative;
+    display: inline-block;
+}
+
+.popup .popuptxt {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #82f939;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60%;
+}
+
+.popup:hover .popuptxt {
+    visibility: visible;
+}
+
 /* NAV BAR -------> */
 nav {
 	//padding: 10px .5% 10px .5%;
