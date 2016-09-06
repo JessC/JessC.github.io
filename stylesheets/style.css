@@ -146,7 +146,7 @@ header,
     color: #82f939;
     text-align: center;
     padding: 5px 0;
-    border-radius: 6px;
+    border-radius: 0px 0px 8px 8px;
     position: absolute;
     z-index: 1;
     top: 100%;
