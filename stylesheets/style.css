@@ -124,11 +124,12 @@ header,
 	height: 805px;
 }
 
-.projects {
+//.projects {
     padding: 25px 10px 10px;
 }
 
 .about,
+.projects,
 .blog,
 .contact {
     padding: 70px 10px 10px;
