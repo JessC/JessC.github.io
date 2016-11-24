@@ -201,6 +201,25 @@ header {
 }
 
 /* ABOUT SECTION -------> */
+#nomobile {
+    height: 300px;
+    width: 600px;
+    background-color: rgba(0,0,0,0.70);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#whytext {
+    display: none;
+}
+
+#why:hover #whytext {
+    display: block;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+
 .about {
 	//background: white;
 	//background-image: url("../images/.jpg");
@@ -880,16 +899,13 @@ footer {
 
 /* Smaller Screens - 450px Breakpoint -------> */
 @media screen and (max-width : 450px) {
-
 	li:nth-last-child(-n+4) {
 		display: none;
 	}
-	
 	nav {
 		padding-left: 10%;
 	}
 }
-
 
 
     /* Outer div - needs to be relative so we can use absolute positioning */
