@@ -235,6 +235,25 @@ header {
 	display: block;
 }
 
+#scale {
+  display: block;
+  position: fixed;
+  height: 100px;
+  width: auto;
+  margin: auto; 
+  z-index: 11;   
+  background-color: tomato;
+}
+
+
+@media (min-width: 950px) 
+{
+  #scale
+   {
+     display: none;
+    }
+}
+
 /*Puts picture behind personal info instead of video*/
 /*.description {
 	background: url("images/**PROFILE PIC**.mp4") center no-repeat;
