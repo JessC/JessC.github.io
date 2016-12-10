@@ -232,6 +232,7 @@ header {
 	//background-image: url("../images/.jpg");
 	background-attachment: fixed;
 	background-size: cover;
+    overflow: auto;
 }
 
 #more-text {
