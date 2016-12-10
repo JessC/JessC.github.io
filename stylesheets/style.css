@@ -133,6 +133,7 @@ header,
 .blog,
 .contact {
     padding: 70px 10px 10px;
+    overflow: auto;
 }
 
 .popup {
@@ -224,7 +225,7 @@ header {
     display: block;
     padding: 25px;
     font-size: 1.5em;
-}
+} 
 
 
 .about {
@@ -232,7 +233,6 @@ header {
 	//background-image: url("../images/.jpg");
 	background-attachment: fixed;
 	background-size: cover;
-    overflow: auto;
 }
 
 #more-text {
