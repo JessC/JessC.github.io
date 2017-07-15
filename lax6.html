@@ -23,6 +23,8 @@
 
 <!-- <link rel="stylesheet" type="text/css" href="stylesheets/style.css"> -->
 
+
+
 <style>
 	  label {
   display: inline-block;
@@ -35,17 +37,37 @@
     outline: #e77600;
 }
 
-.btn:active {
+.zone-btn:active {
+	outline-color: none !important;
+	outline: none !important;
+
+}
+
+.zone-btn:focus {
+	outline-color: none !important;
+}
+
+.amz-btn:active {
     border-color: #e77600 !important;
     outline-color: #e77600 !important;
 }
 
-.btn:focus {
+.amz-btn:focus {
 	outline-color: #e77600 !important;
 }
 
+.btn:active {
+	border-color: #e77600 !important;
+	outline: #e77600;
+}
+
+.btn:focus {
+	border-color: #e77600 !important;
+	outline: #e77600;
+}
+
 .form-control {
-	width: 75%;
+	width: 60%;
 	margin: 0 auto;
 	float: none;
 }
@@ -67,10 +89,22 @@
 <br>
 <div class="row">
 
-<div class="jumbotron col-lg-4 col-md-offset-4" style="text-align: center;">
+<div class="jumbotron col-lg-6 col-md-offset-3" style="text-align: center;">
+
+	<div id="btn-container" style="width: 80%;  margin: 0 auto;" >
+
+<button type="button" id="ambient" class="btn btn-lg zone-btn" style="background-color: white;">Ambient
+</button>
+
+<button type="button" id="chilled" class="btn btn-lg zone-btn" style="background-color: white;">Chilled
+</button>
+
+<button type="button" id="freezer" class="btn btn-lg zone-btn" style="background-color: white;">Freezer
+</button>
+	</div>
 
 <!-- <canvas id="barcode"></canvas>	 -->
-<div class="barcode-container">
+<div class="barcode-container" style="margin-top: 30px;">
         <svg id="barcode" width="382px" height="190px" x="0px" y="0px" viewBox="0 0 332 140" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px); background: rgb(255, 255, 255);"><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="4" height="100"></rect><rect x="6" y="0" width="2" height="100"></rect><rect x="12" y="0" width="2" height="100"></rect><rect x="22" y="0" width="2" height="100"></rect><rect x="30" y="0" width="4" height="100"></rect><rect x="36" y="0" width="2" height="100"></rect><rect x="44" y="0" width="8" height="100"></rect><rect x="56" y="0" width="2" height="100"></rect><rect x="62" y="0" width="2" height="100"></rect><rect x="66" y="0" width="2" height="100"></rect><rect x="72" y="0" width="2" height="100"></rect><rect x="76" y="0" width="4" height="100"></rect><rect x="88" y="0" width="8" height="100"></rect><rect x="98" y="0" width="6" height="100"></rect><rect x="106" y="0" width="2" height="100"></rect><rect x="110" y="0" width="2" height="100"></rect><rect x="114" y="0" width="2" height="100"></rect><rect x="120" y="0" width="8" height="100"></rect><rect x="132" y="0" width="4" height="100"></rect><rect x="140" y="0" width="2" height="100"></rect><rect x="144" y="0" width="2" height="100"></rect><rect x="154" y="0" width="2" height="100"></rect><rect x="158" y="0" width="4" height="100"></rect><rect x="166" y="0" width="2" height="100"></rect><rect x="176" y="0" width="4" height="100"></rect><rect x="182" y="0" width="4" height="100"></rect><rect x="190" y="0" width="4" height="100"></rect><rect x="198" y="0" width="2" height="100"></rect><rect x="202" y="0" width="6" height="100"></rect><rect x="210" y="0" width="8" height="100"></rect><rect x="220" y="0" width="2" height="100"></rect><rect x="224" y="0" width="4" height="100"></rect><rect x="232" y="0" width="6" height="100"></rect><rect x="242" y="0" width="2" height="100"></rect><rect x="250" y="0" width="2" height="100"></rect><rect x="254" y="0" width="4" height="100"></rect><rect x="264" y="0" width="2" height="100"></rect><rect x="268" y="0" width="4" height="100"></rect><rect x="274" y="0" width="6" height="100"></rect><rect x="286" y="0" width="4" height="100"></rect><rect x="296" y="0" width="6" height="100"></rect><rect x="304" y="0" width="2" height="100"></rect><rect x="308" y="0" width="4" height="100"></rect><text style="font: 20px monospace" text-anchor="middle" x="156" y="120">dmgPS01</text></g></svg>
         <span id="invalid" style="display: none;">Not valid data for this barcode type!</span>
       </div> 
@@ -80,10 +114,10 @@
 
 
 <form>
-<input style="font-weight: 700;" class="form-control " id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="">
+<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="">
 
 
-<input class="btn btn-lg" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
+<input class="amz-btn btn btn-lg" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
 "> 
 </form>
 </div>
@@ -95,7 +129,19 @@
  	});
  	</script> 
 
+<script>
+$("#ambient").click(function() {
+    $("#userInput").val("P-1-A").focus();
+  });
 
+$("#chilled").click(function() {
+    $("#userInput").val("P-1-C").focus();
+  });
+
+$("#freezer").click(function() {
+    $("#userInput").val("P-1-F").focus();
+  });
+    </script>
 <!-- ******FOR REALTIME BARCODE***** -->
 <!--<script>
 $.fn.bindTo = function(element) {
