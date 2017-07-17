@@ -172,6 +172,25 @@ $(document).ready(function() {
   $("#userInput").bindTo($("#barcode"));
 });
 </script>-->
+
+<script>
+$(document).ready(function(){
+    $("#userInput").on('input',newBarcode);
+    $("#barcodeType").change(function(){
+        $("#userInput").val( defaultValues[$(this).val()] );
+
+        newBarcode();
+    });
+});
+
+var newBarcode = function() {
+    //Convert to boolean
+    $("#barcode").JsBarcode(
+        $("#userInput").val(),
+)};
+        </script>
+
+
 </div>
 
 
