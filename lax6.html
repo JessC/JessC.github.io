@@ -22,7 +22,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
 <script src="javascripts/JsBarcode.code128.min.js"></script>
 
 <!-- Latest compiled and minified CSS -->
@@ -34,8 +33,11 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- <link rel="stylesheet" type="text/css" href="stylesheets/style.css"> -->
 
+<link rel="stylesheet" href="stylesheets/magnific-popup.css">
+
+<link rel="stylesheet" type="text/css" href="stylesheets/barcode.css">
+<!-- <link rel="stylesheet" type="text/css" href="stylesheets/style.css"> -->
 
 
 <style>
@@ -45,50 +47,6 @@
   font-weight: bold;
 }
 
-.form-control:focus {
-    border-color: #e77600 !important;
-    outline: #e77600;
-}
-
-.zone-btn:active {
-	outline-color: none !important;
-	outline: none !important;
-
-}
-
-.zone-btn:focus {
-	outline-color: none !important;
-}
-
-.amz-btn:active {
-    border-color: #e77600 !important;
-    outline-color: #e77600 !important;
-}
-
-.amz-btn:focus {
-	outline-color: #e77600 !important;
-}
-
-.btn:active {
-	border-color: #e77600 !important;
-	outline: #e77600;
-}
-
-.btn:focus {
-	border-color: #e77600 !important;
-	outline: #e77600;
-}
-
-.form-control {
-	width: 50%;
-	margin: 0 auto;
-	float: none;
-}
-
-h3 {
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
 
 </style>
 
@@ -100,7 +58,7 @@ h3 {
 
 
 <div>
-	Barcode generator built for LAX6 by <a href = "mailto: abc@example.com">jccallwo</a>
+	Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
 	<p>
 	</p>
 <br>
@@ -150,12 +108,12 @@ h3 {
 </form>
 </div>
 
-<!--<script>
+<script>
  	$('#check').click(function() {
 	JsBarcode("#barcode", $('#userInput').val());
 	return false;
  	});
- 	</script> -->
+ 	</script> 
 
 <script>
 $("#ambient").click(function() {

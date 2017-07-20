@@ -1,0 +1,45 @@
+
+.form-control:focus {
+    border-color: #e77600 !important;
+    outline: #e77600;
+}
+
+.zone-btn:active {
+	outline-color: none !important;
+	outline: none !important;
+
+}
+
+.zone-btn:focus {
+	outline-color: none !important;
+}
+
+.amz-btn:active {
+    border-color: #e77600 !important;
+    outline-color: #e77600 !important;
+}
+
+.amz-btn:focus {
+	outline-color: #e77600 !important;
+}
+
+.btn:active {
+	border-color: #e77600 !important;
+	outline: #e77600;
+}
+
+.btn:focus {
+	border-color: #e77600 !important;
+	outline: #e77600;
+}
+
+.form-control {
+	width: 50%;
+	margin: 0 auto;
+	float: none;
+}
+
+h3 {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
