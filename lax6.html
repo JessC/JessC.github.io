@@ -2,53 +2,68 @@
 <html>
 
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 
-<!-- Google Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	<!-- Google Analytics -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-79843294-2', 'auto');
-  ga('send', 'pageview');
+	ga('create', 'UA-79843294-2', 'auto');
+	ga('send', 'pageview');
 
+	</script>
+	<!-- End Google Analytics -->
+
+<script src="javascripts/libs/jquery.min.js"></script>
+
+	<script src="javascripts/scripts.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script src="javascripts/JsBarcode.code128.min.js"></script>
+
+	    <!-- Magnific Popup core JS file -->
+    <script type="text/javascript" src="javascripts/libs/jquery.magnific-popup.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+	<link rel="stylesheet" href="stylesheets/magnific-popup.css">
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/barcode.css">
+	<!-- <link rel="stylesheet" type="text/css" href="stylesheets/style.css"> -->
+
+	<script>
+$(function() {
+  $("#scanner-button").load("/scanner.html");
 </script>
-<!-- End Google Analytics -->
 
+	<style>
+	label {
+		display: inline-block;
+		width: 60px;
+		font-weight: bold;
+	}
 
-<script src="javascripts/scripts.js"></script>
+	#scanner-pop {
+    font-size: 1em; 
+    background-color: #FFFFFF; 
+    width: 75%;
+    margin: 0 auto;
+		border-radius: 10px;
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script src="javascripts/JsBarcode.code128.min.js"></script>
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<link rel="stylesheet" href="stylesheets/magnific-popup.css">
-
-<link rel="stylesheet" type="text/css" href="stylesheets/barcode.css">
-<!-- <link rel="stylesheet" type="text/css" href="stylesheets/style.css"> -->
-
-
-<style>
-	  label {
-  display: inline-block;
-  width: 60px;
-  font-weight: bold;
 }
-
-
-</style>
+	</style>
 
 	<title> LAX6 Barcodes</title>
 
@@ -56,113 +71,138 @@
 
 <body>
 
-
-<div>
-	Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
-	<p>
-	</p>
-<br>
-<div class="row">
-
-<div class="jumbotron col-lg-6 col-md-offset-3" style="text-align: center; padding-top: 0px;">
-	<div class="a-box a-spacing-top-large a-color-alternate-background"><div class="a-box-inner"><div class="a-row"><div class="a-column a-span12 a-text-center"><h3>Barcode Generator</h3></div></div><div class="a-box a-spacing-top-base"><div class="a-box-inner"></div></div></div></div>
-
-	<div id="btn-container" style="width: 80%;  margin: 0 auto;" >
-
-<button type="button" id="ambient" class="btn btn-lg zone-btn" style="background-color: white; margin: 0px 10px 0px 10px;">Ambient
-</button>
-
-<button type="button" id="chilled" class="btn btn-lg zone-btn" style="background-color: white; margin: 0px 10px 0px 10px;">Chilled
-</button>
-
-		<button type="button" id="freezer" class="btn btn-lg zone-btn" style="background-color: white; margin: 0px 10px 0px 10px;">Freezer
-</button>
-
-	</div>
-	<br>
 	<div>
+		Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
+		<p>
+		</p>
+		<br>
+		<div class="row">
 
-<button type="button" id="p-cart" class="btn btn-lg zone-btn" style="background-color: white; margin: 0px 10px 0px 10px;">Pick Cart
-</button>
+			<div class="jumbotron col-lg-6 col-md-offset-3" style="text-align: center; padding-top: 0px;">
+				<div class="a-box a-spacing-top-large a-color-alternate-background"><div class="a-box-inner"><div class="a-row"><div class="a-column a-span12 a-text-center"><h3>Barcode Generator</h3></div></div><div class="a-box a-spacing-top-base"><div class="a-box-inner"></div></div></div></div>
 
-<button type="button" id="s-cart" class="btn btn-lg zone-btn" style="background-color: white; margin: 0px 10px 0px 10px;">Stow Cart
-</button>
-</div>
+				<div id="btn-container" style="width: 80%;  margin: 0 auto;" >
 
-<!-- <canvas id="barcode"></canvas>	 -->
-<div class="barcode-container" style="margin-top: 30px;">
-        <svg id="barcode" width="332px" height="140px" x="0px" y="0px" viewBox="0 0 332 140" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px); background: rgb(255, 255, 255);"><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="4" height="100"></rect><rect x="6" y="0" width="2" height="100"></rect><rect x="12" y="0" width="2" height="100"></rect><rect x="22" y="0" width="2" height="100"></rect><rect x="30" y="0" width="4" height="100"></rect><rect x="36" y="0" width="2" height="100"></rect><rect x="44" y="0" width="8" height="100"></rect><rect x="56" y="0" width="2" height="100"></rect><rect x="62" y="0" width="2" height="100"></rect><rect x="66" y="0" width="2" height="100"></rect><rect x="72" y="0" width="2" height="100"></rect><rect x="76" y="0" width="4" height="100"></rect><rect x="88" y="0" width="8" height="100"></rect><rect x="98" y="0" width="6" height="100"></rect><rect x="106" y="0" width="2" height="100"></rect><rect x="110" y="0" width="2" height="100"></rect><rect x="114" y="0" width="2" height="100"></rect><rect x="120" y="0" width="8" height="100"></rect><rect x="132" y="0" width="4" height="100"></rect><rect x="140" y="0" width="2" height="100"></rect><rect x="144" y="0" width="2" height="100"></rect><rect x="154" y="0" width="2" height="100"></rect><rect x="158" y="0" width="4" height="100"></rect><rect x="166" y="0" width="2" height="100"></rect><rect x="176" y="0" width="4" height="100"></rect><rect x="182" y="0" width="4" height="100"></rect><rect x="190" y="0" width="4" height="100"></rect><rect x="198" y="0" width="2" height="100"></rect><rect x="202" y="0" width="6" height="100"></rect><rect x="210" y="0" width="8" height="100"></rect><rect x="220" y="0" width="2" height="100"></rect><rect x="224" y="0" width="4" height="100"></rect><rect x="232" y="0" width="6" height="100"></rect><rect x="242" y="0" width="2" height="100"></rect><rect x="250" y="0" width="2" height="100"></rect><rect x="254" y="0" width="4" height="100"></rect><rect x="264" y="0" width="2" height="100"></rect><rect x="268" y="0" width="4" height="100"></rect><rect x="274" y="0" width="6" height="100"></rect><rect x="286" y="0" width="4" height="100"></rect><rect x="296" y="0" width="6" height="100"></rect><rect x="304" y="0" width="2" height="100"></rect><rect x="308" y="0" width="4" height="100"></rect><text style="font: 20px monospace" text-anchor="middle" x="156" y="120">dmgPS01</text></g></svg>
-        <span id="invalid" style="display: none;">Not valid data for this barcode type!</span>
-      </div> 
+					<button type="button" id="ambient" class="btn btn-lg zone-btn" style="background-color: white; margin: 0px 10px 0px 10px;">Ambient
+					</button>
+
+					<button type="button" id="chilled" class="btn btn-lg zone-btn" style="background-color: white; margin: 0px 10px 0px 10px;">Chilled
+					</button>
+
+					<button type="button" id="freezer" class="btn btn-lg zone-btn" style="background-color: white; margin: 0px 10px 0px 10px;">Freezer
+					</button>
+
+				</div>
+				<br>
+				<div>
+
+					<button type="button" id="p-cart" class="btn btn-lg zone-btn" style="background-color: white; margin: 0px 10px 0px 10px;">Pick Cart
+					</button>
+
+					<button type="button" id="s-cart" class="btn btn-lg zone-btn" style="background-color: white; margin: 0px 10px 0px 10px;">Stow Cart
+					</button>
+				</div>
+
+				<!-- <canvas id="barcode"></canvas>	 -->
+				<div class="barcode-container" style="margin-top: 30px;">
+					<svg id="barcode" width="332px" height="140px" x="0px" y="0px" viewBox="0 0 332 140" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px); background: rgb(255, 255, 255);"><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="4" height="100"></rect><rect x="6" y="0" width="2" height="100"></rect><rect x="12" y="0" width="2" height="100"></rect><rect x="22" y="0" width="2" height="100"></rect><rect x="30" y="0" width="4" height="100"></rect><rect x="36" y="0" width="2" height="100"></rect><rect x="44" y="0" width="8" height="100"></rect><rect x="56" y="0" width="2" height="100"></rect><rect x="62" y="0" width="2" height="100"></rect><rect x="66" y="0" width="2" height="100"></rect><rect x="72" y="0" width="2" height="100"></rect><rect x="76" y="0" width="4" height="100"></rect><rect x="88" y="0" width="8" height="100"></rect><rect x="98" y="0" width="6" height="100"></rect><rect x="106" y="0" width="2" height="100"></rect><rect x="110" y="0" width="2" height="100"></rect><rect x="114" y="0" width="2" height="100"></rect><rect x="120" y="0" width="8" height="100"></rect><rect x="132" y="0" width="4" height="100"></rect><rect x="140" y="0" width="2" height="100"></rect><rect x="144" y="0" width="2" height="100"></rect><rect x="154" y="0" width="2" height="100"></rect><rect x="158" y="0" width="4" height="100"></rect><rect x="166" y="0" width="2" height="100"></rect><rect x="176" y="0" width="4" height="100"></rect><rect x="182" y="0" width="4" height="100"></rect><rect x="190" y="0" width="4" height="100"></rect><rect x="198" y="0" width="2" height="100"></rect><rect x="202" y="0" width="6" height="100"></rect><rect x="210" y="0" width="8" height="100"></rect><rect x="220" y="0" width="2" height="100"></rect><rect x="224" y="0" width="4" height="100"></rect><rect x="232" y="0" width="6" height="100"></rect><rect x="242" y="0" width="2" height="100"></rect><rect x="250" y="0" width="2" height="100"></rect><rect x="254" y="0" width="4" height="100"></rect><rect x="264" y="0" width="2" height="100"></rect><rect x="268" y="0" width="4" height="100"></rect><rect x="274" y="0" width="6" height="100"></rect><rect x="286" y="0" width="4" height="100"></rect><rect x="296" y="0" width="6" height="100"></rect><rect x="304" y="0" width="2" height="100"></rect><rect x="308" y="0" width="4" height="100"></rect><text style="font: 20px monospace" text-anchor="middle" x="156" y="120">dmgPS01</text></g></svg>
+					<span id="invalid" style="display: none;">Not valid data for this barcode type!</span>
+				</div> 
 
 
-<br>
+				<br>
 
 
-<form>
-<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="">
+				<form>
+					<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="">
 
 
-<input class="amz-btn btn btn-lg" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
-"> 
-</form>
-</div>
+					<input class="amz-btn btn btn-lg" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
+					"> 
+				</form>
+<!-- 
+					<input class="amz-btn btn btn-sm popup-button" id="scanner-button" type="submit" value="Scanner Codes" style="margin-top: 15px; background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
+					"> -->
+			</div>
 
-<script>
- 	$('#check').click(function() {
-	JsBarcode("#barcode", $('#userInput').val());
-	return false;
- 	});
- 	</script> 
 
-<script>
-$("#ambient").click(function() {
-    $("#userInput").val("P-1-A").focus();
-  });
+        
+<!-- ************POP UP*********** -->
+			<div class="info-popup mfp-hide" id="scanner-pop">
+				<div style="margin: 0 auto;
+"><h3><b>
+				Scanner Codes </b></h3>
+				<div id="scanner-codes">
+				</div>
+			</div>
+			</div>
+<!-- ***************************** -->
 
-$("#chilled").click(function() {
-    $("#userInput").val("P-1-C").focus();
-  });
+<!-- *******SUBMIT BARCODE BUTTON******* -->
+			<script>
+			$('#check').click(function() {
+				JsBarcode("#barcode", $('#userInput').val());
+				return false;
+			});
+			</script> 
+<!-- ********END SUBMIT BARCDOE BUTTON****** -->
 
-$("#freezer").click(function() {
-    $("#userInput").val("P-1-F").focus();
-  });
+<!-- *********PREFIX BUTTONS********* -->
+			<script>
+			$("#ambient").click(function() {
+				$("#userInput").val("P-1-A").focus();
+			});
 
-$("#p-cart").click(function() {
-    $("#userInput").val("rbLAX60").focus();
-  });
+			$("#chilled").click(function() {
+				$("#userInput").val("P-1-C").focus();
+			});
 
-$("#s-cart").click(function() {
-    $("#userInput").val("SCFRSH0").focus();
-  });
-    </script>
+			$("#freezer").click(function() {
+				$("#userInput").val("P-1-F").focus();
+			});
 
-<script>
-$(document).ready(function(){
-    $("#userInput").on('input',newBarcode);
-    $("#barcodeType").change(function(){
-        $("#userInput").val( defaultValues[$(this).val()] );
+			$("#p-cart").click(function() {
+				$("#userInput").val("rbLAX60").focus();
+			});
 
-        newBarcode();
-    });
-});
+			$("#s-cart").click(function() {
+				$("#userInput").val("SCFRSH0").focus();
+			});
+			</script>
+<!-- ***********END PREFIX BUTTONS********* -->
 
-var newBarcode = function() {
+<!-- **********REAL TIME BARCODE********* -->
+			<script>
+			$(document).ready(function(){
+				$("#userInput").on('input',newBarcode);
+				$("#barcodeType").change(function(){
+					$("#userInput").val( defaultValues[$(this).val()] );
+
+					newBarcode();
+				});
+			});
+
+			var newBarcode = function() {
     //Convert to boolean
     $("#barcode").JsBarcode(
-        $("#userInput").val(),
-)};
-        </script>
+    	$("#userInput").val(),
+    	)};
+    </script>
+<!-- *******END REAL TIME BARCODE****** -->
 
 
-</div>
+    <script>
+    $('#scanner-button').magnificPopup({
+    	items: {
+    		src: '#scanner-pop',
+    		type: 'inline'
+    	},
+    	closeBtnInside: true
+    });
+    </script>
 
 
-
-
-
-
-
+  </div>
 
 </body>
 </html>

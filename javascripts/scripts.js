@@ -122,10 +122,6 @@ $('#pinkbubble').magnificPopup({
                 tis.toggleClass('active',state);
             });
     });
-
-});
-
-
 //*******************************************************
 //FINISH LATER IF YOU WANT TO ADD RESUME
  //    $('.resume-link').click(function(e){
@@ -170,7 +166,4 @@ $('#pinkbubble').magnificPopup({
 	// 	closeProject();
 	// })
 
-
-
-
-
+});
