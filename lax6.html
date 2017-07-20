@@ -46,6 +46,15 @@
 	<script>
 $(function() {
   $("#scanner-button").load("/scanner.html");
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $("#barcode-desc").click(function(){
+        $("#scanner-code").closest($("#barcode-desc")).slideToggle("fast");
+    });
+});
 </script>
 
 	<style>
@@ -61,8 +70,31 @@ $(function() {
     width: 75%;
     margin: 0 auto;
 		border-radius: 10px;
-
 }
+
+#scanner-code, #barcode-desc {
+    //padding: 5px;
+    margin: 7px;
+    text-align: center;
+    //background-color: #e5eecc;
+    //border: solid 1px #c3c3c3;
+}
+
+#scanner-code {
+    font-size: .5em;
+    //padding: 10px;
+    display: none;
+}
+
+#scanner-code p {
+  color: grey;
+}
+
+#codes-container h3    { cursor:pointer; }
+#codes-container h3.active { color: tomato; }
+#codes-container div { height:0; overflow:hidden; position:relative; }
+#codes-container div p { padding:0; margin-bottom:5px; } 
+
 	</style>
 
 	<title> LAX6 Barcodes</title>
@@ -120,17 +152,16 @@ $(function() {
 					<input class="amz-btn btn btn-lg" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
 					"> 
 				</form>
-<!-- 
-					<input class="amz-btn btn btn-sm popup-button" id="scanner-button" type="submit" value="Scanner Codes" style="margin-top: 15px; background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
-					"> -->
+
+					<input class="amz-btn btn btn-sm popup-button" id="scanner-button" type="submit" value="TEST" style="margin-top: 15px; background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
+					">
 			</div>
 
 
         
 <!-- ************POP UP*********** -->
 			<div class="info-popup mfp-hide" id="scanner-pop">
-				<div style="margin: 0 auto;
-"><h3><b>
+				<div style="text-align: center; padding: 20px;"><h3><b>
 				Scanner Codes </b></h3>
 				<div id="scanner-codes">
 				</div>
