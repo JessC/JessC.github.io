@@ -73,16 +73,16 @@ $(document).ready(function(){
 }
 
 #scanner-code, #barcode-desc {
-    //padding: 5px;
+/*    //padding: 5px;*/
     margin: 7px;
     text-align: center;
-    //background-color: #e5eecc;
-    //border: solid 1px #c3c3c3;
+/*    //background-color: #e5eecc;
+    //border: solid 1px #c3c3c3;*/
 }
 
 #scanner-code {
     font-size: .5em;
-    //padding: 10px;
+/*    //padding: 10px;*/
     display: none;
 }
 
@@ -229,6 +229,24 @@ $(document).ready(function(){
     	closeBtnInside: true
     });
     </script>
+
+<script>
+    $('#codes-container h3').each(function() {
+        var tis = $(this), 
+            state = false, 
+            answer = tis.next('div')
+                        .hide()
+                        .css('height','auto')
+                        .slideUp();
+
+            tis.click(function() {
+                state = !state;
+                answer.slideToggle(state);
+                tis.toggleClass('active',state);
+            });
+    });
+</script>
+
 
 
   </div>
