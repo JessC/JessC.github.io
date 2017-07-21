@@ -548,7 +548,7 @@ height: 699px;
   color: grey;
 }
 
-#toggle-container h3    { cursor:pointer; }
+#toggle-container h3 { cursor:pointer; }
 #toggle-container h3.active { color: tomato; }
 #toggle-container div { height:0; overflow:hidden; position:relative; }
 #toggle-container div p { padding:0; margin-bottom:5px; } 

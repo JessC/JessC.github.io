@@ -17,16 +17,15 @@
 	</script>
 	<!-- End Google Analytics -->
 
-<script src="javascripts/libs/jquery.min.js"></script>
-
-	<script src="javascripts/scripts.js"></script>
+	<script src="javascripts/libs/jquery.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+
 	<script src="javascripts/JsBarcode.code128.min.js"></script>
 
-	    <!-- Magnific Popup core JS file -->
-    <script type="text/javascript" src="javascripts/libs/jquery.magnific-popup.js"></script>
+	<!-- Magnific Popup core JS file -->
+	<script type="text/javascript" src="javascripts/libs/jquery.magnific-popup.js"></script>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -44,18 +43,18 @@
 	<!-- <link rel="stylesheet" type="text/css" href="stylesheets/style.css"> -->
 
 	<script>
-$(function() {
-  $("#scanner").load("/scanner.html");
-});
-</script>
+	$(function() {
+		$("#scanner").load("/scanner.html");
+	});
+	</script>
 
-<script>
-$(document).ready(function(){
-    $("#barcode-desc").click(function(){
-        $("#scanner-code").closest($("#barcode-desc")).slideToggle("fast");
-    });
-});
-</script>
+	<script>
+	$(document).ready(function(){
+		$("#barcode-desc").click(function(){
+			$("#scanner-code").closest($("#barcode-desc")).slideToggle("fast");
+		});
+	});
+	</script>
 
 	<style>
 	label {
@@ -63,58 +62,21 @@ $(document).ready(function(){
 		width: 60px;
 		font-weight: bold;
 	}
-
-	#scanner-pop {
-    font-size: 1em; 
-    background-color: #FFFFFF; 
-    width: 75%;
-    margin: 0 auto;
-		border-radius: 10px;
-}
-
-#scanner-code, #barcode-desc {
-/*    //padding: 5px;*/
-    margin: 7px;
-    text-align: center;
-/*    //background-color: #e5eecc;
-    //border: solid 1px #c3c3c3;*/
-}
-
-#scanner-code {
-    font-size: .5em;
-/*    //padding: 10px;*/
-    display: none;
-}
-
-#scanner-code p {
-  color: grey;
-}
-
-#toggle-container h3    { cursor:pointer; }
-#toggle-container h3.active { color: tomato; }
-#toggle-container div { height:0; overflow:hidden; position:relative; }
-#toggle-container div p { padding:0; margin-bottom: 5px; 
-} 
 	</style>
 
 	<title> LAX6 Barcodes</title>
-
 </head>
 
 <body>
+	<div>
+		Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
+		<input class="amz-btn btn btn-sm popup-button" id="scanner-button" type="submit" value="TEST" style="float:right; margin-top: 15px; margin-right: 5%;background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
+		">
+		<br>
+		<div class="row">
 
-<div>
-	Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
-						<input class="amz-btn btn btn-sm popup-button" id="scanner-button" type="submit" value="TEST" style="float:right; margin-top: 15px; margin-right: 5%;background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
-					">
-
-	<p>
-	</p>
-<br>
-<div class="row">
-
-<div class="jumbotron col-lg-6 col-md-offset-3" style="text-align: center; padding-top: 0px;">
-	<div class="a-box a-spacing-top-large a-color-alternate-background"><div class="a-box-inner"><div class="a-row"><div class="a-column a-span12 a-text-center"><h3>Barcode Generator</h3></div></div><div class="a-box a-spacing-top-base"><div class="a-box-inner"></div></div></div></div>
+			<div class="jumbotron col-lg-6 col-md-offset-3" style="text-align: center; padding-top: 0px;">
+				<div class="a-box a-spacing-top-large a-color-alternate-background"><div class="a-box-inner"><div class="a-row"><div class="a-column a-span12 a-text-center"><h3 class="title">Barcode Generator</h3></div></div><div class="a-box a-spacing-top-base"><div class="a-box-inner"></div></div></div></div>
 
 				<div id="btn-container" style="width: 80%;  margin: 0 auto;" >
 
@@ -157,27 +119,29 @@ $(document).ready(function(){
 				</form>
 
 			</div>
-   
-<!-- ************POP UP*********** -->
+
+			<!-- ************POP UP*********** -->
 			<div class="info-popup mfp-hide" id="scanner-pop">
 				<div style="text-align: center; padding: 20px;"><h3><b>
-				Scanner Codes </b></h3>
-				<div id="scanner">
+					Scanner Codes </b></h3>
+					<div id="scanner">
+					</div>
 				</div>
 			</div>
-			</div>
-<!-- ***************************** -->
+			<!-- ***************************** -->
 
-<!-- *******SUBMIT BARCODE BUTTON******* -->
+	<script src="javascripts/scripts.js"></script>
+
+			<!-- *******SUBMIT BARCODE BUTTON******* -->
 			<script>
 			$('#check').click(function() {
 				JsBarcode("#barcode", $('#userInput').val());
 				return false;
 			});
 			</script> 
-<!-- ********END SUBMIT BARCDOE BUTTON****** -->
+			<!-- ********END SUBMIT BARCDOE BUTTON****** -->
 
-<!-- *********PREFIX BUTTONS********* -->
+			<!-- *********PREFIX BUTTONS********* -->
 			<script>
 			$("#ambient").click(function() {
 				$("#userInput").val("P-1-A").focus();
@@ -199,9 +163,9 @@ $(document).ready(function(){
 				$("#userInput").val("SCFRSH0").focus();
 			});
 			</script>
-<!-- ***********END PREFIX BUTTONS********* -->
+			<!-- ***********END PREFIX BUTTONS********* -->
 
-<!-- **********REAL TIME BARCODE********* -->
+			<!-- **********REAL TIME BARCODE********* -->
 			<script>
 			$(document).ready(function(){
 				$("#userInput").on('input',newBarcode);
@@ -218,8 +182,7 @@ $(document).ready(function(){
     	$("#userInput").val(),
     	)};
     </script>
-<!-- *******END REAL TIME BARCODE****** -->
-
+    <!-- *******END REAL TIME BARCODE****** -->
 
     <script>
     $('#scanner-button').magnificPopup({
@@ -231,10 +194,6 @@ $(document).ready(function(){
     });
     </script>
 
-
-
-
-  </div>
-
-</body>
+  	</div>
+	</body>
 </html>
