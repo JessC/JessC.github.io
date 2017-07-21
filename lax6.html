@@ -25,6 +25,9 @@
 	<!-- Magnific Popup core JS file -->
 	<script type="text/javascript" src="javascripts/libs/jquery.magnific-popup.js"></script>
 
+	<script src="javascripts/scripts.js"></script>
+
+
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -33,24 +36,6 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<script>
- $('#toggle-container h3').each(function() {
-	var tis = $(this), 
-	state = false, 
-	answer = tis.next('div')
-	.hide()
-	.css('height','auto')
-	.slideUp();
-
-	tis.click(function() {
-		state = !state;
-		answer.slideToggle(state);
-		tis.toggleClass('active',state);
-	});
-}); 
- </script>
-
 
 	<link rel="stylesheet" href="stylesheets/magnific-popup.css">
 
@@ -130,7 +115,6 @@
 				</form>
 			</div>
 	
-	<script src="javascripts/scripts.js"></script>
 
 			<!-- ************POP UP*********** -->
 			<div class="info-popup mfp-hide" id="scanner-pop" style="text-align: center; padding: 20px;">
@@ -164,6 +148,15 @@
 			</script>
 			<!-- ***********END PREFIX BUTTONS********* -->
 
+    <!-- *******SUBMIT BARCODE BUTTON******* -->
+    <script>
+    $('#check').click(function() {
+    	JsBarcode("#barcode", $('#userInput').val());
+    	return false;
+    });
+    </script> 
+    <!-- ********END SUBMIT BARCDOE BUTTON****** -->
+    
 			<!-- **********REAL TIME BARCODE********* -->
 			<script>
 			$(document).ready(function(){
@@ -183,14 +176,7 @@
     </script>
     <!-- *******END REAL TIME BARCODE****** -->
 
-    <!-- *******SUBMIT BARCODE BUTTON******* -->
-    <script>
-    $('#check').click(function() {
-    	JsBarcode("#barcode", $('#userInput').val());
-    	return false;
-    });
-    </script> 
-    <!-- ********END SUBMIT BARCDOE BUTTON****** -->
+
 
     <script>
     $('#scanner-button').magnificPopup({
