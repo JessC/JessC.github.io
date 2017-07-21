@@ -108,7 +108,7 @@ $('#pinkbubble').magnificPopup({
 // });
 
 
-    $('#faqs-container h3').each(function() {
+    $('#toggle-container h3').each(function() {
         var tis = $(this), 
             state = false, 
             answer = tis.next('div')

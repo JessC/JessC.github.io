@@ -57,24 +57,6 @@ $(document).ready(function(){
 });
 </script>
 
-
-<script>
-$('#codes-container h3').each(function() {
-	var tis = $(this), 
-	state = false, 
-	answer = tis.next('div')
-	.hide()
-	.css('height','auto')
-	.slideUp();
-
-	tis.click(function() {
-		state = !state;
-		answer.slideToggle(state);
-		tis.toggleClass('active',state);
-	});
-});
-</script>
-
 	<style>
 	label {
 		display: inline-block;
@@ -108,11 +90,11 @@ $('#codes-container h3').each(function() {
   color: grey;
 }
 
-#codes-container h3    { cursor:pointer; }
-#codes-container h3.active { color: tomato; }
-#codes-container div { height:0; overflow:hidden; position:relative; }
-#codes-container div p { padding:0; margin-bottom:5px; } 
-
+#toggle-container h3    { cursor:pointer; }
+#toggle-container h3.active { color: tomato; }
+#toggle-container div { height:0; overflow:hidden; position:relative; }
+#toggle-container div p { padding:0; margin-bottom: 5px; 
+} 
 	</style>
 
 	<title> LAX6 Barcodes</title>
