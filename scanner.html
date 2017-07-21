@@ -8,17 +8,89 @@ $(document).ready(function(){
 });
 </script>
 -->
+	<script src="javascripts/libs/jquery.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+
+#scanner-pop {
+    font-size: 1em; 
+    background-color: #FFFFFF; 
+    width: 75%;
+    margin: 0 auto;
+		border-radius: 10px;
+}
+
+#scanner-code, #barcode-desc {
+/*    //padding: 5px;*/
+    margin: 7px;
+    text-align: center;
+/*    //background-color: #e5eecc;
+    //border: solid 1px #c3c3c3;*/
+}
+
+#scanner-code {
+    font-size: .5em;
+/*    //padding: 10px;*/
+    display: none;
+}
+
+#scanner-code p {
+  color: grey;
+}
+
+#toggle-container h3 { cursor:pointer; }
+#toggle-container h3.active { color: #FF9900; }
+#toggle-container div { height:0; overflow:hidden; position:relative; }
+#toggle-container div p { padding:0; margin-bottom: 5px; } 
+
+
+</style>
 
 <div style="background-color: " id="toggle-container">
 
-<h3 id="barcode-desc">Reset scanner to factory setting</h3>
-<div id="scanner-code"><p>reset</p>
-<img class="b-code" id="reset-code" src="images/reset_code.png">
+<h3 id="barcode-desc">Factory Default</h3>
+<div id="scanner-code"><h2>Resets scanner to default settings</h2>
+<img class="b-code" id="resetcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/reset.png">
 </div> 
 
-<h3 id="barcode-desc">Auto return</h3>
-<div id="scanner-code"><p>The Enter function will automatically be submitted each time a barcode is scanned</p> 
-<img class="b-code" id="enter-code" src="images/enter_code.png">
+<h3 id="barcode-desc">Return Suffix</h3>
+<div id="scanner-code"><h2>Scanner will add an Enter key function after each scan</h2> 
+<img class="b-code" id="entercode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/enter.png">
+</div> 
+
+<h3 id="barcode-desc">Clear Suffix</h3>
+<div id="scanner-code"><h2>Removes all suffixes</h2> 
+<img class="b-code" id="suffixcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/suffix.png">
+</div> 
+
+<h3 id="barcode-desc">Auto</h3>
+<div id="scanner-code"><h2>Scanner will automatically scan any barcodes with out pressing the trigger</h2> 
+<img class="b-code" id="autocode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/auto.png">
+</div> 
+
+<h3 id="barcode-desc">Manual</h3>
+<div id="scanner-code"><h2>Scanner will add an Enter key function after each scan</h2> 
+<img class="b-code" id="manualcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/manual.png">
 </div> 
  
 </div>
+
+
+<script>
+$('#toggle-container h3').each(function() {
+	var tis = $(this), 
+	state = false, 
+	answer = tis.next('div')
+	.hide()
+	.css('height','auto')
+	.slideUp();
+
+	tis.click(function() {
+		state = !state;
+		answer.slideToggle(state);
+		tis.toggleClass('active',state);
+	});
+});
+</script>
