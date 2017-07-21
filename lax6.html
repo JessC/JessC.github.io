@@ -18,7 +18,7 @@
 
 	<script src="javascripts/libs/jquery.min.js"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 
 	<script src="javascripts/JsBarcode.code128.min.js"></script>
 
@@ -140,15 +140,6 @@
 				</div>
 			<!-- ***************************** -->
 
-			<!-- *******SUBMIT BARCODE BUTTON******* -->
-			<script>
-			$('#check').click(function() {
-				JsBarcode("#barcode", $('#userInput').val());
-				return false;
-			});
-			</script> 
-			<!-- ********END SUBMIT BARCDOE BUTTON****** -->
-
 			<!-- *********PREFIX BUTTONS********* -->
 			<script>
 			$("#ambient").click(function() {
@@ -191,6 +182,16 @@
     	)};
     </script>
     <!-- *******END REAL TIME BARCODE****** -->
+
+    <!-- *******SUBMIT BARCODE BUTTON******* -->
+    <script>
+    $('#check').click(function() {
+    	JsBarcode("#barcode", $('#userInput').val());
+    	return false;
+    });
+    </script> 
+    <!-- ********END SUBMIT BARCDOE BUTTON****** -->
+
 
     <script>
     $('#scanner-button').magnificPopup({
