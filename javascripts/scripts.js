@@ -111,20 +111,21 @@ $('#pinkbubble').magnificPopup({
 //     $("#scanner-code").closest($("#barcode-desc")).slideToggle("fast");
 // });
 
-// $('#toggle-container h3').each(function() {
-// 	var tis = $(this), 
-// 	state = false, 
-// 	answer = tis.next('div')
-// 	.hide()
-// 	.css('height','auto')
-// 	.slideUp();
 
-// 	tis.click(function() {
-// 		state = !state;
-// 		answer.slideToggle(state);
-// 		tis.toggleClass('active',state);
-// 	});
-// });
+$('#toggle-container h3').each(function() {
+	var tis = $(this), 
+	state = false, 
+	answer = tis.next('div')
+	.hide()
+	.css('height','auto')
+	.slideUp();
+
+	tis.click(function() {
+		state = !state;
+		answer.slideToggle(state);
+		tis.toggleClass('active',state);
+	});
+});
 //*******************************************************
 //FINISH LATER IF YOU WANT TO ADD RESUME
  //    $('.resume-link').click(function(e){
