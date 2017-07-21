@@ -107,6 +107,9 @@ $('#pinkbubble').magnificPopup({
 // 	$("#answer").slideToggle("fast");
 // });
 
+// $("#barcode-desc").click(function(){
+//     $("#scanner-code").closest($("#barcode-desc")).slideToggle("fast");
+// });
 
 $('#toggle-container h3').each(function() {
 	var tis = $(this), 
