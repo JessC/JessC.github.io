@@ -74,9 +74,13 @@
   color: grey;
 }
 
+.amzorng {
+	color: #FF9900;
+}
+
 #toggle-container h3 { cursor:pointer; }
-#toggle-container h3.active { color: #FF9900; }
-/*#toggle-container div { height:0; overflow:hidden; position:relative; }
+/*#toggle-container h3.active { color: #FF9900; }
+*//*#toggle-container div { height:0; overflow:hidden; position:relative; }
 #toggle-container div p { padding:0; margin-bottom: 5px; } 
 
 */
