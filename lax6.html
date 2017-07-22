@@ -128,42 +128,54 @@
 					<input class="amz-btn btn btn-lg" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
 					"> 
 				</form>
-			</div>
+<div>
+	<h6 style="float: right" class="toggle-switch">
+		<u>more
+		</u>
+	</h6>
+	<div class="toggle-div" style="margin: 10px">
+		<p>
+coming soon
+</p>
+	</div>
+</div>
+
+	</div>
 	
 
-			<!-- ************POP UP*********** -->
-			<div class="info-popup mfp-hide" id="scanner-pop" style="text-align: center; padding: 20px;">
-				<h3><b><u>Scanner Codes</u></b></h3>
+<!-- *****************POP UP***************** -->
+	<div class="info-popup mfp-hide" id="scanner-pop" style="text-align: center; padding: 20px;">
+		<h3><b><u>Scanner Codes</u></b></h3>
 					
-<div style="background-color: " id="toggle-container">
+				<div style="background-color: " id="toggle-container">
 
-<h3 id="barcode-desc" class="toggle-switch">Factory Default</h3>
-<div class="toggle-div" id="scanner-code"><h4>Resets scanner to default settings</h4>
-<img class="b-code" id="resetcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/reset.png">
-</div> 
+					<h3 id="barcode-desc" class="toggle-switch">Factory Default</h3>
+					<div class="toggle-div" id="scanner-code"><h4>Resets scanner to default settings</h4>
+						<img class="b-code" id="resetcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/reset.png">
+					</div> 
 
-<h3 class="toggle-switch" id="barcode-desc">Return Suffix</h3>
-<div class="toggle-div" id="scanner-code"><h4>Scanner will add an Enter key function after each scan</h4> 
-<img class="b-code" id="entercode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/enter.png">
-</div> 
+					<h3 class="toggle-switch" id="barcode-desc">Return Suffix</h3>
+					<div class="toggle-div" id="scanner-code"><h4>Scanner will add an Enter key function after each scan</h4> 
+						<img class="b-code" id="entercode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/enter.png">
+					</div> 
 
-<h3 class="toggle-switch" id="barcode-desc">Clear Suffix</h3>
-<div class="toggle-div" id="scanner-code"><h4>Removes all suffixes</h4> 
-<img class="b-code" id="suffixcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/suffix.png">
-</div> 
+					<h3 class="toggle-switch" id="barcode-desc">Clear Suffix</h3>
+					<div class="toggle-div" id="scanner-code"><h4>Removes all suffixes</h4> 
+						<img class="b-code" id="suffixcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/suffix.png">
+					</div> 
 
- <h3 class="toggle-switch" id="barcode-desc">Manual</h3>
-<div class="toggle-div" id="scanner-code"><h4>Trigger must be pressed to scan</h4> 
-<img class="b-code" id="manualcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/manual.png">
-</div> 
+					<h3 class="toggle-switch" id="barcode-desc">Manual</h3>
+					<div class="toggle-div" id="scanner-code"><h4>Trigger must be pressed to scan</h4> 
+						<img class="b-code" id="manualcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/manual.png">
+					</div> 
 
-<h3 class="toggle-switch" id="barcode-desc">Auto</h3>
-<div class="toggle-div" id="scanner-code"><h4>Scanner will automatically scan barcodes without pressing the trigger</h4> 
-<img class="b-code" id="autocode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/auto.png">
-</div> 
+					<h3 class="toggle-switch" id="barcode-desc">Auto</h3>
+					<div class="toggle-div" id="scanner-code"><h4>Scanner will automatically scan barcodes without pressing the trigger</h4> 
+						<img class="b-code" id="autocode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/auto.png">
+					</div> 
+				</div>
+<!-- *****************END POP UP***************** -->
 
-
-</div>
 
 				</div>
 			<!-- ***************************** -->
@@ -223,7 +235,7 @@
 <script>
         $('.toggle-switch').click(function(){
         $(this).toggleClass("amzorng")
-        $(this).next().slideToggle("slow", function(){
+        $(this).next().slideToggle("fast", function(){
         });
       });
     </script>
