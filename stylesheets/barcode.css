@@ -4,13 +4,13 @@
     outline: #e77600;
 }
 
-.zone-btn:active {
+.amz-btn:active {
 	outline-color: none !important;
 	outline: none !important;
 
 }
 
-.zone-btn:focus {
+.amz-btn:focus {
 	outline-color: none !important;
 }
 
@@ -33,6 +33,10 @@
 	outline: #e77600;
 }
 
+.wht-btn {
+	background-color: white;
+}
+
 .form-control {
 	width: 50%;
 	margin: 0 auto;
@@ -40,8 +44,8 @@
 }
 
 .title {
-	margin-top: 10px;
-	margin-bottom: 20px;
+	margin-top: 7px;
+	margin-bottom: 12px;
 }
 
 #scanner-pop {
