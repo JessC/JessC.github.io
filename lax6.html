@@ -119,7 +119,7 @@
 
 				<!-- <canvas id="barcode"></canvas>	 -->
 				<div class="barcode-container" style="margin-top: 20px;">
-					<svg id="barcode" width="332px" height="140px" x="0px" y="0px" viewBox="0 0 332 140" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px); background: rgb(255, 255, 255);"><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="4" height="100"></rect><rect x="6" y="0" width="2" height="100"></rect><rect x="12" y="0" width="2" height="100"></rect><rect x="22" y="0" width="2" height="100"></rect><rect x="30" y="0" width="4" height="100"></rect><rect x="36" y="0" width="2" height="100"></rect><rect x="44" y="0" width="8" height="100"></rect><rect x="56" y="0" width="2" height="100"></rect><rect x="62" y="0" width="2" height="100"></rect><rect x="66" y="0" width="2" height="100"></rect><rect x="72" y="0" width="2" height="100"></rect><rect x="76" y="0" width="4" height="100"></rect><rect x="88" y="0" width="8" height="100"></rect><rect x="98" y="0" width="6" height="100"></rect><rect x="106" y="0" width="2" height="100"></rect><rect x="110" y="0" width="2" height="100"></rect><rect x="114" y="0" width="2" height="100"></rect><rect x="120" y="0" width="8" height="100"></rect><rect x="132" y="0" width="4" height="100"></rect><rect x="140" y="0" width="2" height="100"></rect><rect x="144" y="0" width="2" height="100"></rect><rect x="154" y="0" width="2" height="100"></rect><rect x="158" y="0" width="4" height="100"></rect><rect x="166" y="0" width="2" height="100"></rect><rect x="176" y="0" width="4" height="100"></rect><rect x="182" y="0" width="4" height="100"></rect><rect x="190" y="0" width="4" height="100"></rect><rect x="198" y="0" width="2" height="100"></rect><rect x="202" y="0" width="6" height="100"></rect><rect x="210" y="0" width="8" height="100"></rect><rect x="220" y="0" width="2" height="100"></rect><rect x="224" y="0" width="4" height="100"></rect><rect x="232" y="0" width="6" height="100"></rect><rect x="242" y="0" width="2" height="100"></rect><rect x="250" y="0" width="2" height="100"></rect><rect x="254" y="0" width="4" height="100"></rect><rect x="264" y="0" width="2" height="100"></rect><rect x="268" y="0" width="4" height="100"></rect><rect x="274" y="0" width="6" height="100"></rect><rect x="286" y="0" width="4" height="100"></rect><rect x="296" y="0" width="6" height="100"></rect><rect x="304" y="0" width="2" height="100"></rect><rect x="308" y="0" width="4" height="100"></rect><text style="font: 20px monospace" text-anchor="middle" x="156" y="120">dmgPS01</text></g></svg>
+					<svg id="barcode" width="244px" height="142px" x="0px" y="0px" viewBox="0 0 244 142" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px); background: rgb(255, 255, 255);"><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="4" height="100"></rect><rect x="6" y="0" width="2" height="100"></rect><rect x="12" y="0" width="2" height="100"></rect><rect x="22" y="0" width="2" height="100"></rect><rect x="32" y="0" width="2" height="100"></rect><rect x="38" y="0" width="4" height="100"></rect><rect x="44" y="0" width="8" height="100"></rect><rect x="54" y="0" width="6" height="100"></rect><rect x="62" y="0" width="2" height="100"></rect><rect x="66" y="0" width="2" height="100"></rect><rect x="72" y="0" width="4" height="100"></rect><rect x="78" y="0" width="2" height="100"></rect><rect x="88" y="0" width="6" height="100"></rect><rect x="96" y="0" width="6" height="100"></rect><rect x="104" y="0" width="4" height="100"></rect><rect x="110" y="0" width="4" height="100"></rect><rect x="116" y="0" width="6" height="100"></rect><rect x="124" y="0" width="2" height="100"></rect><rect x="132" y="0" width="2" height="100"></rect><rect x="138" y="0" width="6" height="100"></rect><rect x="146" y="0" width="4" height="100"></rect><rect x="154" y="0" width="2" height="100"></rect><rect x="160" y="0" width="6" height="100"></rect><rect x="170" y="0" width="4" height="100"></rect><rect x="176" y="0" width="2" height="100"></rect><rect x="186" y="0" width="2" height="100"></rect><rect x="192" y="0" width="4" height="100"></rect><rect x="198" y="0" width="4" height="100"></rect><rect x="208" y="0" width="6" height="100"></rect><rect x="216" y="0" width="2" height="100"></rect><rect x="220" y="0" width="4" height="100"></rect><text style="font: 20px monospace" text-anchor="middle" x="112" y="122">dmgPS01</text></g>
 					<span id="invalid" style="display: none;">Not valid data for this barcode type!</span>
 				</div> 
 				
@@ -133,7 +133,7 @@
 					"> 
 				</form>
 <div>
-	<h6 style="float: right" class="toggle-switch">
+	<h6 style="float: right" class="toggle-switch" id="more">
 		<u>more
 		</u>
 	</h6>
@@ -233,7 +233,6 @@
 				$("#userInput").on('input',newBarcode);
 				$("#barcodeType").change(function(){
 					$("#userInput").val( defaultValues[$(this).val()] );
-
 					newBarcode();
 				});
 			});
@@ -252,6 +251,9 @@
         $('.toggle-switch').click(function(){
         $(this).toggleClass("amzorng")
         $(this).next().slideToggle("fast", function(){
+        	   //          if($('#toggle-div').is(":visible")){
+            //     $('#more').text("less");
+            // }
         });
       });
     </script>
