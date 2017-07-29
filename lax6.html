@@ -6,7 +6,11 @@
 <head>
 	<meta charset="UTF-8">
 
+<script src="javascripts/libs/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- Google Analytics -->
+	
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,9 +22,7 @@
 	</script>
 	<!-- End Google Analytics -->
 
-<script src="javascripts/libs/jquery.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- JsBarcode -->
 <script src="javascripts/JsBarcode.code128.min.js"></script>
@@ -90,6 +92,12 @@
 		Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
 		<input class="amz-btn btn btn-sm popup-button" id="scanner-button" type="submit" value="Scanner" style="float:right; margin-top: 10px; margin-right: 10%;background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
 		">
+<!-- <select id="fcLocation">
+  <option value="1">LAX6</option>
+  <option value="ONT4">ONT4</option>
+  <option value="OAK4">OAK4</option>
+</select> -->
+
 		<br>
 		<div class="row">
 
@@ -209,7 +217,16 @@
 			});
 
 			$("#p-cart").click(function() {
-				$("#userInput").val("rbLAX60").focus();
+				// if
+				// 	(document.getElementById("fcLocation").value == "ONT4")
+				// {$("#userInput").val("rbONT40").focus();}
+				// else if
+				// 	(document.getElementById("fcLocation").value == "OAK4")
+				// {$("#userInput").val("rbOAK40").focus();} 
+				// else
+				// {
+					$("#userInput").val("rbLAX60").focus();
+				// }
 			});
 
 			$("#s-cart").click(function() {
@@ -296,7 +313,12 @@ return listOfStations[Math.floor(Math.random()*listOfStations.length)];
 			});
 
 
-		</script>
+	</script>
+
+
+
+
+
 
   	</div>
 	</body>
