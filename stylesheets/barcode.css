@@ -91,6 +91,31 @@
 #toggle-container div p { padding:0; margin-bottom: 5px; } 
 
 */
+@media screen and (min-width : 0px) and (max-width : 800px) {
+#pbutton, #titlebar, .printbutton {
+	display: none;
+}
 
+.jumbotron {
+	margin-top: -5px;
+}
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+  }
+  #section-to-print {
+    margin: 0 auto;
+    top: 0;
+  }
+
+  #barcode {
+    width: 374px;
+    height: 272px;
+}
 
 
