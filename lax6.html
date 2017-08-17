@@ -311,9 +311,17 @@ document.write("<input type='button' " +
 
 			var newBarcode = function() {
     //Convert to boolean
+        if 
+    	($("#userInput").val().charAt(0) == "P")
+    {
     $("#barcode").JsBarcode(
+    	$("#userInput").val().toUpperCase(),
+    	)
+  } else {
+  	    $("#barcode").JsBarcode(
     	$("#userInput").val(),
-    	)};
+  )}
+  };
     </script>
     <!-- *******END REAL TIME BARCODE****** -->
 
