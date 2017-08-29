@@ -112,6 +112,11 @@ body {
 .jumbotron {
 	margin-top: -5px;
 }
+
+.wht-btn {
+margin: 1px;
+padding: 5px 5px;
+}
 }
 
 @media print {

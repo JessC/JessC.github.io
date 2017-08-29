@@ -145,8 +145,8 @@
 <script>
 document.write("<input type='button' " +
 "onClick='window.print()' " +
-"style='float: right; background-color: #eee' " +
-"class='printbutton wht-btn amz-btn btn btn-sm popup-button' " +
+"style='float: right; background-color: #eee;'" +
+"class='printbutton wht-btn amz-btn btn btn-link popup-button' " +
 "value='Print'/>");
 </script>
 <!-- ********END PRINT PAGE******** -->
@@ -166,10 +166,13 @@ document.write("<input type='button' " +
 				</div>
 		
 				<div>
-					<button type="button" id="p-cart" class="wht-btn btn btn-lg amz-btn" style="margin: 10px 10px 0px 10px;">Pick Cart
+					<button type="button" id="p-cart" class="wht-btn btn btn-lg amz-btn" style="margin: 10px 5px 0px 5px;">Pick Cart
 					</button>
 
-					<button type="button" id="s-cart" class="wht-btn btn btn-lg amz-btn" style="margin: 10px 10px 0px 10px;">Stow Cart
+					<button type="button" id="oneway" class="wht-btn btn btn-lg amz-btn" style="margin: 10px 5px 0px 5px;">1WAY
+					</button>
+
+					<button type="button" id="s-cart" class="wht-btn btn btn-lg amz-btn" style="margin: 10px 5px 0px 5px;">Stow Cart
 					</button>
 				</div>
 
@@ -282,6 +285,10 @@ document.write("<input type='button' " +
 				// {
 					$("#userInput").val("rbLAX60").focus();
 				// }
+			});
+
+				$("#oneway").click(function() {
+				$("#userInput").val("sp1WAY").focus();
 			});
 
 			$("#s-cart").click(function() {
