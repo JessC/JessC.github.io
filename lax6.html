@@ -163,6 +163,9 @@ document.write("<input type='button' " +
 
 					<button type="button" id="freezer" class="wht-btn btn btn-lg amz-btn" style="">Freezer
 					</button>
+
+					<button type="button" id="bigs" class="wht-btn btn btn-lg amz-btn" style="">Bigs
+					</button>
 				</div>
 		
 				<div>
@@ -274,6 +277,10 @@ document.write("<input type='button' " +
 				$("#userInput").val("P-1-F").focus();
 			});
 
+			$("#bigs").click(function() {
+				$("#userInput").val("P-1-B").focus();
+			});
+
 			$("#p-cart").click(function() {
 				// if
 				// 	(document.getElementById("fcLocation").value == "ONT4")
@@ -319,7 +326,7 @@ document.write("<input type='button' " +
 			var newBarcode = function() {
     //Convert to boolean
         if 
-    	($("#userInput").val().charAt(0) == "P")
+    	($("#userInput").val().charAt(0) == "P" && $("#userInput").val().charAt(1) == "-")
     {
     $("#barcode").JsBarcode(
     	$("#userInput").val().toUpperCase(),
