@@ -316,6 +316,11 @@ $('#check').click(function() {
 </script> 
 <!-- ********END SUBMIT BARCDOE BUTTON****** -->
 
+<script>
+
+</script>
+
+
 <!-- **********REAL TIME BARCODE********* -->
 <script>
 $(document).ready(function(){
@@ -382,15 +387,29 @@ $('#randstation').click(function() {
 });
 
 $('#drop-ambient').click(function() {
+		if ( $(window).width() < 600) {
+	JsBarcode("#barcode", "dz-P-AMBIENT", {width: 1});
+} else {
 	JsBarcode("#barcode", "dz-P-AMBIENT");
+}
 });
 
 $('#drop-chilled').click(function() {
+if ( $(window).width() < 600) {
+	JsBarcode("#barcode", "dz-P-CHILLED", {width: 1});
+} else {
 	JsBarcode("#barcode", "dz-P-CHILLED");
+}
 });
+
 $('#drop-freezer').click(function() {
+if ( $(window).width() < 600) {
+	JsBarcode("#barcode", "dz-P-FROZEN", {width: 1});
+} else {
 	JsBarcode("#barcode", "dz-P-FROZEN");
+}
 });
+
 
 
 </script>
