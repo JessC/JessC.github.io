@@ -110,8 +110,7 @@
 
 	<div id="titlebar" style="padding-left: 20px;">
 		Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
-		<input class="amz-btn btn btn-sm popup-button" id="scanner-button" type="submit" value="Scanner" style="float:right; margin-top: 10px; margin-right: 10%;background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
-		">
+
 	</div>
 
 		<!-- FC SELECTION -->
@@ -132,6 +131,11 @@
 
 			<div class="jumbotron col-md-6 col-md-offset-3" style="text-align: center; margin-bottom: 0 auto; padding-top: 5px; border-radius: 1.5rem;">
 				<div class="a-box a-spacing-top-large a-color-alternate-background"><div class="a-box-inner"><div class="a-row"><div class="a-column a-span12 a-text-center"><h3 class="title">Barcode Generator
+<!-- ***********SCANNER BUTTON************ -->
+		<input class="amz-btn amz-col btn btn-sm popup-button" id="scanner-button" type="submit" value="Scanner">
+<!-- ******SCANNER BUTTON END****** -->
+
+
 					<!-- *******PRINT PAGE******* -->
    <style type="text/css" media="print">
 .printbutton {
@@ -192,7 +196,7 @@ document.write("<input type='button' " +
 					<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="">
 
 
-					<input class="amz-btn btn btn-lg" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; background: linear-gradient(to bottom,#f7dfa5,#f0c14b); radius: .2rem;
+					<input class="amz-btn btn btn-lg amz-col" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;
 					"> 
 				</form>
 

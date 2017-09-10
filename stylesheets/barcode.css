@@ -35,6 +35,10 @@ body {
 	outline-color: #e77600 !important;
 }
 
+.amz-col {
+  background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+}
+
 .btn:active {
 	border-color: #e77600 !important;
 	outline: #e77600;
@@ -59,6 +63,12 @@ body {
 .title {
 	margin-top: 7px;
 	margin-bottom: 12px;
+}
+
+#scanner-button {
+  float: left;
+  margin-left: 3%; 
+  border-radius: .2rem;
 }
 
 #scanner-pop {
@@ -105,7 +115,7 @@ body {
 
 */
 @media screen and (min-width : 0px) and (max-width : 800px) {
-#pbutton, #titlebar, .printbutton {
+#pbutton, #titlebar, .printbutton, #scanner-button {
 	display: none;
 }
 
