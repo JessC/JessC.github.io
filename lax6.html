@@ -7,11 +7,11 @@
 	<meta charset="UTF-8">
 
 
-<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script src="javascripts/libs/jquery.min.js"></script>
+	<script src="javascripts/libs/jquery.min.js"></script>
 	<!-- Google Analytics -->
 	
 	<script>
@@ -27,16 +27,16 @@
 
 
 
-<!-- JsBarcode -->
-<script src="javascripts/JsBarcode.code128.min.js"></script>
+	<!-- JsBarcode -->
+	<script src="javascripts/JsBarcode.code128.min.js"></script>
 
-<!-- Magnific Popup core JS file -->
-<script type="text/javascript" src="javascripts/libs/jquery.magnific-popup.js"></script>
+	<!-- Magnific Popup core JS file -->
+	<script type="text/javascript" src="javascripts/libs/jquery.magnific-popup.js"></script>
 
-<script src="javascripts/scripts.js"></script>
+	<script src="javascripts/scripts.js"></script>
 
 
-<!-- BOOTSTRAP -->
+	<!-- BOOTSTRAP -->
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -49,12 +49,12 @@
 	<link rel="stylesheet" href="stylesheets/magnific-popup.css">
 
 	<link rel="stylesheet" type="text/css" href="stylesheets/barcode.css">
-<!-- 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css"> -->
+	<!-- 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css"> -->
 
 <!-- 	// $(function() {
 	// 	$("#scanner").load("/scanner.html");
 	// });
- -->
+-->
 
 <!--
 	// $(document).ready(function(){
@@ -87,15 +87,15 @@
 </script>
 
 
-	<style>
-	label {
-		display: inline-block;
-		width: 60px;
-		font-weight: bold;
-	}
-	</style>
+<style>
+label {
+	display: inline-block;
+	width: 60px;
+	font-weight: bold;
+}
+</style>
 
-	<title> LAX6 Barcodes</title>
+<title> LAX6 Barcodes</title>
 </head>
 
 <body>
@@ -108,12 +108,12 @@
     </p>
   </div> -->
 
-	<div id="titlebar" style="padding-left: 20px;">
-		Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
+  <div id="titlebar" style="padding-left: 20px;">
+  	Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
 
-	</div>
+  </div>
 
-		<!-- FC SELECTION -->
+  <!-- FC SELECTION -->
 <!-- <select id="fcLocation">
   <option value="1">LAX6</option>
   <option value="ONT4">ONT4</option>
@@ -125,167 +125,166 @@
 
 
 
-		<br>
-		<div>
-
-
-			<div class="jumbotron col-md-6 col-md-offset-3" style="text-align: center; margin-bottom: 0 auto; padding-top: 5px; border-radius: 1.5rem;">
-				<div class="a-box a-spacing-top-large a-color-alternate-background"><div class="a-box-inner"><div class="a-row"><div class="a-column a-span12 a-text-center"><h3 class="title">Barcode Generator
-<!-- ***********SCANNER BUTTON************ -->
-		<input class="amz-btn amz-col btn btn-sm popup-button" id="scanner-button" type="submit" value="Scanner">
-<!-- ******SCANNER BUTTON END****** -->
-
-
-					<!-- *******PRINT PAGE******* -->
-   <style type="text/css" media="print">
-.printbutton {
-  visibility: none;
-  display: none;
-}
-</style> 
-
-
-<!-- <h1>Print Test</h1>  -->
-<script>
-document.write("<input type='button' " +
-"onClick='window.print()' " +
-"style='float: right; background-color: #eee;'" +
-"class='printbutton wht-btn amz-btn btn btn-link popup-button' " +
-"value='Print'/>");
-</script>
-<!-- ********END PRINT PAGE******** -->
-				</h3>
-				</div></div><div class="a-box a-spacing-top-base"><div class="a-box-inner"></div></div></div></div>
-
-				<div id="btn-container" style="width: 80%;  margin: 0 auto;" >
-
-					<button type="button" id="ambient" class="wht-btn btn btn-lg amz-btn" style="">Ambient
-					</button>
-
-					<button type="button" id="chilled" class="wht-btn btn btn-lg amz-btn" style="">Chilled
-					</button>
-
-					<button type="button" id="freezer" class="wht-btn btn btn-lg amz-btn" style="">Freezer
-					</button>
-
-					<button type="button" id="bigs" class="wht-btn btn btn-lg amz-btn" style="">Bigs
-					</button>
-				</div>
-		
-				<div>
-					<button type="button" id="p-cart" class="wht-btn btn btn-lg amz-btn" style="margin: 10px 5px 0px 5px;">Pick Cart
-					</button>
-
-					<button type="button" id="oneway" class="wht-btn btn btn-lg amz-btn" style="margin: 10px 5px 0px 5px;">1WAY
-					</button>
-
-					<button type="button" id="s-cart" class="wht-btn btn btn-lg amz-btn" style="margin: 10px 5px 0px 5px;">Stow Cart
-					</button>
-				</div>
-
-				<!-- <canvas id="barcode"></canvas>	 -->
-				<div id="section-to-print" class="barcode-container" style="margin-top: 20px;">
-					<svg id="barcode" width="244px" height="142px" x="0px" y="0px" viewBox="0 0 244 142" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px); background: rgb(255, 255, 255);"><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="4" height="100"></rect><rect x="6" y="0" width="2" height="100"></rect><rect x="12" y="0" width="2" height="100"></rect><rect x="22" y="0" width="2" height="100"></rect><rect x="32" y="0" width="2" height="100"></rect><rect x="38" y="0" width="4" height="100"></rect><rect x="44" y="0" width="8" height="100"></rect><rect x="54" y="0" width="6" height="100"></rect><rect x="62" y="0" width="2" height="100"></rect><rect x="66" y="0" width="2" height="100"></rect><rect x="72" y="0" width="4" height="100"></rect><rect x="78" y="0" width="2" height="100"></rect><rect x="88" y="0" width="6" height="100"></rect><rect x="96" y="0" width="6" height="100"></rect><rect x="104" y="0" width="4" height="100"></rect><rect x="110" y="0" width="4" height="100"></rect><rect x="116" y="0" width="6" height="100"></rect><rect x="124" y="0" width="2" height="100"></rect><rect x="132" y="0" width="2" height="100"></rect><rect x="138" y="0" width="6" height="100"></rect><rect x="146" y="0" width="4" height="100"></rect><rect x="154" y="0" width="2" height="100"></rect><rect x="160" y="0" width="6" height="100"></rect><rect x="170" y="0" width="4" height="100"></rect><rect x="176" y="0" width="2" height="100"></rect><rect x="186" y="0" width="2" height="100"></rect><rect x="192" y="0" width="4" height="100"></rect><rect x="198" y="0" width="4" height="100"></rect><rect x="208" y="0" width="6" height="100"></rect><rect x="216" y="0" width="2" height="100"></rect><rect x="220" y="0" width="4" height="100"></rect><text style="font: 20px monospace" text-anchor="middle" x="112" y="122">dmgPS01</text></g></svg>
-					<span id="invalid" style="display: none;">Not valid data for this barcode type!</span>
-				</div> 
-				
-				<br>
-
-
-				<form>
-					<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="">
-
-
-					<input class="amz-btn btn btn-lg amz-col" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;
-					"> 
-				</form>
-
-
+<br>
 <div>
-	<h5 style="float: right; margin-top: -30px; margin-right: 35px;" class="toggle-switch" id="more">
-		<u>more
-		</u>
-	</h5>
-	<div class="toggle-div" style="margin: 10px">
-		<p>
 
 
-		<input class="wht-btn amz-btn btn btn-sm popup-button" id="randstation" type="submit" value="Random Workstation" style="margin-top: 10px;
-		">
+	<div class="jumbotron col-md-6 col-md-offset-3" style="text-align: center; margin-bottom: 0 auto; padding-top: 5px; border-radius: 1.5rem;">
+		<div class="a-box a-spacing-top-large a-color-alternate-background"><div class="a-box-inner"><div class="a-row"><div class="a-column a-span12 a-text-center"><h3 class="title">Barcode Generator
+			<!-- ***********SCANNER BUTTON************ -->
+			<input class="amz-btn amz-col btn btn-sm popup-button" id="scanner-button" type="submit" value="Scanner">
+			<!-- ******SCANNER BUTTON END****** -->
+
+
+			<!-- *******PRINT PAGE******* -->
+			<style type="text/css" media="print">
+			.printbutton {
+				visibility: none;
+				display: none;
+			}
+			</style> 
+
+
+			<!-- <h1>Print Test</h1>  -->
+			<script>
+			document.write("<input type='button' " +
+				"onClick='window.print()' " +
+				"style='float: right; background-color: #eee;'" +
+				"class='printbutton wht-btn amz-btn btn btn-link popup-button' " +
+				"value='Print'/>");
+			</script>
+			<!-- ********END PRINT PAGE******** -->
+		</h3>
+	</div></div><div class="a-box a-spacing-top-base"><div class="a-box-inner"></div></div></div></div>
+
+	<div id="btn-container" style="width: 99%;  margin: 0 auto;" >
+
+		<button type="button" id="ambient" class="wht-btn btn btn-lg amz-btn" style="">Ambient
+		</button>
+
+		<button type="button" id="chilled" class="wht-btn btn btn-lg amz-btn" style="">Chilled
+		</button>
+
+		<button type="button" id="freezer" class="wht-btn btn btn-lg amz-btn" style="">Freezer
+		</button>
+
+		<button type="button" id="bigs" class="wht-btn btn btn-lg amz-btn" style="">Bigs
+		</button>
+	</div>
+
+	<div>
+		<button type="button" id="p-cart" class="wht-btn btn btn-lg amz-btn" style="margin: 10px 5px 0px 5px;">Pick Cart
+		</button>
+
+		<button type="button" id="oneway" class="wht-btn btn btn-lg amz-btn" style="margin: 10px 5px 0px 5px;">1WAY
+		</button>
+
+		<button type="button" id="s-cart" class="wht-btn btn btn-lg amz-btn" style="margin: 10px 5px 0px 5px;">Stow Cart
+		</button>
+	</div>
+
+	<!-- <canvas id="barcode"></canvas>	 -->
+	<div id="section-to-print" class="barcode-container" style="margin-top: 20px;">
+		<svg id="barcode" width="244px" height="142px" x="0px" y="0px" viewBox="0 0 244 142" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px); background: rgb(255, 255, 255);"><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="4" height="100"></rect><rect x="6" y="0" width="2" height="100"></rect><rect x="12" y="0" width="2" height="100"></rect><rect x="22" y="0" width="2" height="100"></rect><rect x="32" y="0" width="2" height="100"></rect><rect x="38" y="0" width="4" height="100"></rect><rect x="44" y="0" width="8" height="100"></rect><rect x="54" y="0" width="6" height="100"></rect><rect x="62" y="0" width="2" height="100"></rect><rect x="66" y="0" width="2" height="100"></rect><rect x="72" y="0" width="4" height="100"></rect><rect x="78" y="0" width="2" height="100"></rect><rect x="88" y="0" width="6" height="100"></rect><rect x="96" y="0" width="6" height="100"></rect><rect x="104" y="0" width="4" height="100"></rect><rect x="110" y="0" width="4" height="100"></rect><rect x="116" y="0" width="6" height="100"></rect><rect x="124" y="0" width="2" height="100"></rect><rect x="132" y="0" width="2" height="100"></rect><rect x="138" y="0" width="6" height="100"></rect><rect x="146" y="0" width="4" height="100"></rect><rect x="154" y="0" width="2" height="100"></rect><rect x="160" y="0" width="6" height="100"></rect><rect x="170" y="0" width="4" height="100"></rect><rect x="176" y="0" width="2" height="100"></rect><rect x="186" y="0" width="2" height="100"></rect><rect x="192" y="0" width="4" height="100"></rect><rect x="198" y="0" width="4" height="100"></rect><rect x="208" y="0" width="6" height="100"></rect><rect x="216" y="0" width="2" height="100"></rect><rect x="220" y="0" width="4" height="100"></rect><text style="font: 20px monospace" text-anchor="middle" x="112" y="122">dmgPS01</text></g></svg>
+		<span id="invalid" style="display: none;">Not valid data for this barcode type!</span>
+	</div> 
+
+	<br>
+
+
+	<form>
+		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="">
+
+
+		<input class="amz-btn btn btn-lg amz-col" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;
+		"> 
+	</form>
+
+
+	<div>
+		<h5 style="float: right; margin-top: -30px; margin-right: 35px;" class="toggle-switch" id="more">
+			<u>more
+			</u>
+		</h5>
+		<div class="toggle-div" style="margin: 10px">
+			<p>
+
+				<input class="wht-btn amz-btn btn btn-sm popup-button" id="randstation" type="submit" value="Random Workstation" style="margin-top: 10px;
+				">
 
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="drop-ambient" type="submit" value="Ambient DZ" style="margin-top: 10px;
-		">
+				">
 
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="drop-chilled" type="submit" value="Chilled DZ" style="margin-top: 10px;
-		">
+				">
 
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="drop-freezer" type="submit" value="Freezer DZ" style="margin-top: 10px;
-		">
-</p>
+				">
+			</p>
+		</div>
 	</div>
+
+
+
+
+</div>
 </div>
 
 
-
-
-  	</div>
-  </div>
-	
-
 <!-- *****************POP UP***************** -->
-	<div class="info-popup mfp-hide" id="scanner-pop" style="text-align: center; padding: 20px;">
-		<h3><b><u>Scanner Codes</u></b></h3>
-					
-				<div style="background-color: " id="toggle-container">
+<div class="info-popup mfp-hide" id="scanner-pop" style="text-align: center; padding: 20px;">
+	<h3><b><u>Scanner Codes</u></b></h3>
 
-					<h3 id="barcode-desc" class="toggle-switch">Factory Default</h3>
-					<div class="toggle-div" id="scanner-code"><h4>Resets scanner to default settings</h4>
-						<img class="b-code" id="resetcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/reset.png">
-					</div> 
+	<div style="background-color: " id="toggle-container">
 
-					<h3 class="toggle-switch" id="barcode-desc">Return Suffix</h3>
-					<div class="toggle-div" id="scanner-code"><h4>Scanner will add an Enter key function after each scan</h4> 
-						<img class="b-code" id="entercode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/enter.png">
-					</div> 
+		<h3 id="barcode-desc" class="toggle-switch">Factory Default</h3>
+		<div class="toggle-div" id="scanner-code"><h4>Resets scanner to default settings</h4>
+			<img class="b-code" id="resetcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/reset.png">
+		</div> 
 
-					<h3 class="toggle-switch" id="barcode-desc">Clear Suffix</h3>
-					<div class="toggle-div" id="scanner-code"><h4>Removes all suffixes</h4> 
-						<img class="b-code" id="suffixcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/suffix.png">
-					</div> 
+		<h3 class="toggle-switch" id="barcode-desc">Return Suffix</h3>
+		<div class="toggle-div" id="scanner-code"><h4>Scanner will add an Enter key function after each scan</h4> 
+			<img class="b-code" id="entercode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/enter.png">
+		</div> 
 
-					<h3 class="toggle-switch" id="barcode-desc">Manual</h3>
-					<div class="toggle-div" id="scanner-code"><h4>Trigger must be pressed to scan</h4> 
-						<img class="b-code" id="manualcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/manual.png">
-					</div> 
+		<h3 class="toggle-switch" id="barcode-desc">Clear Suffix</h3>
+		<div class="toggle-div" id="scanner-code"><h4>Removes all suffixes</h4> 
+			<img class="b-code" id="suffixcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/suffix.png">
+		</div> 
 
-					<h3 class="toggle-switch" id="barcode-desc">Auto</h3>
-					<div class="toggle-div" id="scanner-code"><h4>Scanner will automatically scan barcodes without pressing the trigger</h4> 
-						<img class="b-code" id="autocode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/auto.png">
-					</div> 
-				</div>
-			</div>
+		<h3 class="toggle-switch" id="barcode-desc">Manual</h3>
+		<div class="toggle-div" id="scanner-code"><h4>Trigger must be pressed to scan</h4> 
+			<img class="b-code" id="manualcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/manual.png">
+		</div> 
+
+		<h3 class="toggle-switch" id="barcode-desc">Auto</h3>
+		<div class="toggle-div" id="scanner-code"><h4>Scanner will automatically scan barcodes without pressing the trigger</h4> 
+			<img class="b-code" id="autocode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/auto.png">
+		</div> 
+	</div>
+</div>
 <!-- *****************END POP UP***************** -->
 
-			<!-- *********PREFIX BUTTONS********* -->
-			<!-- STORE ALL PREFIX BUTTONS HERE -->
-			<script>
-			$("#ambient").click(function() {
-				$("#userInput").val("P-1-A").focus();
-			});
+<!-- *********PREFIX BUTTONS********* -->
+<!-- STORE ALL PREFIX BUTTONS HERE -->
+<script>
+$("#ambient").click(function() {
+	$("#userInput").val("P-1-A").focus();
+});
 
-			$("#chilled").click(function() {
-				$("#userInput").val("P-1-C").focus();
-			});
+$("#chilled").click(function() {
+	$("#userInput").val("P-1-C").focus();
+});
 
-			$("#freezer").click(function() {
-				$("#userInput").val("P-1-F").focus();
-			});
+$("#freezer").click(function() {
+	$("#userInput").val("P-1-F").focus();
+});
 
-			$("#bigs").click(function() {
-				$("#userInput").val("P-1-B").focus();
-			});
+$("#bigs").click(function() {
+	$("#userInput").val("P-1-B").focus();
+});
 
-			$("#p-cart").click(function() {
+$("#p-cart").click(function() {
 				// if
 				// 	(document.getElementById("fcLocation").value == "ONT4")
 				// {$("#userInput").val("rbONT40").focus();}
@@ -298,62 +297,62 @@ document.write("<input type='button' " +
 				// }
 			});
 
-				$("#oneway").click(function() {
-				$("#userInput").val("sp1WAY").focus();
-			});
+$("#oneway").click(function() {
+	$("#userInput").val("sp1WAY").focus();
+});
 
-			$("#s-cart").click(function() {
-				$("#userInput").val("SCFRSH0").focus();
-			});
-			</script>
-			<!-- ***********END PREFIX BUTTONS********* -->
+$("#s-cart").click(function() {
+	$("#userInput").val("SCFRSH0").focus();
+});
+</script>
+<!-- ***********END PREFIX BUTTONS********* -->
 
-    <!-- *******SUBMIT BARCODE BUTTON******* -->
-    <script>
-    $('#check').click(function() {
-    	JsBarcode("#barcode", $('#userInput').val());
-    	return false;
-    });
-    </script> 
-    <!-- ********END SUBMIT BARCDOE BUTTON****** -->
+<!-- *******SUBMIT BARCODE BUTTON******* -->
+<script>
+$('#check').click(function() {
+	JsBarcode("#barcode", $('#userInput').val());
+	return false;
+});
+</script> 
+<!-- ********END SUBMIT BARCDOE BUTTON****** -->
 
-			<!-- **********REAL TIME BARCODE********* -->
-			<script>
-			$(document).ready(function(){
-				$("#userInput").on('input',newBarcode);
-				$("#barcodeType").change(function(){
-					$("#userInput").val( defaultValues[$(this).val()] );
-					newBarcode();
-				});
-			});
+<!-- **********REAL TIME BARCODE********* -->
+<script>
+$(document).ready(function(){
+	$("#userInput").on('input',newBarcode);
+	$("#barcodeType").change(function(){
+		$("#userInput").val( defaultValues[$(this).val()] );
+		newBarcode();
+	});
+});
 
-			var newBarcode = function() {
+var newBarcode = function() {
     //Convert to boolean
-        if 
+    if 
     	($("#userInput").val().charAt(0) == "P" && $("#userInput").val().charAt(1) == "-")
     {
-    $("#barcode").JsBarcode(
-    	$("#userInput").val().toUpperCase(),
-    	)
-  } else {
-  	    $("#barcode").JsBarcode(
-    	$("#userInput").val(),
-  )}
-  };
+    	$("#barcode").JsBarcode(
+    		$("#userInput").val().toUpperCase(),
+    		)
+    } else {
+    	$("#barcode").JsBarcode(
+    		$("#userInput").val(),
+    		)}
+    };
     </script>
     <!-- *******END REAL TIME BARCODE****** -->
 
 
     <!-- *********TOGGLE FUNCTION********* -->
-		<script>
-        $('.toggle-switch').click(function(){
-        $(this).toggleClass("amzorng")
-        $(this).next().slideToggle("fast", function(){
+    <script>
+    $('.toggle-switch').click(function(){
+    	$(this).toggleClass("amzorng")
+    	$(this).next().slideToggle("fast", function(){
         	   //          if($('#toggle-div').is(":visible")){
             //     $('#more').text("less");
             // }
-        });
-      });
+          });
+    });
     </script>
     <!-- *********END TOGGLE FUNCTION********* -->
 
@@ -367,40 +366,40 @@ document.write("<input type='button' " +
     	closeBtnInside: true
     });
     </script>
-     <!-- *********END POPUP FUNCTION********* -->
+    <!-- *********END POPUP FUNCTION********* -->
 
-   <script>
+    <script>
 //<!--  selecting a random array item
- -->
+-->
 var listOfStations = ["ws-FMP-01", "ws-FMP-02", "ws-FMP-03", "ws-FMP-04", "ws-FMP-05", "ws-FMP-06", "ws-FMP-07", "ws-FMP-08", "ws-FMP-09", "ws-FMP-10", "ws-a-01", "ws-f-01", "ws-p-01", "ws-a-02", "ws-f-02", "ws-p-02", "ws-a-03", "ws-f-03", "ws-p-03", "ws-a-04", "ws-f-04", "ws-p-04", "ws-a-05", "ws-f-05", "ws-p-05", "ws-a-06", "ws-f-06", "ws-p-06", "ws-a-07", "ws-f-07", "ws-p-07", "ws-a-08", "ws-f-08", "ws-p-08", "ws-a-09", "ws-f-09", "ws-p-09", "ws-a-10", "ws-f-10", "ws-p-10", "ws-c-01", "ws-c-02", "ws-c-03", "ws-c-04", "ws-c-05", "ws-c-06", "ws-c-07", "ws-c-08", "ws-c-09", "ws-c-10", "ws-d-01", "ws-d-02", "ws-d-03", "ws-d-04", "ws-d-05", "ws-d-06", "ws-d-07", "ws-d-08", "ws-d-09", "ws-d-10"];
 
 function random_workstation(listOfStations)
 {
-return listOfStations[Math.floor(Math.random()*listOfStations.length)];
+	return listOfStations[Math.floor(Math.random()*listOfStations.length)];
 }
-    $('#randstation').click(function() {
-    	JsBarcode("#barcode", random_workstation(listOfStations));
-    });
+$('#randstation').click(function() {
+	JsBarcode("#barcode", random_workstation(listOfStations));
+});
 
-     $('#drop-ambient').click(function() {
-    	JsBarcode("#barcode", "dz-P-AMBIENT");
-    	});
+$('#drop-ambient').click(function() {
+	JsBarcode("#barcode", "dz-P-AMBIENT");
+});
 
-    $('#drop-chilled').click(function() {
-    		JsBarcode("#barcode", "dz-P-CHILLED");
-			});
-    $('#drop-freezer').click(function() {
-    			JsBarcode("#barcode", "dz-P-FROZEN");
-			});
-
-
-	</script>
+$('#drop-chilled').click(function() {
+	JsBarcode("#barcode", "dz-P-CHILLED");
+});
+$('#drop-freezer').click(function() {
+	JsBarcode("#barcode", "dz-P-FROZEN");
+});
 
 
+</script>
 
 
 
 
-  	</div>
-	</body>
+
+
+</div>
+</body>
 </html>
