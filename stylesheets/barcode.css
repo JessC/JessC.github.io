@@ -2,6 +2,34 @@ body {
 	width: 100%;
 }
 
+a.info {
+    /*cursor:help;*/ /* changes cursor to a question mark on mouseover */
+    position:relative; /* important to keep */
+    z-index:1;
+    background-color:#FFFFFF; /* white background highlighting of link text */
+    color:#e77600; /* colour of link text */
+    text-decoration:none; /* tooltip will default to underlined text unless set to none */
+}
+a.info:hover {
+    z-index:2;
+    /*background-color:#FFCC99*/ /* background highlighting of link text on mouseover */
+}
+a.info span {
+    display:none; /* hide the text between the span tags until hovered on */
+}
+a.info:hover span {
+    display:block; /* display the text in the span tags as a box */
+    position:absolute; /* position tooltip according to line below */
+    top:1em; left:2em; width:15em;
+    border-radius: 1rem;
+    border:3px solid #FF9900; /* border colour of tooltip box */
+    padding: .5em;
+    background-color:#232F3E; /* shading colour of tooltip box */
+    color:#FFFFFF; /* colour of text in tooltip, black used */
+    font-size: 1.1em;
+    /*text-align:left;*/ /* alignment of text in tooltip box */
+}
+
 .center {
 	text-align: center;
 }

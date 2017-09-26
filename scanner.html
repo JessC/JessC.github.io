@@ -1,3 +1,81 @@
+<html>
+
+<head>
+
+<title>CSS Tooltips</title>
+
+<style> 
+
+/* the z-index property specifies the stack order of an element.
+An element with greater stack order is always in front of an element with a lower stack order.
+Consider it as a method of creating or preventing overlapping of elements.
+The z-index property only works on positioned elements
+*/
+
+a.info {
+    cursor:help; /* changes cursor to a question mark on mouseover */
+    position:relative; /* important to keep */
+    z-index:1;
+    background-color:#FFFFFF; /* white background highlighting of link text */
+    color:#FF3300; /* colour of link text */
+    text-decoration:none; /* tooltip will default to underlined text unless set to none */
+}
+a.info:hover {
+    z-index:2;
+    background-color:#FFCC99 /* background highlighting of link text on mouseover */
+}
+a.info span {
+    display:none; /* hide the text between the span tags until hovered on */
+}
+a.info:hover span {
+    display:block; /* display the text in the span tags as a box */
+    position:absolute; /* position tooltip according to line below */
+    top:0em; left:3em; width:15em;
+    border:1px solid #FFCC99; /* border colour of tooltip box */
+    background-color:#FFFFCC; /* shading colour of tooltip box */
+    color:#000000; /* colour of text in tooltip, black used */
+    text-align:left; /* alignment of text in tooltip box */
+}
+</style>
+
+</head>
+
+<body>
+
+	<script type="text/javascript">
+function open_win()
+{
+window.open("http://www.w3schools.com","_blank","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=yes, width=400, height=400");
+}
+</script>
+
+<H2 style="text-align:center">CSS Tool-Tips</H2>
+<HR />
+<br />
+
+<div style="text-align:left">
+Tool tip created from CSS only. Hover over the question mark for help tip.&nbsp;&nbsp;<a class=info href="#">&nbsp;&nbsp;<b>?</b>&nbsp;&nbsp;<span>Your tool-tip text will show here in the style defined within the inline style, or you could use an external CSS file.</span></a>
+</div>
+
+<p></p>
+
+<div style="text-align:left">
+<a class=info href="#">
+<img border="0" src="manScratchHead.gif" width="42" height="103"><span>I am scratching my head not because I am puzzled over how to use CSS to create a tool-tip, but because I have head lice and I am wondering how to get rid of them. Go ahead, ridicule me.</span></a></p>
+</div>
+
+
+
+<p>Link to page of Javascript Browser Functions.</p>
+<p>Button opens new window to target URL and JavaScript parameters control how it displays.  However, it will not work if your browser settings prevent this type of scripted control.</p>
+<form>
+<input type="button" value="Open Window" onclick="open_win()">
+</form>
+
+</body>
+</html>
+
+
 <!-- *********NO CODE HERE ANYMORE******** -->
 
 
