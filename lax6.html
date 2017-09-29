@@ -206,8 +206,8 @@ label {
 
 	<div>
 		<h5 style="float: right; margin-top: -30px; margin-right: 35px;" class="toggle-switch" id="more">
-			<u>more
-			</u>
+			<span>more
+			</span>
 		</h5>
 		<div class="toggle-div" style="margin: 10px">
 			<p>
@@ -368,9 +368,11 @@ var newBarcode = function() {
     $('.toggle-switch').click(function(){
     	$(this).toggleClass("amzorng")
     	$(this).next().slideToggle("fast", function(){
-        	   //          if($('#toggle-div').is(":visible")){
-            //     $('#more').text("less");
-            // }
+        	            if($('.toggle-div').is(":visible")){
+                $('#more').text("less");
+            }else{
+            	$('#more').text("more");
+            }
           });
     });
     </script>
