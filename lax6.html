@@ -113,7 +113,7 @@ label {
   <div id="titlebar" style="padding-left: 20px;">
   	Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
   	<a class="fa fa-info-circle info"> <span>If you're interested in having a page like this that's tailored to your site, email me and I'll do my best to make it happen. <br> (I'm looking at you ONT)</span></a>
-<!-- <i class="fa fa-info-circle"></i> -->
+  	<!-- <i class="fa fa-info-circle"></i> -->
   </div>
 
   <!-- FC SELECTION -->
@@ -227,12 +227,8 @@ label {
 		</div>
 	</div>
 
-
-
-
 </div>
 </div>
-
 
 <!-- ***********POP UP************* -->
 <div class="info-popup mfp-hide" id="scanner-pop" style="text-align: center; padding: 20px;">
@@ -289,7 +285,7 @@ $("#bigs").click(function() {
 
 $("#p-cart").click(function() {
 				// if
-				// 	(document.getElementById("fcLocation").value == "ONT4")
+				// 	(document.getElementById("fcLfocation").value == "ONT4")
 				// {$("#userInput").val("rbONT40").focus();}
 				// else if
 				// 	(document.getElementById("fcLocation").value == "OAK4")
@@ -319,9 +315,6 @@ $('#check').click(function() {
 </script> 
 <!-- ********END SUBMIT BARCODE BUTTON****** -->
 
-<script>
-
-</script>
 
 
 <!-- **********REAL TIME BARCODE********* -->
@@ -344,7 +337,7 @@ var newBarcode = function() {
     } 
     else if ($("#userInput").val().charAt(0) == "P" && $("#userInput").val().charAt(1) == "-" && windowSize < 400)
     {
-      $("#barcode").JsBarcode(
+    	$("#barcode").JsBarcode(
     		$("#userInput").val().toUpperCase(), {width: 1},
     		)	
     }
@@ -362,18 +355,17 @@ var newBarcode = function() {
     </script>
     <!-- *******END REAL TIME BARCODE****** -->
 
-
     <!-- *********TOGGLE FUNCTION********* -->
     <script>
     $('.toggle-switch').click(function(){
     	$(this).toggleClass("amzorng")
     	$(this).next().slideToggle("fast", function(){
-        	            if($('.toggle-div').is(":visible")){
-                $('#more').text("less");
-            }else{
-            	$('#more').text("more");
-            }
-          });
+    		if($('.toggle-div').is(":visible")){
+    			$('#more').text("less");
+    		}else{
+    			$('#more').text("more");
+    		}
+    	});
     });
     </script>
     <!-- *********END TOGGLE FUNCTION********* -->
@@ -404,36 +396,30 @@ $('#randstation').click(function() {
 });
 
 $('#drop-ambient').click(function() {
-		if ( $(window).width() < 400) {
-	JsBarcode("#barcode", "dz-P-AMBIENT", {width: 1});
-} else {
-	JsBarcode("#barcode", "dz-P-AMBIENT");
-}
+	if ( $(window).width() < 400) {
+		JsBarcode("#barcode", "dz-P-AMBIENT", {width: 1});
+	} else {
+		JsBarcode("#barcode", "dz-P-AMBIENT");
+	}
 });
 
 $('#drop-chilled').click(function() {
-if ( $(window).width() < 400) {
-	JsBarcode("#barcode", "dz-P-CHILLED", {width: 1});
-} else {
-	JsBarcode("#barcode", "dz-P-CHILLED");
-}
+	if ( $(window).width() < 400) {
+		JsBarcode("#barcode", "dz-P-CHILLED", {width: 1});
+	} else {
+		JsBarcode("#barcode", "dz-P-CHILLED");
+	}
 });
 
 $('#drop-freezer').click(function() {
-if ( $(window).width() < 400) {
-	JsBarcode("#barcode", "dz-P-FROZEN", {width: 1});
-} else {
-	JsBarcode("#barcode", "dz-P-FROZEN");
-}
+	if ( $(window).width() < 400) {
+		JsBarcode("#barcode", "dz-P-FROZEN", {width: 1});
+	} else {
+		JsBarcode("#barcode", "dz-P-FROZEN");
+	}
 });
 
-
-
 </script>
-
-
-
-
 
 
 </div>
