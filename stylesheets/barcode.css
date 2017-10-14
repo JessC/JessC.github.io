@@ -93,6 +93,10 @@ a.info:hover span {
 	margin-bottom: 12px;
 }
 
+#isd {
+  visibility: hidden;
+}
+
 #scanner-button {
   float: left;
   margin-left: 3%; 

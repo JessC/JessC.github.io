@@ -112,7 +112,7 @@ label {
 
   <div id="titlebar" style="padding-left: 20px;">
   	Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
-  	<a class="fa fa-info-circle info"> <span>If you're interested in having a page like this that's tailored to your site, email me and I'll do my best to make it happen. <br> (I'm looking at you ONT)</span></a>
+  	<a class="fa fa-info-circle info"> <span>If you're interested in having a page like this that's tailored to your FC, email or ping me and I'll do my best to make it happen. <br> (I'm looking at you ONT)</span></a>
   	<!-- <i class="fa fa-info-circle"></i> -->
   </div>
 
@@ -203,6 +203,9 @@ label {
 		"> 
 	</form>
 
+	<input class="amz-btn btn btn-md amz-col" id="isd" type="submit" value="Create ISD">
+
+	</input>.
 
 	<div>
 		<h5 style="float: right; margin-top: -30px; margin-right: 35px;" class="toggle-switch" id="more">
@@ -315,12 +318,14 @@ $('#check').click(function() {
 </script> 
 <!-- ********END SUBMIT BARCODE BUTTON****** -->
 
-
+<script>
+</script>
 
 <!-- **********REAL TIME BARCODE********* -->
 <script>
 $(document).ready(function(){
 	$("#userInput").on('input',newBarcode);
+	$("#userInput").on('input',checkISD);
 	$("#barcodeType").change(function(){
 		$("#userInput").val( defaultValues[$(this).val()] );
 	});
@@ -352,7 +357,19 @@ var newBarcode = function() {
     		$("#userInput").val(),
     		)}
     };
+
+    var checkISD = function() {
+    	if ($("#userInput").val().charAt(6) == "8" && $("#userInput").val().charAt(7) == "0" && $("#userInput").val().charAt(8) == "4" && $("#userInput").val().charAt(9) == "" ){
+    		$('#isd').css('visibility', 'visible'); 	 		
+    	}
+    	else
+    	{
+    		$('#isd').css('visibility', 'hidden'); 	 		
+    	}
+    }
     </script>
+
+
     <!-- *******END REAL TIME BARCODE****** -->
 
     <!-- *********TOGGLE FUNCTION********* -->
