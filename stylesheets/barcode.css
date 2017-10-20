@@ -97,6 +97,25 @@ a.info:hover span {
   visibility: hidden;
 }
 
+/*TEMP CSS FOR TEST*/
+/*#barcodeform {
+  visibility: hidden;
+}
+#barcode-container {
+  visibility: hidden;
+}
+#barcode {
+  visibility: hidden;
+}
+.barcode-container {
+  visibility: hidden;
+}
+#btn-container {
+  visibility: hidden;
+}
+*/
+
+
 #scanner-button {
   float: left;
   margin-left: 3%; 
