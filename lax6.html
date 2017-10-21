@@ -6,6 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 
+<script type="text/javascript" src="javascripts/arrays.js"></script>
 
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 
@@ -13,8 +14,7 @@
 
 	<script src="javascripts/libs/jquery.min.js"></script>
 
-	<script src="javascripts/libs/"
-	<!-- Google Analytics -->
+	<!-- //Google Analytics -->
 	
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -35,15 +35,13 @@
 	<!-- Magnific Popup core JS file -->
 	<script type="text/javascript" src="javascripts/libs/jquery.magnific-popup.js"></script>
 
-	<script src="javascripts/arrays.js"></script>
-
-
 	<!-- BOOTSTRAP -->
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -115,8 +113,40 @@ label {
   <div id="titlebar" style="padding-left: 20px;">
   	Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
   	<a class="fa fa-info-circle info"> <span>If you're interested in having a page like this that's tailored to your FC, email or ping me and I'll do my best to make it happen. <br> (I'm looking at you ONT)</span></a>
-  	<!-- <i class="fa fa-info-circle"></i> -->
+
+
+
+<div class="btn-group mytoggle" data-toggle="buttons">
+	<button type="button" title="bcode" class="btn amz-btn active">bcode</button>
+	<button type="button" title="sioc" class="btn amz-btn">sioc</button>
+</div>
+<!-- <div id="barcode"> Barcode Generator </div>
+<div id="sioc"> SIOC TOOL </div> -->
+
+<script>
+$('.mytoggle button').click(function(){
+    var ix = $(this).index();
+    
+    $('#barcode-checker').toggle( ix === 0 );
+    $('#sioc-checker').toggle( ix === 1 );
+});
+  // $(function() {
+  //   $('#toggle-event').change(function() {
+  //     //$('#console-event').html('Function: ' + $(this).prop('checked'))
+  //     $('#barcode-checker, #sioc-checker').toggle()
+  // }
+  //         		// $('#barcode-checker').css('visibility', 'hidden');
+  //         		// $('#sioc-checker').css('visibility', 'visible');
+  //   })
+  // })
+  // $('#toggle-event').bootstrapToggle({
+  //   	on: 'sioc',
+  //     off: 'bcode'
+  //     });
+</script>
   </div>
+
+<!-- Rounded switch -->
 
   <!-- FC SELECTION -->
 <!-- <select id="fcLocation">
@@ -135,7 +165,11 @@ label {
 
 
 	<div class="jumbotron col-md-6 col-md-offset-3" style="text-align: center; margin-bottom: 0 auto; padding-top: 5px; border-radius: 1.5rem;">
-		<div class="a-box a-spacing-top-large a-color-alternate-background"><div class="a-box-inner"><div class="a-row"><div class="a-column a-span12 a-text-center"><h3 class="title">Barcode Generator
+		<div class="a-box a-spacing-top-large a-color-alternate-background">
+			<div class="a-box-inner">
+				<div class="a-row">
+					<div class="a-column a-span12 a-text-center">
+						<h3 class="title">Barcode Generator
 			<!-- ***********SCANNER BUTTON************ -->
 			<input class="amz-btn amz-col btn btn-sm popup-button" id="scanner-button" type="submit" value="Scanner">
 			<!-- ******SCANNER BUTTON END****** -->
@@ -160,7 +194,14 @@ label {
 			</script>
 			<!-- ********END PRINT PAGE******** -->
 		</h3>
-	</div></div><div class="a-box a-spacing-top-base"><div class="a-box-inner"></div></div></div></div>
+	</div>
+</div>
+	<div id="barcode-checker">
+
+	<div class="a-box a-spacing-top-base">
+		<div class="a-box-inner"></div>
+	</div>
+
 
 	<div id="btn-container" style="width: 99%;  margin: 0 auto;" >
 <div>
@@ -199,23 +240,44 @@ label {
 
 <!-- BARCODE INPUT -->
 	<form id="barcodeform">
-		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="">
+		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" >
 
 
 		<input class="amz-btn btn btn-lg amz-col" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;
 		"> 
 	</form>
-
+</div>
 <!-- *********CREATE ISD BUTTON********** -->
 	<input class="amz-btn btn btn-md amz-col" id="isd" type="submit" value="Create ISD">
 <!-- ************************************ -->
 	</input>
+
 	<!-- END BARCODE INPUT -->
 
-<!-- $('#check').click(function() {
-	JsBarcode("#barcode", $('#userInput').val());
-	return false;
-}); -->
+			<div id="sioc-checker" >
+				<div>
+					<p id="upc-value">
+						UPC:
+					</p>
+					<p id="asin-value">
+						ASIN:
+					</p>
+
+					<p id="asin-link">
+						enter upc or asin
+					</p>
+
+				</div>
+				<div>
+					<!-- SIOC INPUT -->
+					<form id="siocform">
+						<input style="font-weight: 700;" class="form-control" id="sioc-input" type="text" value="" placeholder="UPC/ASIN">
+
+						<input class="amz-btn btn btn-lg amz-col" id="check-sioc" type="submit" value="Check SIOC" style="margin-top: 15px; radius: .2rem;
+						">
+					</form>
+				</div>
+			</div>
 	<!-- END SIOC INPUT -->
 
 	<div>
@@ -238,34 +300,9 @@ label {
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="drop-freezer" type="submit" value="Freezer DZ" style="margin-top: 10px;
 				">
 			</p>
-			<div id="sioc-checker">
-				<div>
-					<p id="upc-value">
-						UPC:
-					</p>
-					<p id="asin-value">
-						ASIN:
-					</p>
-
-					<p id="asin-link">
-						enter upc or asin to get link
-					</p>
-
-				</div>
-				<div>
-					<!-- SIOC INPUT -->
-					<form id="siocform">
-						<input style="font-weight: 700;" class="form-control" id="sioc-input" type="text" value="" placeholder="Enter UPC or ASIN">
-
-						<input class="amz-btn btn btn-lg amz-col" id="check-sioc" type="submit" value="Check SIOC" style="margin-top: 15px; radius: .2rem;
-						">
-					</form>
-				</div>
-			</div>
 		</div>
 	</div>
 
-</div>
 </div>
 
 <!-- ***********POP UP************* -->
@@ -300,6 +337,7 @@ label {
 		</div> 
 	</div>
 </div>
+
 <!-- ***********END POP UP************ -->
 
 <!-- *********PREFIX BUTTONS********* -->
@@ -341,6 +379,7 @@ $("#oneway").click(function() {
 $("#s-cart").click(function() {
 	$("#userInput").val("SCFRSH0").focus();
 });
+
 </script>
 <!-- ***********END PREFIX BUTTONS********* -->
 
@@ -353,8 +392,6 @@ $('#check').click(function() {
 </script> 
 <!-- ********END SUBMIT BARCODE BUTTON****** -->
 
-<script>
-</script>
 
 <!-- **********REAL TIME BARCODE********* -->
 <script>
@@ -440,12 +477,12 @@ var newBarcode = function() {
 -->
 
 
-function random_workstation(listOfStations)
+function randomWorkstation(listOfStations)
 {
 	return listOfStations[Math.floor(Math.random()*listOfStations.length)];
 }
 $('#randstation').click(function() {
-	JsBarcode("#barcode", random_workstation(listOfStations));
+	JsBarcode("#barcode", randomWorkstation(listOfStations));
 });
 
 $('#drop-ambient').click(function() {
@@ -471,7 +508,6 @@ $('#drop-freezer').click(function() {
 		JsBarcode("#barcode", "dz-P-FROZEN");
 	}
 });
-
 </script>
 
 <script>
@@ -497,30 +533,31 @@ if(!String.linkify) {
 
 var clearResults = function() {
 		results = null;
-}
+};
+
 var upcValue = function() {
     var str = document.getElementById("upc-value").innerHTML; 
     var txt = str.replace("UPC:", ("UPC: " + results[0].UPC));
     document.getElementById("upc-value").innerHTML = txt;
-}
+};
 
 var asinValue = function() {
     var str = document.getElementById("asin-value").innerHTML; 
     var txt = str.replace("ASIN:", ("ASIN: " + results[0].ASIN));
     document.getElementById("asin-value").innerHTML = txt;
-}
+};
 
 var asinLink = function() {
     var str = document.getElementById("asin-link").innerHTML; 
-    var txt = str.replace("enter upc or asin to get link", "http://fcresearch-na.aka.amazon.com/LAX6/results?s="+results[0].UPC).linkify();
+    var txt = str.replace("enter upc or asin", "http://fcresearch-na.aka.amazon.com/LAX6/results?s="+results[0].UPC).linkify();
     document.getElementById("asin-link").innerHTML = txt;
-}
+};
 
 var notSioc = function() {
     var str = document.getElementById("asin-link").innerHTML; 
-    var txt = str.replace("enter upc or asin to get link", "This Item is Not SICO");
+    var txt = str.replace("enter upc or asin", "This Item is Not SICO");
     document.getElementById("asin-link").innerHTML = txt;
-}
+};
 
 
 
@@ -539,10 +576,9 @@ return results[0];
 
 $('#check-sioc').click(function() {
    //alert(JSON.stringify(checkSioc($('#sioc-input').val().toString())));
-
    checkSioc($('#sioc-input').val());
 
-   if (results == 0) {
+   if (results.length == 0) {
    	notSioc();
    } else {
    	asinLink();
@@ -550,8 +586,7 @@ $('#check-sioc').click(function() {
    	asinValue();
    };
 	// alert(results[0].UPC);
-      	clearResults();
-
+   	clearResults();
 	return false;
 });
 // 645729415164

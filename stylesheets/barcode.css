@@ -97,6 +97,9 @@ a.info:hover span {
   visibility: hidden;
 }
 
+#sioc-checker {
+  display: none;
+}
 /*TEMP CSS FOR TEST*/
 /*#barcodeform {
   visibility: hidden;
