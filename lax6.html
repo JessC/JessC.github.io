@@ -257,6 +257,7 @@ $('.mytoggle button').click(function(){
 	<!-- END BARCODE INPUT -->
 
 			<div class="sioc-checker" >
+				<img id="val-img" style="width: 4em;" src="">
 				<div>
 					<p id="upc-value">
 						UPC:
@@ -278,6 +279,10 @@ $('.mytoggle button').click(function(){
 						<input class="amz-btn btn btn-lg amz-col" id="check-sioc" type="submit" onclick="return false;" value="Check SIOC" style="margin-top: 15px; radius: .2rem;
 						">
 					</form>
+					<br>
+					<p style="font-size: 1em;">
+						Use this tool to check whether items are sioc (non-toteable). Should work but we are still testing it. <br> Thank you Chris Lopez FHD for your input on this!
+					</p>
 				</div>
 			</div>
 	<!-- END SIOC INPUT -->
@@ -589,18 +594,16 @@ $('#check-sioc').click(function(event) {
    checkSioc($('#sioc-input').val());
    if (results.length == 0) {
    	notSioc();
-
+   	$('#val-img').attr('src', 'images/no.png')
    } else {
    	asinLink();
    	upcValue();
    	asinValue();
+   	$('#val-img').attr('src', 'images/yes.png')
    };
    	clearResults();
    		 //alert(results[0].UPC);
-
    	return false;
-
-
 });
 // 645729415164
 
