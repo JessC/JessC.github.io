@@ -97,7 +97,7 @@ a.info:hover span {
   visibility: hidden;
 }
 
-#sioc-checker {
+.sioc-checker {
   display: none;
 }
 /*TEMP CSS FOR TEST*/

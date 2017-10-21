@@ -127,8 +127,10 @@ label {
 $('.mytoggle button').click(function(){
     var ix = $(this).index();
     
-    $('#barcode-checker').toggle( ix === 0 );
-    $('#sioc-checker').toggle( ix === 1 );
+    $('.barcode-checker').toggle( ix === 0 );
+    $('.sioc-checker').toggle( ix === 1 );
+      // document.getElementById("barcode-checker").blur();
+
 });
   // $(function() {
   //   $('#toggle-event').change(function() {
@@ -169,7 +171,8 @@ $('.mytoggle button').click(function(){
 			<div class="a-box-inner">
 				<div class="a-row">
 					<div class="a-column a-span12 a-text-center">
-						<h3 class="title">Barcode Generator
+						<h3 class="sioc-checker">SIOC Checker </h3>
+						<h3 class="title barcode-checker">Barcode Generator
 			<!-- ***********SCANNER BUTTON************ -->
 			<input class="amz-btn amz-col btn btn-sm popup-button" id="scanner-button" type="submit" value="Scanner">
 			<!-- ******SCANNER BUTTON END****** -->
@@ -196,7 +199,7 @@ $('.mytoggle button').click(function(){
 		</h3>
 	</div>
 </div>
-	<div id="barcode-checker">
+	<div class="barcode-checker">
 
 	<div class="a-box a-spacing-top-base">
 		<div class="a-box-inner"></div>
@@ -240,11 +243,10 @@ $('.mytoggle button').click(function(){
 
 <!-- BARCODE INPUT -->
 	<form id="barcodeform">
-		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" >
+		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="" > 
 
 
-		<input class="amz-btn btn btn-lg amz-col" id="check" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;
-		"> 
+		<input class="amz-btn btn btn-lg amz-col" id="check" type="button" value="Get Barcode" style="margin-top: 15px; radius: .2rem;"> 
 	</form>
 </div>
 <!-- *********CREATE ISD BUTTON********** -->
@@ -254,7 +256,7 @@ $('.mytoggle button').click(function(){
 
 	<!-- END BARCODE INPUT -->
 
-			<div id="sioc-checker" >
+			<div class="sioc-checker" >
 				<div>
 					<p id="upc-value">
 						UPC:
@@ -270,22 +272,22 @@ $('.mytoggle button').click(function(){
 				</div>
 				<div>
 					<!-- SIOC INPUT -->
-					<form id="siocform">
+					<form id="siocform" >
 						<input style="font-weight: 700;" class="form-control" id="sioc-input" type="text" value="" placeholder="UPC/ASIN">
 
-						<input class="amz-btn btn btn-lg amz-col" id="check-sioc" type="submit" value="Check SIOC" style="margin-top: 15px; radius: .2rem;
+						<input class="amz-btn btn btn-lg amz-col" id="check-sioc" type="submit" onclick="return false;" value="Check SIOC" style="margin-top: 15px; radius: .2rem;
 						">
 					</form>
 				</div>
 			</div>
 	<!-- END SIOC INPUT -->
 
-	<div>
+	<div class="barcode-checker">
 		<h5 style="float: right; margin-top: -30px; margin-right: 35px;" class="toggle-switch" id="more">
 			<span>more
 			</span>
 		</h5>
-		<div class="toggle-div" style="margin: 10px">
+		<div class=" toggle-div" style="margin: 10px">
 			<p>
 
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="randstation" type="submit" value="Random Workstation" style="margin-top: 10px;
@@ -397,7 +399,6 @@ $('#check').click(function() {
 <script>
 $(document).ready(function(){
 	$("#userInput").on('input',newBarcode);
-	// $("#sioc-input").on('input', checkSioc);
 	$("#userInput").on('input',checkISD);
 	$("#barcodeType").change(function(){
 		$("#userInput").val( defaultValues[$(this).val()] );
@@ -529,41 +530,50 @@ if(!String.linkify) {
             .replace(emailAddressPattern, '<a target="_blank" href="mailto:$1">$1</a>');
     };
 }
-	var results = []
+var results = []
 
 var clearResults = function() {
 		results = null;
+		results = [];
 };
 
 var upcValue = function() {
-    var str = document.getElementById("upc-value").innerHTML; 
+    // var str = document.getElementById("upc-value").innerHTML; 
+    var str = document.getElementById("upc-value").value = "UPC:";
     var txt = str.replace("UPC:", ("UPC: " + results[0].UPC));
     document.getElementById("upc-value").innerHTML = txt;
 };
 
 var asinValue = function() {
-    var str = document.getElementById("asin-value").innerHTML; 
+    //var str = document.getElementById("asin-value").innerHTML; 
+    var str = document.getElementById("asin-value").value = "ASIN:";
     var txt = str.replace("ASIN:", ("ASIN: " + results[0].ASIN));
     document.getElementById("asin-value").innerHTML = txt;
 };
 
 var asinLink = function() {
-    var str = document.getElementById("asin-link").innerHTML; 
+    // var str = document.getElementById("asin-link").innerHTML; 
+    var str = document.getElementById("asin-link").value = "enter upc or asin";
     var txt = str.replace("enter upc or asin", "http://fcresearch-na.aka.amazon.com/LAX6/results?s="+results[0].UPC).linkify();
     document.getElementById("asin-link").innerHTML = txt;
 };
 
 var notSioc = function() {
-    var str = document.getElementById("asin-link").innerHTML; 
-    var txt = str.replace("enter upc or asin", "This Item is Not SICO");
+    // var str = document.getElementById("asin-link").innerHTML; 
+    var str = document.getElementById("asin-link").value = "enter upc or asin";
+    var txt = str.replace("enter upc or asin", "This Item is Not SIOC");
     document.getElementById("asin-link").innerHTML = txt;
+    var upcstr = document.getElementById("upc-value").value = "";
+    document.getElementById("upc-value").innerHTML = upcstr;
+    var asnstr = document.getElementById("upc-value").value = "";
+    document.getElementById("asin-value").innerHTML = asnstr;
+
 };
 
 
 
 function checkSioc(toSearch) {
    // var toSearch = $('#sioc-input').val()
-
 for(var i=0; i<siocObjects.length; i++) {
   for(key in siocObjects[i]) {
     if(siocObjects[i][key].indexOf(toSearch)!=-1) {
@@ -574,20 +584,23 @@ for(var i=0; i<siocObjects.length; i++) {
 return results[0];
 };
 
-$('#check-sioc').click(function() {
+$('#check-sioc').click(function(event) {
    //alert(JSON.stringify(checkSioc($('#sioc-input').val().toString())));
    checkSioc($('#sioc-input').val());
-
    if (results.length == 0) {
    	notSioc();
+
    } else {
    	asinLink();
    	upcValue();
    	asinValue();
    };
-	// alert(results[0].UPC);
    	clearResults();
-	return false;
+   		 //alert(results[0].UPC);
+
+   	return false;
+
+
 });
 // 645729415164
 
