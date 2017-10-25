@@ -111,7 +111,7 @@ label {
   </div> -->
 
   <div id="titlebar" style="padding-left: 20px;">
-  	Barcode generator built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
+  	Barcode Generator/SICO Checker built for LAX6 by <a href = "mailto: jccallwo@amazon.com">jccallwo</a>
   	<a class="fa fa-info-circle info"> <span>If you're interested in having a page like this that's tailored to your FC, email or ping me and I'll do my best to make it happen. <br> (I'm looking at you ONT)</span></a>
 
 
@@ -249,7 +249,7 @@ $('.mytoggle button').click(function(){
 	</form>
 </div>
 <!-- *********CREATE ISD BUTTON********** -->
-	<input class="amz-btn btn btn-md amz-col" id="isd" type="submit" value="Create ISD">
+<!-- 	<input class="amz-btn btn btn-md amz-col" id="isd" type="submit" value="Create ISD"> -->
 <!-- ************************************ -->
 	</input>
 
@@ -592,7 +592,8 @@ return results[0];
 
 $('#check-sioc').click(function(event) {
    //alert(JSON.stringify(checkSioc($('#sioc-input').val().toString())));
-   checkSioc($('#sioc-input').val());
+   siocInput = $('#sioc-input').val().replace(/^0+/, '')
+   checkSioc(siocInput);
    if (results.length == 0) {
    	notSioc();
    	$('#val-img').attr('src', 'images/no.png')
