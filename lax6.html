@@ -8,6 +8,7 @@
 
 <script type="text/javascript" src="javascripts/arrays.js"></script>
 
+
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -338,95 +339,12 @@ $('.mytoggle button').click(function(){
 </div>
 <!-- ***********END POP UP************ -->
 
-<!-- *********PREFIX BUTTONS********* -->
-<!-- STORE ALL PREFIX BUTTONS HERE -->
-<script>
-$("#ambient").click(function() {
-	$("#userInput").val("P-1-A").focus();
-});
 
-$("#chilled").click(function() {
-	$("#userInput").val("P-1-C").focus();
-});
-
-$("#freezer").click(function() {
-	$("#userInput").val("P-1-F").focus();
-});
-
-$("#bigs").click(function() {
-	$("#userInput").val("P-1-B").focus();
-});
-
-$("#p-cart").click(function() {
-				// if
-				// 	(document.getElementById("fcLfocation").value == "ONT4")
-				// {$("#userInput").val("rbONT40").focus();}
-				// else if
-				// 	(document.getElementById("fcLocation").value == "OAK4")
-				// {$("#userInput").val("rbOAK40").focus();} 
-				// else
-				// {
-					$("#userInput").val("rbLAX60").focus();
-				// }
-			});
-
-$("#oneway").click(function() {
-	$("#userInput").val("sp1WAY").focus();
-});
-
-$("#s-cart").click(function() {
-	$("#userInput").val("SCFRSH0").focus();
-});
-
-</script>
-<!-- ***********END PREFIX BUTTONS********* -->
-
-<!-- *******SUBMIT BARCODE BUTTON******* -->
-<script>
-$('#check').click(function() {
-	JsBarcode("#barcode", $('#userInput').val());
-	return false;
-});
-</script> 
-<!-- ********END SUBMIT BARCODE BUTTON****** -->
 
 
 <!-- **********REAL TIME BARCODE********* -->
 <script>
-$(document).ready(function(){
-	$("#userInput").on('input',newBarcode);
-	$("#userInput").on('input',checkISD);
-	$("#barcodeType").change(function(){
-		$("#userInput").val( defaultValues[$(this).val()] );
-	});
-});
 
-var newBarcode = function() {
-	var windowSize = $(window).width();
-    //Convert to boolean
-    if ($("#userInput").val().charAt(0) == "P" && $("#userInput").val().charAt(1) == "-" && windowSize > 401)
-    {
-    	$("#barcode").JsBarcode(
-    		$("#userInput").val().toUpperCase(),
-    		)
-    } 
-    else if ($("#userInput").val().charAt(0) == "P" && $("#userInput").val().charAt(1) == "-" && windowSize < 400)
-    {
-    	$("#barcode").JsBarcode(
-    		$("#userInput").val().toUpperCase(), {width: 1},
-    		)	
-    }
-    else if ( windowSize < 400)
-    {
-    	$("#barcode").JsBarcode(
-    		$("#userInput").val(), {width: 1},
-    		)
-    } 
-    else {
-    	$("#barcode").JsBarcode(
-    		$("#userInput").val(),
-    		)}
-    };
 
     var checkISD = function() {
     	if ($("#userInput").val().charAt(6) == "8" && $("#userInput").val().charAt(7) == "0" && $("#userInput").val().charAt(8) == "4" && $("#userInput").val().charAt(9) == "" ){
@@ -467,134 +385,9 @@ var newBarcode = function() {
     </script>
     <!-- *********END POPUP FUNCTION********* -->
 
-    <script>
-//<!--  selecting a random array item
--->
+<script type="text/javascript" src="javascripts/barcode.js"> </script>
 
-
-function randomWorkstation(listOfStations)
-{
-	return listOfStations[Math.floor(Math.random()*listOfStations.length)];
-}
-$('#randstation').click(function() {
-	JsBarcode("#barcode", randomWorkstation(listOfStations));
-});
-
-$('#drop-ambient').click(function() {
-	if ( $(window).width() < 400) {
-		JsBarcode("#barcode", "dz-P-AMBIENT", {width: 1});
-	} else {
-		JsBarcode("#barcode", "dz-P-AMBIENT");
-	}
-});
-
-$('#drop-chilled').click(function() {
-	if ( $(window).width() < 400) {
-		JsBarcode("#barcode", "dz-P-CHILLED", {width: 1});
-	} else {
-		JsBarcode("#barcode", "dz-P-CHILLED");
-	}
-});
-
-$('#drop-freezer').click(function() {
-	if ( $(window).width() < 400) {
-		JsBarcode("#barcode", "dz-P-FROZEN", {width: 1});
-	} else {
-		JsBarcode("#barcode", "dz-P-FROZEN");
-	}
-});
-</script>
-
-<script>
-if(!String.linkify) {
-    String.prototype.linkify = function() {
-
-        // http://, https://, ftp://
-        var urlPattern = /\b(?:https?|ftp):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*[a-z0-9-+&@#\/%=~_|]/gim;
-
-        // www. sans http:// or https://
-        var pseudoUrlPattern = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
-
-        // Email addresses *** here I've changed the expression ***
-        var emailAddressPattern = /(([a-zA-Z0-9_\-\.]+)@[a-zA-Z_]+?(?:\.[a-zA-Z]{2,6}))+/gim;
-
-        return this
-            .replace(urlPattern, '<a target="_blank" href="$&">$&</a>')
-            .replace(pseudoUrlPattern, '$1<a target="_blank" href="http://$2">$2</a>')
-            .replace(emailAddressPattern, '<a target="_blank" href="mailto:$1">$1</a>');
-    };
-}
-var results = []
-
-var clearResults = function() {
-		results = null;
-		results = [];
-};
-
-var upcValue = function() {
-    // var str = document.getElementById("upc-value").innerHTML; 
-    var str = document.getElementById("upc-value").value = "UPC:";
-    var txt = str.replace("UPC:", ("UPC: " + results[0].UPC));
-    document.getElementById("upc-value").innerHTML = txt;
-};
-
-var asinValue = function() {
-    //var str = document.getElementById("asin-value").innerHTML; 
-    var str = document.getElementById("asin-value").value = "ASIN:";
-    var txt = str.replace("ASIN:", ("ASIN: " + results[0].ASIN));
-    document.getElementById("asin-value").innerHTML = txt;
-};
-
-var asinLink = function() {
-    // var str = document.getElementById("asin-link").innerHTML; 
-    var str = document.getElementById("asin-link").value = "enter upc or asin";
-    var txt = str.replace("enter upc or asin", "http://fcresearch-na.aka.amazon.com/LAX6/results?s="+results[0].ASIN).linkify();
-    document.getElementById("asin-link").innerHTML = txt;
-};
-
-var notSioc = function() {
-    // var str = document.getElementById("asin-link").innerHTML; 
-    var str = document.getElementById("asin-link").value = "enter upc or asin";
-    var txt = str.replace("enter upc or asin", "This Item is Not SIOC");
-    document.getElementById("asin-link").innerHTML = txt;
-    var asnstr = document.getElementById("upc-value").value = "";
-    document.getElementById("upc-value").innerHTML = upcstr;
-    var upcstr = document.getElementById("upc-value").value = "";
-    document.getElementById("asin-value").innerHTML = asnstr;
-};
-
-
-function checkSioc(toSearch) {
-   // var toSearch = $('#sioc-input').val()
-for(var i=0; i<siocObjects.length; i++) {
-  for(key in siocObjects[i]) {
-    if(siocObjects[i][key].indexOf(toSearch)!=-1) {
-      results.push(siocObjects[i]);
-    }
-  }
-}
-return results[0];
-};
-
-$('#check-sioc').click(function(event) {
-   //alert(JSON.stringify(checkSioc($('#sioc-input').val().toString())));
-   siocInput = $('#sioc-input').val().replace(/^0+/, '')
-   checkSioc(siocInput);
-   if (results.length == 0) {
-   	notSioc();
-   	$('#val-img').attr('src', 'images/no.png')
-   } else {
-   	asinLink();
-   	upcValue();
-   	asinValue();
-   	$('#val-img').attr('src', 'images/yes.png')
-   };
-   	clearResults();
-   		 //alert(results[0].UPC);
-   	return false;
-});
-// 645729415164
-</script>
+<script type="text/javascript" src="javascripts/sioc.js"> </script>
 
 </div>
 </body>
