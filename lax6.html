@@ -264,15 +264,12 @@ function signout()
             $('#signoutqr').show();
             $("#signoutqr").css("width", "244px");
             $("#signoutqr").css("height", "142px");
-           
-
           }
         }
         function revert()
         {
         	$('#barcode').show();
         	$('#signoutqr').hide();
-
         	istrue = false;
         };
 
@@ -283,7 +280,7 @@ function signout()
 	<form id="barcodeform">
 		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="" > 
 
-		<input class="amz-btn btn btn-lg amz-col" class"sign_out" type="button" value="Get Barcode" style="margin-top: 15px; radius: .2rem;" onmousedown="signoutPopup()" ontouchstart="signoutPopup()" onmouseup="revert()" ontouchend="revert()"> 
+		<input id="check" class="amz-btn btn btn-lg amz-col" class"sign_out" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;" onmousedown="signoutPopup()" ontouchstart="signoutPopup()" onmouseup="revert()" ontouchend="revert()"> 
 	</form>
 </div>
 <!-- *********CREATE ISD BUTTON********** -->

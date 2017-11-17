@@ -1,7 +1,7 @@
 
+$(document).ready(function() {
 
 // *******SUBMIT BARCODE BUTTON*******
-
 $('#check').click(function() {
 	JsBarcode("#barcode", $('#userInput').val());
 	return false;
@@ -53,7 +53,7 @@ $(document).ready(function(){
 	$("#userInput").on('input',newBarcode);
 	$("#userInput").on('input',checkISD);
 	$("#barcodeType").change(function(){
-		$("#userInput").val( defaultValues[$(this).val()] );
+	$("#userInput").val( defaultValues[$(this).val()] );
 	});
 });
 
@@ -121,3 +121,6 @@ $('#drop-freezer').click(function() {
 		JsBarcode("#barcode", "dz-P-FROZEN");
 	}
 });
+});
+
+
