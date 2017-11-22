@@ -9,6 +9,9 @@ $('#check').click(function() {
 
 // ********END SUBMIT BARCODE BUTTON******
 
+// ******SIGNOUT BUTTON*******
+
+// *****END SIGNOUT BUTTON*****
 
 // ******PREFIX BUTTONS******
 $("#ambient").click(function() {
@@ -121,6 +124,8 @@ $('#drop-freezer').click(function() {
 		JsBarcode("#barcode", "dz-P-FROZEN");
 	}
 });
+
+
 });
 
 

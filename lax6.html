@@ -236,43 +236,7 @@ $('.mytoggle button').click(function(){
 	</div> 
 
 	<br>
-	<script>
-	var timer;
-	var istrue = false;
-	var delay = 1500;
-
-	function signoutPopup(e)
-	{
-		istrue = true;
-		timer = setTimeout(function(){ signout();},delay);
-		// SUPPOSED TO PREVENT PAGE REFRESH FOR LONG PRESS, NEEDS FIX
-     if (e.preventDefault) 
-  { 
-     e.preventDefault();
-  } else {
-     e.returnValue = false; 
-  }
-}
-function signout()
-{
-	if(timer)
-		clearTimeout(timer);
-
-	if(istrue)
-	{
-		$('#barcode').hide();
-		$('#signoutqr').show();
-		$("#signoutqr").css("width", "244px");
-		$("#signoutqr").css("height", "142px");
-	}
-}
-function revert()
-{
-	$('#barcode').show();
-	$('#signoutqr').hide();
-	istrue = false;
-};
-</script>
+	
 
 
 <!-- BARCODE INPUT -->
@@ -427,6 +391,44 @@ function revert()
 <script type="text/javascript" src="javascripts/barcode.js"> </script>
 
 <script type="text/javascript" src="javascripts/sioc.js"> </script>
+
+<script>
+	var timer;
+	var istrue = false;
+	var delay = 1500;
+
+	function signoutPopup(e)
+	{
+		istrue = true;
+		timer = setTimeout(function(){ signout();},delay);
+		// SUPPOSED TO PREVENT PAGE REFRESH FOR LONG PRESS, NEEDS FIX
+     if (e.preventDefault) 
+  { 
+     e.preventDefault();
+  } else {
+     e.returnValue = false; 
+  }
+}
+function signout()
+{
+	if(timer)
+		clearTimeout(timer);
+
+	if(istrue)
+	{
+		$('#barcode').hide();
+		$('#signoutqr').show();
+		$("#signoutqr").css("width", "244px");
+		$("#signoutqr").css("height", "142px");
+	}
+}
+function revert()
+{
+	$('#barcode').show();
+	$('#signoutqr').hide();
+	istrue = false;
+}
+</script>
 
 </div>
 </body>
