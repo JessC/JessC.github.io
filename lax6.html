@@ -241,16 +241,17 @@ $('.mytoggle button').click(function(){
 	var istrue = false;
 	var delay = 1500;
 
-function signoutPopup()
-{
-   istrue = true;
-   timer = setTimeout(function(){ signout();},delay);
-  //    if (e.preventDefault) 
-  // { 
-  //    e.preventDefault();
-  // } else {
-  //    e.returnValue = false; 
-  // }
+	function signoutPopup(e)
+	{
+		istrue = true;
+		timer = setTimeout(function(){ signout();},delay);
+		// SUPPOSED TO PREVENT PAGE REFRESH FOR LONG PRESS, NEEDS FIX
+     if (e.preventDefault) 
+  { 
+     e.preventDefault();
+  } else {
+     e.returnValue = false; 
+  }
 }
 function signout()
 {
@@ -259,28 +260,26 @@ function signout()
 
 	if(istrue)
 	{
-            /// rest of your code
-            $('#barcode').hide();
-            $('#signoutqr').show();
-            $("#signoutqr").css("width", "244px");
-            $("#signoutqr").css("height", "142px");
-          }
-        }
-        function revert()
-        {
-        	$('#barcode').show();
-        	$('#signoutqr').hide();
-        	istrue = false;
-        };
-
-	</script>
+		$('#barcode').hide();
+		$('#signoutqr').show();
+		$("#signoutqr").css("width", "244px");
+		$("#signoutqr").css("height", "142px");
+	}
+}
+function revert()
+{
+	$('#barcode').show();
+	$('#signoutqr').hide();
+	istrue = false;
+};
+</script>
 
 
 <!-- BARCODE INPUT -->
 	<form id="barcodeform">
 		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="" > 
 
-		<input id="check" class="amz-btn btn btn-lg amz-col" class"sign_out" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;" onmousedown="signoutPopup()" ontouchstart="signoutPopup()" onmouseup="revert()" ontouchend="revert()"> 
+		<input id="check" class="amz-btn btn btn-lg amz-col" class"sign_out" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;"> 
 	</form>
 </div>
 <!-- *********CREATE ISD BUTTON********** -->
@@ -328,7 +327,7 @@ function signout()
 		<div  style="margin: 10px">
 
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="randstation" type="submit" value="Random Workstation" style="margin-top: 10px;
-				">
+				" onmousedown="signoutPopup(event)" ontouchstart="signoutPopup(event)" onmouseup="revert()" ontouchend="revert()">
 
 			<div id="workstation" style="display: inline-block">	
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="drop-ambient" type="submit" value="Ambient DZ" style="margin-top: 10px;
