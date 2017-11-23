@@ -97,6 +97,12 @@ a.info:hover span {
   visibility: hidden;
 }
 
+label {
+  display: inline-block;
+  width: 60px;
+  font-weight: bold;
+}
+
 
 /*TEMP CSS FOR TEST*/
 /*#barcodeform {

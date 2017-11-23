@@ -29,7 +29,6 @@
 	<!-- End Google Analytics -->
 
 
-
 	<!-- JsBarcode -->
 	<script src="javascripts/JsBarcode.code128.min.js"></script>
 
@@ -81,22 +80,6 @@
 // 	});
 // });
 -->
-<script type="text/javascript">
-// if (screen.width <= 400) {
-//     $(function() {
-//     $("#mobilealert").show();
-//   })
-// }
-</script>
-
-
-<style>
-label {
-	display: inline-block;
-	width: 60px;
-	font-weight: bold;
-}
-</style>
 
 <title>Fresh Barcodes</title>
 </head>
@@ -236,14 +219,50 @@ $('.mytoggle button').click(function(){
 	</div> 
 
 	<br>
-	
+	<script>
+	var timer;
+	var istrue = false;
+	var delay = 1500;
+
+	function signoutPopup(e)
+	{
+		istrue = true;
+		timer = setTimeout(function(){ signout();},delay);
+		// SUPPOSED TO PREVENT PAGE REFRESH FOR LONG PRESS, NEEDS FIX
+     if (e.preventDefault) 
+  { 
+     e.preventDefault();
+  } else {
+     e.returnValue = false; 
+  }
+}
+function signout()
+{
+	if(timer)
+		clearTimeout(timer);
+
+	if(istrue)
+	{
+		$('#barcode').hide();
+		$('#signoutqr').show();
+		$("#signoutqr").css("width", "244px");
+		$("#signoutqr").css("height", "142px");
+	}
+}
+function revert()
+{
+	$('#barcode').show();
+	$('#signoutqr').hide();
+	istrue = false;
+};
+</script>
 
 
 <!-- BARCODE INPUT -->
 	<form id="barcodeform">
 		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="" > 
 
-		<input id="check" class="amz-btn btn btn-lg amz-col" class"sign_out" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;"> 
+		<input id="check" class="amz-btn btn btn-lg amz-col" class"sign_out" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;" onmousedown="signoutPopup(event)" ontouchstart="signoutPopup(event)" onmouseup="revert()" ontouchend="revert()"> 
 	</form>
 </div>
 <!-- *********CREATE ISD BUTTON********** -->
@@ -291,7 +310,7 @@ $('.mytoggle button').click(function(){
 		<div  style="margin: 10px">
 
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="randstation" type="submit" value="Random Workstation" style="margin-top: 10px;
-				" onmousedown="signoutPopup(event)" ontouchstart="signoutPopup(event)" onmouseup="revert()" ontouchend="revert()">
+				">
 
 			<div id="workstation" style="display: inline-block">	
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="drop-ambient" type="submit" value="Ambient DZ" style="margin-top: 10px;
@@ -344,38 +363,6 @@ $('.mytoggle button').click(function(){
 
 
 
-
-<!-- **********REAL TIME BARCODE********* -->
-<script>
-
-
-    var checkISD = function() {
-    	if ($("#userInput").val().charAt(6) == "8" && $("#userInput").val().charAt(7) == "0" && $("#userInput").val().charAt(8) == "4" && $("#userInput").val().charAt(9) == "" ){
-    		$('#isd').css('visibility', 'visible'); 	 		
-    	}
-    	else
-    	{
-    		$('#isd').css('visibility', 'hidden'); 	 		
-    	}
-    }
-    </script>
-    <!-- *******END REAL TIME BARCODE****** -->
-
-    <!-- *********TOGGLE FUNCTION********* -->
-    <script>
-    $('.toggle-switch').click(function(){
-    	$(this).toggleClass("amzorng")
-    	$(this).next().slideToggle("fast", function(){
-    		if($('.toggle-div').is(":visible")){
-    			$('#more').text("less");
-    		}else{
-    			$('#more').text("more");
-    		}
-    	});
-    });
-    </script>
-    <!-- *********END TOGGLE FUNCTION********* -->
-
     <!-- *********POPUP FUNCTION********* -->
     <script>
     $('#scanner-button').magnificPopup({
@@ -387,177 +374,10 @@ $('.mytoggle button').click(function(){
     });
     </script>
     <!-- *********END POPUP FUNCTION********* -->
-<script>
 
-// *******SUBMIT BARCODE BUTTON*******
-$('#check').click(function() {
-	JsBarcode("#barcode", $('#userInput').val());
-	return false;
-});
-
-// ********END SUBMIT BARCODE BUTTON******
-
-// ******SIGNOUT BUTTON*******
-
-// *****END SIGNOUT BUTTON*****
-
-// ******PREFIX BUTTONS******
-$("#ambient").click(function() {
-	$("#userInput").val("P-1-A").focus();
-});
-
-$("#chilled").click(function() {
-	$("#userInput").val("P-1-C").focus();
-});
-
-$("#freezer").click(function() {
-	$("#userInput").val("P-1-F").focus();
-});
-
-$("#bigs").click(function() {
-	$("#userInput").val("P-1-B").focus();
-});
-
-$("#p-cart").click(function() {
-				// if
-				// 	(document.getElementById("fcLfocation").value == "ONT4")
-				// {$("#userInput").val("rbONT40").focus();}
-				// else if
-				// 	(document.getElementById("fcLocation").value == "OAK4")
-				// {$("#userInput").val("rbOAK40").focus();} 
-				// else
-				// {
-					$("#userInput").val("rbLAX60").focus();
-				// }
-			});
-
-$("#oneway").click(function() {
-	$("#userInput").val("sp1WAY").focus();
-});
-
-$("#s-cart").click(function() {
-	$("#userInput").val("SCFRSH0").focus();
-});
-// ******END PREFIX BUTTONS******
-
-$(document).ready(function(){
-	$("#userInput").on('input',newBarcode);
-	$("#userInput").on('input',checkISD);
-	$("#barcodeType").change(function(){
-	$("#userInput").val( defaultValues[$(this).val()] );
-	});
-});
-
-var newBarcode = function() {
-	var windowSize = $(window).width();
-    //Convert to boolean
-    if ($("#userInput").val().charAt(0) == "P" && $("#userInput").val().charAt(1) == "-" && windowSize > 401)
-    {
-    	$("#barcode").JsBarcode(
-    		$("#userInput").val().toUpperCase(),
-    		)
-    } 
-    else if ($("#userInput").val().charAt(0) == "P" && $("#userInput").val().charAt(1) == "-" && windowSize < 400)
-    {
-    	$("#barcode").JsBarcode(
-    		$("#userInput").val().toUpperCase(), {width: 1},
-    		)	
-    }
-    else if ( windowSize < 400)
-    {
-    	$("#barcode").JsBarcode(
-    		$("#userInput").val(), {width: 1},
-    		)
-    } 
-    else {
-    	$("#barcode").JsBarcode(
-    		$("#userInput").val(),
-    		)}
-    };
-
-
-
-//<!--  selecting a random array item
--->
-
-
-function randomWorkstation(listOfStations)
-{
-	return listOfStations[Math.floor(Math.random()*listOfStations.length)];
-}
-$('#randstation').click(function() {
-	JsBarcode("#barcode", randomWorkstation(listOfStations));
-});
-
-$('#drop-ambient').click(function() {
-	if ( $(window).width() < 400) {
-		JsBarcode("#barcode", "dz-P-AMBIENT", {width: 1});
-	} else {
-		JsBarcode("#barcode", "dz-P-AMBIENT");
-	}
-});
-
-$('#drop-chilled').click(function() {
-	if ( $(window).width() < 400) {
-		JsBarcode("#barcode", "dz-P-CHILLED", {width: 1});
-	} else {
-		JsBarcode("#barcode", "dz-P-CHILLED");
-	}
-});
-
-$('#drop-freezer').click(function() {
-	if ( $(window).width() < 400) {
-		JsBarcode("#barcode", "dz-P-FROZEN", {width: 1});
-	} else {
-		JsBarcode("#barcode", "dz-P-FROZEN");
-	}
-});
-
-
-</script>
-
-
- <!--<script type="text/javascript" src="javascripts/barcode.js"> </script>-->
+<script type="text/javascript" src="javascripts/barcode.js"> </script>
 
 <script type="text/javascript" src="javascripts/sioc.js"> </script>
-
-<script>
-	var timer;
-	var istrue = false;
-	var delay = 1500;
-
-	function signoutPopup(e)
-	{
-		istrue = true;
-		timer = setTimeout(function(){ signout();},delay);
-		// SUPPOSED TO PREVENT PAGE REFRESH FOR LONG PRESS, NEEDS FIX
-     if (e.preventDefault) 
-  { 
-     e.preventDefault();
-  } else {
-     e.returnValue = false; 
-  }
-}
-function signout()
-{
-	if(timer)
-		clearTimeout(timer);
-
-	if(istrue)
-	{
-		$('#barcode').hide();
-		$('#signoutqr').show();
-		$("#signoutqr").css("width", "244px");
-		$("#signoutqr").css("height", "142px");
-	}
-}
-function revert()
-{
-	$('#barcode').show();
-	$('#signoutqr').hide();
-	istrue = false;
-}
-</script>
 
 </div>
 </body>

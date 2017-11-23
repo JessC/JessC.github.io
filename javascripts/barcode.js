@@ -1,17 +1,22 @@
 
 $(document).ready(function() {
 
+
+$('.mytoggle button').click(function(){
+    var ix = $(this).index();
+    
+    $('.barcode-checker').toggle( ix === 0 );
+    $('.sioc-checker').toggle( ix === 1 );
+      // document.getElementById("barcode-checker").blur();
+});
+
 // *******SUBMIT BARCODE BUTTON*******
 $('#check').click(function() {
 	JsBarcode("#barcode", $('#userInput').val());
 	return false;
 });
-
 // ********END SUBMIT BARCODE BUTTON******
 
-// ******SIGNOUT BUTTON*******
-
-// *****END SIGNOUT BUTTON*****
 
 // ******PREFIX BUTTONS******
 $("#ambient").click(function() {
@@ -52,13 +57,6 @@ $("#s-cart").click(function() {
 });
 // ******END PREFIX BUTTONS******
 
-$(document).ready(function(){
-	$("#userInput").on('input',newBarcode);
-	$("#userInput").on('input',checkISD);
-	$("#barcodeType").change(function(){
-	$("#userInput").val( defaultValues[$(this).val()] );
-	});
-});
 
 var newBarcode = function() {
 	var windowSize = $(window).width();
@@ -86,7 +84,6 @@ var newBarcode = function() {
     		$("#userInput").val(),
     		)}
     };
-
 
 
 //<!--  selecting a random array item
@@ -126,6 +123,76 @@ $('#drop-freezer').click(function() {
 });
 
 
+	$("#userInput").on('input',newBarcode);
+	// $("#userInput").on('input',checkISD);
+	$("#barcodeType").change(function(){
+	$("#userInput").val( defaultValues[$(this).val()] );
+	});
+
+
+    $('#scanner-button').magnificPopup({
+    	items: {
+    		src: '#scanner-pop',
+    		type: 'inline'
+    	},
+    	closeBtnInside: true
+    });
+
+// *********TOGGLE FUNCTION*********
+    $('.toggle-switch').click(function(){
+    	$(this).toggleClass("amzorng")
+    	$(this).next().slideToggle("fast", function(){
+    		if($('.toggle-div').is(":visible")){
+    			$('#more').text("less");
+    		}else{
+    			$('#more').text("more");
+    		}
+    	});
+    });
+// *********END TOGGLE FUNCTION*********
+
+
 });
+
+
+// **********REAL TIME BARCODE********* 
+// <script>
+//     var checkISD = function() {
+//     	if ($("#userInput").val().charAt(6) == "8" && $("#userInput").val().charAt(7) == "0" && $("#userInput").val().charAt(8) == "4" && $("#userInput").val().charAt(9) == "" ){
+//     		$('#isd').css('visibility', 'visible'); 	 		
+//     	}
+//     	else
+//     	{
+//     		$('#isd').css('visibility', 'hidden'); 	 		
+//     	}
+//     }
+//     </script>
+//  *******END REAL TIME BARCODE****** 
+
+
+// **********MOBILE ALERT********* 
+// if (screen.width <= 400) {
+//     $(function() {
+//     $("#mobilealert").show();
+//   })
+// }
+// **********END MOBILE ALERT********* 
+
+
+// **********CHECK ISD********* 
+//     var checkISD = function() {
+//     	if ($("#userInput").val().charAt(6) == "8" && $("#userInput").val().charAt(7) == "0" && $("#userInput").val().charAt(8) == "4" && $("#userInput").val().charAt(9) == "" ){
+//     		$('#isd').css('visibility', 'visible'); 	 		
+//     	}
+//     	else
+//     	{
+//     		$('#isd').css('visibility', 'hidden'); 	 		
+//     	}
+//     }
+// **********END CHECK ISD********* 
+
+
+
+
 
 
