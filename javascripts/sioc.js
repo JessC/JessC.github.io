@@ -61,6 +61,11 @@ var notSioc = function() {
 
 function checkSioc(toSearch) {
    // var toSearch = $('#sioc-input').val()
+
+   if (siocInput.length == 0)
+    {
+     alert("Enter a UPC or ASIN")
+}else{
 for(var i=0; i<siocObjects.length; i++) {
   for(key in siocObjects[i]) {
     if(siocObjects[i][key].indexOf(toSearch)!=-1) {
@@ -69,6 +74,7 @@ for(var i=0; i<siocObjects.length; i++) {
   }
 }
 return results[0];
+}
 };
 
 $('#check-sioc').click(function(event) {
