@@ -15,6 +15,8 @@
 
 	<script src="javascripts/libs/jquery.min.js"></script>
 
+<script type="text/javascript" src="javascripts/barcode.js"> </script>
+
 	<!-- //Google Analytics -->
 	
 	<script>
@@ -262,7 +264,7 @@ function revert()
 	<form id="barcodeform">
 		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="" > 
 
-		<input id="check" class="amz-btn btn btn-lg amz-col" class"sign_out" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;" onmousedown="signoutPopup(event)" ontouchstart="signoutPopup(event)" onmouseup="revert()" ontouchend="revert()"> 
+		<input id="check" class="amz-btn btn btn-lg amz-col" class"sign_out" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;"> 
 
 	</form>
 </div>
@@ -311,7 +313,7 @@ function revert()
 		<div  style="margin: 10px">
 
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="randstation" type="submit" value="Random Workstation" style="margin-top: 10px;
-				">
+				" onmousedown="signoutPopup(event)" ontouchstart="signoutPopup(event)" onmouseup="revert()" ontouchend="revert()">
 
 			<div id="workstation" style="display: inline-block">	
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="drop-ambient" type="submit" value="Ambient DZ" style="margin-top: 10px;
@@ -376,7 +378,7 @@ function revert()
     </script>
     <!-- *********END POPUP FUNCTION********* -->
 
-<script type="text/javascript" src="javascripts/barcode.js"> </script>
+
 
 <script type="text/javascript" src="javascripts/sioc.js"> </script>
 
