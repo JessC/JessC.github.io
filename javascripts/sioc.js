@@ -62,7 +62,7 @@ var notSioc = function() {
 function checkSioc(toSearch) {
    // var toSearch = $('#sioc-input').val()
 
-   if (siocInput.length == 0)
+   if (siocInput.length == 0 || siocInput.length < 9) 
     {
      alert("Enter a UPC or ASIN")
 }else{
