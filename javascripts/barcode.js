@@ -66,24 +66,24 @@ var newBarcode = function() {
     if ($("#userInput").val().charAt(0) == "P" && $("#userInput").val().charAt(1) == "-" && windowSize > 401)
     {
     	$("#barcode").JsBarcode(
-    		$("#userInput").val().toUpperCase(),
+    		$("#userInput").val().toUpperCase()
     		)
     } 
     else if ($("#userInput").val().charAt(0) == "P" && $("#userInput").val().charAt(1) == "-" && windowSize < 400)
     {
     	$("#barcode").JsBarcode(
-    		$("#userInput").val().toUpperCase(), {width: 1},
+    		$("#userInput").val().toUpperCase(), {width: 1}
     		)	
     }
     else if ( windowSize < 400)
     {
     	$("#barcode").JsBarcode(
-    		$("#userInput").val(), {width: 1},
+    		$("#userInput").val(), {width: 1}
     		)
     } 
     else {
     	$("#barcode").JsBarcode(
-    		$("#userInput").val(),
+    		$("#userInput").val()
     		)}
     };
 
