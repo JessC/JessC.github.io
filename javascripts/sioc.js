@@ -1,6 +1,6 @@
+$(document).ready(function() {
+
 // ********MOVE SICO CODE HERE********
-
-
 if(!String.linkify) {
     String.prototype.linkify = function() {
 
@@ -94,5 +94,8 @@ $('#check-sioc').click(function(event) {
    		 //alert(results[0].UPC);
    	return false;
 });
+
+});
+
 // 645729415164
 

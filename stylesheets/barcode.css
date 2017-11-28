@@ -130,11 +130,11 @@ label {
 }
 
 #scanner-pop {
-    font-size: 1em; 
-    background-color: #FFFFFF; 
-    width: 75%;
-    margin: 0 auto;
-		border-radius: 10px;
+  font-size: 1em; 
+  background-color: #FFFFFF; 
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 #scanner-code, #barcode-desc {
