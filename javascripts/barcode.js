@@ -44,7 +44,7 @@ $("#p-cart").click(function() {
 				// {$("#userInput").val("rbOAK40").focus();} 
 				// else
 				// {
-					$("#userInput").val("rbLAX60").focus();
+					$("#userInput").val("rbLAX6").focus();
 				// }
 			});
 
@@ -110,7 +110,7 @@ $('#drop-chilled').click(function() {
 	if ( $(window).width() < 400) {
 		JsBarcode("#barcode", "dz-P-CHILLED", {width: 1});
 	} else {
-		JsBarcode("#barcode", "dz-P-CHILLED", {lineColor: "green"});
+		JsBarcode("#barcode", "dz-P-CHILLED", {lineColor: ""});
 	}
 });
 
@@ -118,7 +118,7 @@ $('#drop-freezer').click(function() {
 	if ( $(window).width() < 400) {
 		JsBarcode("#barcode", "dz-P-FROZEN", {width: 1});
 	} else {
-		JsBarcode("#barcode", "dz-P-FROZEN", {lineColor: "blue"});
+		JsBarcode("#barcode", "dz-P-FROZEN", {lineColor: ""});
 	}
 });
 
