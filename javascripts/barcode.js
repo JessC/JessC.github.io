@@ -94,9 +94,32 @@ function randomWorkstation(listOfStations)
 {
 	return listOfStations[Math.floor(Math.random()*listOfStations.length)];
 }
-$('#randstation').click(function() {
-	JsBarcode("#barcode", randomWorkstation(listOfStations));
+// $('#randstation').click(function() {
+// 	JsBarcode("#barcode", randomWorkstation(listOfStations));
+// });
+
+$(function(){
+            var hits = 0; //->variable
+    //  binding handler to click event
+    $('#randstation').click(function(){ 
+                    if  (hits % 2 !== 0) 
+                    {
+    JsBarcode("#barcode", randomWorkstation(listOfStations), {lineColor: "red"});
+
+                    }
+                    else
+                    { 
+    JsBarcode("#barcode", randomWorkstation(listOfStations), {lineColor: "green"});
+
+                    }
+                   hits++;
+        return false;
+    });
 });
+
+
+
+
 
 $('#drop-ambient').click(function() {
 	if ( $(window).width() < 400) {
