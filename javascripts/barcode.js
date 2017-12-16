@@ -102,17 +102,15 @@ $(function(){
             var hits = 0; //->variable
     //  binding handler to click event
     $('#randstation').click(function(){ 
-                    if  (hits % 2 !== 0) 
-                    {
-    JsBarcode("#barcode", randomWorkstation(listOfStations), {lineColor: "red"});
-
-                    }
-                    else
-                    { 
-    JsBarcode("#barcode", randomWorkstation(listOfStations), {lineColor: "green"});
-
-                    }
-                   hits++;
+        if  (hits % 2 !== 0) 
+        {
+            JsBarcode("#barcode", randomWorkstation(listOfStations), {background: "red", text: "Holidays"});
+        }
+        else
+        { 
+            JsBarcode("#barcode", randomWorkstation(listOfStations), {background: "green", text: "Happy"});
+        }
+        hits++;
         return false;
     });
 });
