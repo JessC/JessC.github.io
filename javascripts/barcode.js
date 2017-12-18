@@ -104,11 +104,11 @@ $(function(){
     $('#randstation').click(function(){ 
         if  (hits % 2 !== 0) 
         {
-            JsBarcode("#barcode", randomWorkstation(listOfStations), {background: "red", text: "Holidays"});
+            JsBarcode("#barcode", randomWorkstation(listOfStations), {background: "#FF0000", text: "Holidays"});
         }
         else
         { 
-            JsBarcode("#barcode", randomWorkstation(listOfStations), {background: "green", text: "Happy"});
+            JsBarcode("#barcode", randomWorkstation(listOfStations), {background: "#00FF5D", text: "Happy"});
         }
         hits++;
         return false;
