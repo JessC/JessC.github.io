@@ -104,11 +104,11 @@ $(function(){
     $('#randstation').click(function(){ 
         if  (hits % 2 !== 0) 
         {
-            JsBarcode("#barcode", randomWorkstation(listOfStations), {lineColor: "white", background: "black", text: "New Year"});
+            JsBarcode("#barcode", randomWorkstation(listOfStations), {lineColor: "#bf0202", background: "#2ad221", text: "New Year"});
         }
         else
         { 
-            JsBarcode("#barcode", randomWorkstation(listOfStations), {lineColor: "black", background: "white", text: "Happy"});
+            JsBarcode("#barcode", randomWorkstation(listOfStations), {lineColor: "#f0b44c", background: "#232f3e", text: "Happy"});
         }
         hits++;
         return false;
