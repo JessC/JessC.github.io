@@ -64,7 +64,8 @@ a.info:hover span {
 }
 
 .amz-col {
-  background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+/*  background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+*/  background: #F97A18;
 }
 
 .btn:active {
@@ -166,6 +167,10 @@ label {
 	color: #FF9900;
 }
 
+#titlebar {
+  color: white;
+}
+
 #toggle-container h3 { cursor:pointer; }
 /*#toggle-container h3.active { color: #FF9900; }
 *//*#toggle-container div { height:0; overflow:hidden; position:relative; }
@@ -178,7 +183,7 @@ label {
 }
 
 .jumbotron {
-	margin-top: -5px;
+	margin-top: -5px;  
 }
 
 .wht-btn {
