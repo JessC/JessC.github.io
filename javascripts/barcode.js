@@ -104,7 +104,7 @@ $(function(){
     $('#randstation').click(function(){ 
         if  (hits % 2 !== 0) 
         {
-            JsBarcode("#barcode", randomWorkstation(listOfStations), {text: "New Year"});
+            JsBarcode("#barcode", randomWorkstation(listOfStations), {text: "New Year ♪~ ᕕ(ᐛ)ᕗ"});
         }
         else
         { 
