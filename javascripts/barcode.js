@@ -94,26 +94,26 @@ function randomWorkstation(listOfStations)
 {
 	return listOfStations[Math.floor(Math.random()*listOfStations.length)];
 }
-// $('#randstation').click(function() {
-// 	JsBarcode("#barcode", randomWorkstation(listOfStations));
-// });
-
-$(function(){
-            var hits = 0; //->variable
-    //  binding handler to click event
-    $('#randstation').click(function(){ 
-        if  (hits % 2 !== 0) 
-        {
-            JsBarcode("#barcode", randomWorkstation(listOfStations), {text: "New Year ♪~ ᕕ(ᐛ)ᕗ"});
-        }
-        else
-        { 
-            JsBarcode("#barcode", randomWorkstation(listOfStations), {text: "Happy"});
-        }
-        hits++;
-        return false;
-    });
+$('#randstation').click(function() {
+	JsBarcode("#barcode", randomWorkstation(listOfStations));
 });
+
+// $(function(){
+//             var hits = 0; //->variable
+//     //  binding handler to click event
+//     $('#randstation').click(function(){ 
+//         if  (hits % 2 !== 0) 
+//         {
+//             JsBarcode("#barcode", randomWorkstation(listOfStations), {text: "New Year ♪~ ᕕ(ᐛ)ᕗ"});
+//         }
+//         else
+//         { 
+//             JsBarcode("#barcode", randomWorkstation(listOfStations), {text: "Happy"});
+//         }
+//         hits++;
+//         return false;
+//     });
+// });
 
 
 
@@ -211,6 +211,8 @@ $('#drop-freezer').click(function() {
 //     	}
 //     }
 // **********END CHECK ISD********* 
+
+// amazon.com/gp/product/ASIN **only works with ASIN
 
 
 

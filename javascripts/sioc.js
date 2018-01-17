@@ -45,6 +45,7 @@ var asinLink = function() {
     var str = document.getElementById("asin-link").value = "enter upc or asin";
     var txt = str.replace("enter upc or asin", "http://fcresearch-na.aka.amazon.com/LAX6/results?s="+results[0].ASIN).linkify();
     document.getElementById("asin-link").innerHTML = txt;
+    
 };
 
 var notSioc = function() {
