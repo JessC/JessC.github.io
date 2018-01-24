@@ -65,7 +65,15 @@ a.info:hover span {
 
 .amz-col {
 /*  background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
-*/  background: #F97A18;
+*/  background: #f90;
+}
+
+.amz-col:hover {
+  background: #F97A18;
+
+}
+  .amz-col:active {
+    color: white;
 }
 
 .btn:active {
