@@ -103,6 +103,11 @@ a.info:hover span {
 	margin-bottom: 12px;
 }
 
+.jumbotron  {
+/*  background-color: none; */    
+background-image: url("../images/easter_eggs.jpg");
+}
+
 #isd {
   visibility: hidden;
 }
