@@ -83,6 +83,13 @@
 // });
 -->
 
+<script type="text/javascript">
+window.onload = scrollDownToTheTop;
+function scrollDownToTheTop() {
+window.scrollTo(0, document.body.scrollHeight);
+}
+</script>
+
 <title>Fresh Barcodes</title>
 </head>
 
@@ -145,14 +152,15 @@ $('.mytoggle button').click(function(){
 <!-- END FC SELECTION -->
 
 <br>
-<div>
 
-	<div class="jumbotron col-md-6 col-md-offset-3" background="images/easter_eggs.jpg" style="text-align: center; padding-top: 5px; border-radius: 1.5rem; padding-bottom: 1em;">
+	<div class="jumbotron col-md-6 col-md-offset-3" style="text-align: center; padding-top: 5px; border-radius: 1.5rem; padding-bottom: 1em;">
+			<div id="flipdiv">
+
 		<div class="a-box a-spacing-top-large a-color-alternate-background">
 			<div class="a-box-inner">
 				<div class="a-row">
 					<div class="a-column a-span12 a-text-center">
-						<h3 style="color: " class="title barcode-checker"><span style="color: #f49731;">Barcode Generator</span>
+						<h3 style="color: " class="title barcode-checker"><span style="color: #13ABAF;">Barcode Generator</span>
 							<!-- ***********SCANNER BUTTON************ -->
 							<input class="amz-btn amz-col btn btn-sm popup-button" id="scanner-button" type="submit" value="Scanner">
 							<!-- ******SCANNER BUTTON END****** -->
@@ -328,6 +336,7 @@ function signoutPopup(e)
 </div>
 </div>
 </div>
+</div>
 
 
 <!-- ***********POP UP************* -->
@@ -383,5 +392,6 @@ function signoutPopup(e)
 <script type="text/javascript" src="javascripts/sioc.js"> </script>
 
 </div>
+
 </body>
 </html>
