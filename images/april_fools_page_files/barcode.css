@@ -1,0 +1,238 @@
+body {
+	width: 100%;
+  background: #283442;
+}
+
+#flipdiv {
+    width: 100%;
+    height: 100%;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+a.info {
+    /*cursor:help;*/ /* changes cursor to a question mark on mouseover */
+    position: relative; /* important to keep */
+    z-index: 1;
+    background-color: #FFFFFF; /* white background highlighting of link text */
+    color: #e77600; /* colour of link text */
+    text-decoration: none; /* tooltip will default to underlined text unless set to none */
+}
+a.info:hover {
+    z-index: 2;
+    /*background-color:#FFCC99*/ /* background highlighting of link text on mouseover */
+}
+a.info span {
+    display: none; /* hide the text between the span tags until hovered on */
+}
+a.info:hover span {
+    display: block; /* display the text in the span tags as a box */
+    position: absolute; /* position tooltip according to line below */
+    top: 1em; left: 2em; width: 15em;
+    border-radius: 1rem;
+    border: 3px solid #FF9900; /* border colour of tooltip box */
+    padding: .5em;
+    background-color: #232F3E; /* shading colour of tooltip box */
+    color: #FFFFFF; /* colour of text in tooltip, black used */
+    font-size: 1.1em;
+    /*text-align:left;*/ /* alignment of text in tooltip box */
+}
+
+.center {
+	text-align: center;
+}
+
+
+.container {
+	max-width: 100%;
+}
+
+.form-control:focus {
+    border-color: #e77600 !important;
+    outline: #e77600;
+}
+
+.amz-btn:active {
+	outline-color: none !important;
+	outline: none !important;
+
+}
+
+.amz-btn:focus {
+	outline-color: none !important;
+}
+
+.amz-btn:active {
+    border-color: #e77600 !important;
+    outline-color: #e77600 !important;
+}
+
+.amz-btn:focus {
+	outline-color: #e77600 !important;
+}
+
+.amz-col {
+/*  background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+*/  background: #f90;
+}
+
+.amz-col:hover {
+  background: #F97A18;
+
+}
+  .amz-col:active {
+    color: white;
+}
+
+.btn:active {
+	border-color: #e77600 !important;
+	outline: #e77600;
+}
+
+.btn:focus {
+	border-color: #e77600 !important;
+	outline: #e77600;
+}
+
+.wht-btn {
+	background-color: white;
+	margin: 2px;
+}
+
+.form-control {
+	width: 40%;
+	margin: 0 auto;
+	float: none;
+}
+
+.title {
+	margin-top: 7px;
+	margin-bottom: 12px;
+}
+
+.jumbotron  {
+/*  background-color: none; */    
+background-image: url("../images/easter_eggs.jpg");
+}
+
+#isd {
+  visibility: hidden;
+}
+
+label {
+  display: inline-block;
+  width: 60px;
+  font-weight: bold;
+}
+
+
+/*TEMP CSS FOR TEST*/
+/*#barcodeform {
+  visibility: hidden;
+}
+#barcode-container {
+  visibility: hidden;
+}
+#barcode {
+  visibility: hidden;
+}
+.barcode-container {
+  visibility: hidden;
+}
+#btn-container {
+  visibility: hidden;
+}
+*/
+
+
+#scanner-button {
+  float: left;
+  margin-left: 3%; 
+  border-radius: .2rem;
+}
+
+#scanner-pop {
+  font-size: 1em; 
+  background-color: #FFFFFF; 
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+#scanner-code, #barcode-desc {
+/*    //padding: 5px;*/
+    margin: 7px;
+    text-align: center;
+/*    //background-color: #e5eecc;
+    //border: solid 1px #c3c3c3;*/
+}
+
+/*#scanner-code {
+    font-size: .5em;
+    //padding: 10px;
+    display: none;
+}*/
+/*#mobilealert {
+	display: none;
+}
+*/
+.toggle-div {
+	display: none;
+}
+
+#scanner-code p {
+  color: grey;
+}
+
+.amzorng {
+	color: #FF9900;
+}
+
+#titlebar {
+  color: white;
+}
+
+#toggle-container h3 { cursor:pointer; }
+/*#toggle-container h3.active { color: #FF9900; }
+*//*#toggle-container div { height:0; overflow:hidden; position:relative; }
+#toggle-container div p { padding:0; margin-bottom: 5px; } 
+
+*/
+@media screen and (min-width : 0px) and (max-width : 800px) {
+#pbutton, #titlebar, .printbutton, #scanner-button {
+	display: none;
+}
+
+.jumbotron {
+	margin-top: -5px;
+}
+
+.wht-btn {
+margin: 1px;
+padding: 5px 5px;
+}
+
+
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+  }
+  #section-to-print {
+    margin: 0 auto;
+    top: 0;
+  }
+
+  #barcode {
+    width: 374px;
+    height: 272px;
+}
+
+
