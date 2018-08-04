@@ -299,7 +299,7 @@ function signoutPopup(e)
 		<p style="font-size: 1em;">
 			Use this tool to check whether an item Ships In Own Container (SIOC)
 		</p>
-		<p style="font-size: .85em;"><i>
+		<p style="font-size: .85em; color: #13ABAF;"><i>
 			Designed by Chris Lopez
 		</i></p>
 	</div>
@@ -307,7 +307,9 @@ function signoutPopup(e)
 <!-- END SIOC INPUT -->
 
 <div class="barcode-checker">
-<!-- 		<h5 style="float: right; margin-top: -30px; margin-right: 35px;" class="toggle-switch" id="more">
+
+	<!-- ******** MORE TOGGLE ******** -->
+		<!-- <h5 style="float: right; margin-top: -30px; margin-right: 35px;" class="toggle-switch" id="more"> 
 			<span>more
 			</span>
 		</h5> -->
@@ -327,7 +329,16 @@ function signoutPopup(e)
 			" onmousedown="signoutPopup(event)" ontouchstart="signoutPopup(event)" onmouseup="revert()" ontouchend="revert()">
 		Sign Out
 	</div>
+
 	</div>
+<!-- 		***2nd Barcode Input***
+		<div>
+<svg id="barcode" width="244px" height="75px" x="0px" y="0px" viewBox="0 0 244 142" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px); background: rgb(255, 255, 255);"><g transform="translate(10, 10)" style="fill:#000000;"><text style="font: 20px monospace" text-anchor="middle" x="112" y="122">dmgPS01</text></g></svg>
+	<span id="invalid" style="display: none;">Not valid data for this barcode type!</span>
+	</div>
+		<form id="barcodeform">
+		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin"> 
+	</form> -->
 </div>
 </div>
 </div>
