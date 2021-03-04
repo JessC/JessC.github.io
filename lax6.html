@@ -18,7 +18,7 @@
 <script type="text/javascript" src="javascripts/barcode.js"> </script>
 
 	<!-- //Google Analytics -->
-	
+
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -68,8 +68,8 @@
 	// });
 
 // $('#toggle-container h3').each(function() {
-// 	var tis = $(this), 
-// 	state = false, 
+// 	var tis = $(this),
+// 	state = false,
 // 	answer = tis.next('div')
 // 	.hide()
 // 	.css('height','auto')
@@ -113,7 +113,7 @@
 <script>
 $('.mytoggle button').click(function(){
     var ix = $(this).index();
-    
+
     $('.barcode-checker').toggle( ix === 0 );
     $('.sioc-checker').toggle( ix === 1 );
       // document.getElementById("barcode-checker").blur();
@@ -164,7 +164,7 @@ $('.mytoggle button').click(function(){
 								visibility: none;
 								display: none;
 							}
-							</style> 
+							</style>
 
 
 							<!-- <h1>Print Test</h1>  -->
@@ -218,7 +218,7 @@ $('.mytoggle button').click(function(){
 	SIGN OUT</p></div>
 	<svg id="barcode" width="244px" height="142px" x="0px" y="0px" viewBox="0 0 244 142" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px); background: rgb(255, 255, 255);"><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="4" height="100"></rect><rect x="6" y="0" width="2" height="100"></rect><rect x="12" y="0" width="2" height="100"></rect><rect x="22" y="0" width="2" height="100"></rect><rect x="32" y="0" width="2" height="100"></rect><rect x="38" y="0" width="4" height="100"></rect><rect x="44" y="0" width="8" height="100"></rect><rect x="54" y="0" width="6" height="100"></rect><rect x="62" y="0" width="2" height="100"></rect><rect x="66" y="0" width="2" height="100"></rect><rect x="72" y="0" width="4" height="100"></rect><rect x="78" y="0" width="2" height="100"></rect><rect x="88" y="0" width="6" height="100"></rect><rect x="96" y="0" width="6" height="100"></rect><rect x="104" y="0" width="4" height="100"></rect><rect x="110" y="0" width="4" height="100"></rect><rect x="116" y="0" width="6" height="100"></rect><rect x="124" y="0" width="2" height="100"></rect><rect x="132" y="0" width="2" height="100"></rect><rect x="138" y="0" width="6" height="100"></rect><rect x="146" y="0" width="4" height="100"></rect><rect x="154" y="0" width="2" height="100"></rect><rect x="160" y="0" width="6" height="100"></rect><rect x="170" y="0" width="4" height="100"></rect><rect x="176" y="0" width="2" height="100"></rect><rect x="186" y="0" width="2" height="100"></rect><rect x="192" y="0" width="4" height="100"></rect><rect x="198" y="0" width="4" height="100"></rect><rect x="208" y="0" width="6" height="100"></rect><rect x="216" y="0" width="2" height="100"></rect><rect x="220" y="0" width="4" height="100"></rect><text style="font: 20px monospace" text-anchor="middle" x="112" y="122">dmgPS01</text></g></svg>
 	<span id="invalid" style="display: none;">Not valid data for this barcode type!</span>
-</div> 
+</div>
 
 <br>
 <script>
@@ -231,11 +231,11 @@ function signoutPopup(e)
 	istrue = true;
 	timer = setTimeout(function(){ signout();},delay);
 		// SUPPOSED TO PREVENT PAGE REFRESH FOR LONG PRESS, NEEDS FIX
-		if (e.preventDefault) 
-		{ 
+		if (e.preventDefault)
+		{
 			e.preventDefault();
 		} else {
-			e.returnValue = false; 
+			e.returnValue = false;
 		}
 	}
 	function signout()
@@ -262,9 +262,9 @@ function signoutPopup(e)
 
 	<!-- BARCODE INPUT -->
 	<form id="barcodeform">
-		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="" > 
+		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin" autofocus="" >
 
-		<input id="check" class="amz-btn btn btn-lg amz-col" class"sign_out" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;"> 
+		<input id="check" class="amz-btn btn btn-lg amz-col" class"sign_out" type="submit" value="Get Barcode" style="margin-top: 15px; radius: .2rem;">
 	</form>
 </div>
 <!-- *********CREATE ISD BUTTON********** -->
@@ -311,7 +311,7 @@ function signoutPopup(e)
 <div class="barcode-checker">
 
 	<!-- ******** MORE TOGGLE ******** -->
-		<!-- <h5 style="float: right; margin-top: -30px; margin-right: 35px;" class="toggle-switch" id="more"> 
+		<!-- <h5 style="float: right; margin-top: -30px; margin-right: 35px;" class="toggle-switch" id="more">
 			<span>more
 			</span>
 		</h5> -->
@@ -319,7 +319,7 @@ function signoutPopup(e)
 
 			<input class="wht-btn amz-btn btn btn-sm popup-button" id="randstation" type="submit" value="Random Workstation" style="margin-top: 10px;">
 
-			<div id="workstation" style="display: inline-block">	
+			<div id="workstation" style="display: inline-block">
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="drop-ambient" type="submit" value="Ambient DZ" style="margin-top: 10px;">
 
 				<input class="wht-btn amz-btn btn btn-sm popup-button" id="drop-chilled" type="submit" value="Chilled DZ" style="margin-top: 10px;">
@@ -339,7 +339,7 @@ function signoutPopup(e)
 	<span id="invalid" style="display: none;">Not valid data for this barcode type!</span>
 	</div>
 		<form id="barcodeform">
-		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin"> 
+		<input style="font-weight: 700;" class="form-control" id="userInput" type="text" value="" placeholder="Enter Bin">
 	</form> -->
 </div>
 </div>
@@ -355,27 +355,27 @@ function signoutPopup(e)
 		<h3 id="barcode-desc" class="toggle-switch">Factory Default</h3>
 		<div class="toggle-div" id="scanner-code"><h4>Resets scanner to default settings</h4>
 			<img class="b-code" id="resetcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/reset.png">
-		</div> 
+		</div>
 
 		<h3 class="toggle-switch" id="barcode-desc">Return Suffix</h3>
-		<div class="toggle-div" id="scanner-code"><h4>Scanner will add an Enter key function after each scan</h4> 
+		<div class="toggle-div" id="scanner-code"><h4>Scanner will add an Enter key function after each scan</h4>
 			<img class="b-code" id="entercode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/enter.png">
-		</div> 
+		</div>
 
 		<h3 class="toggle-switch" id="barcode-desc">Clear Suffix</h3>
-		<div class="toggle-div" id="scanner-code"><h4>Removes all suffixes</h4> 
+		<div class="toggle-div" id="scanner-code"><h4>Removes all suffixes</h4>
 			<img class="b-code" id="suffixcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/suffix.png">
-		</div> 
+		</div>
 
 		<h3 class="toggle-switch" id="barcode-desc">Manual</h3>
-		<div class="toggle-div" id="scanner-code"><h4>Trigger must be pressed to scan</h4> 
+		<div class="toggle-div" id="scanner-code"><h4>Trigger must be pressed to scan</h4>
 			<img class="b-code" id="manualcode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/manual.png">
-		</div> 
+		</div>
 
 		<h3 class="toggle-switch" id="barcode-desc">Auto</h3>
-		<div class="toggle-div" id="scanner-code"><h4>Scanner will automatically scan barcodes without pressing the trigger</h4> 
+		<div class="toggle-div" id="scanner-code"><h4>Scanner will automatically scan barcodes without pressing the trigger</h4>
 			<img class="b-code" id="autocode" src="https://s3-us-west-1.amazonaws.com/instograph-content/pic_storage/auto.png">
-		</div> 
+		</div>
 	</div>
 </div>
 <!-- ***********END POP UP************ -->
