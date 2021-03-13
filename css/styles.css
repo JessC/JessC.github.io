@@ -2651,6 +2651,11 @@ fieldset:disabled a.btn {
   background-color: #343a40;
   border-color: #343a40;
 }
+.btn-davey {
+  color: #fff;
+  background-color: #008751;
+  border-color: #008751;
+}
 .btn-dark:hover {
   color: #fff;
   background-color: #23272b;
@@ -9984,7 +9989,9 @@ body {
 p {
   line-height: 1.75;
 }
-
+.page-section-links {
+  padding: ;
+}
 .page-section {
   padding: 6rem 0;
 }
@@ -10430,11 +10437,12 @@ section#contact {
   background-image: url("../assets/img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
+   background-size: cover;
 }
 section#contact .section-heading {
   color: #fff;
 }
-section#contact form#contactForm .form-group {
+/*section#contact form#contactForm .form-group {
   margin-bottom: 1.5rem;
 }
 section#contact form#contactForm .form-group input,
@@ -10478,7 +10486,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
 }
-
+*/
 .footer {
   text-align: center;
   font-size: 0.9rem;
