@@ -448,6 +448,13 @@ mark,
   list-style: none;
 }
 
+.list-inlinebig {
+  padding-top: 1rem;
+  padding-left: 0;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
 .list-inline-item {
   display: inline-block;
 }
