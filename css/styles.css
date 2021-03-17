@@ -6148,6 +6148,10 @@ button.bg-danger:focus {
   background-color: #f8f9fa !important;
 }
 
+.bg-davey {
+    background-color: #5d5d5d7d;
+}
+
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
@@ -10432,7 +10436,7 @@ header.masthead .masthead-heading {
 .team-member img {
   width: 14rem;
   height: 14rem;
-  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  border: 0.5rem solid #008751;
 }
 .team-member h4 {
   margin-top: 1.5rem;
