@@ -10453,6 +10453,8 @@ section#contact {
 section#contact .section-heading {
   color: #fff;
 }
+
+ div.linksbackground:hover, div.linksbackground:active {background-color: white;}
 /*section#contact form#contactForm .form-group {
   margin-bottom: 1.5rem;
 }
