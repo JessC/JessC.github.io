@@ -519,12 +519,23 @@
                                         <li><b>Tree ID</b></li> - There are apps that can use your phones camera to help you identify tree species. I don't know what the best one is but I use <a href="https://apps.apple.com/us/app/inaturalist/id421397028" target="_blank">iNaturalist</a>. If you want to know more infor mation about a particular tree species try here: <a href="https://apps.apple.com/us/app/inaturalist/id421397028" target="_blank">https://selectree.calpoly.edu/</a>
                                         <br>
                                         <br>
-                                        <li><b>Core</b> - Core allows corporations to securely share files and make them available for use offline. PG&E is moving away from providing paper copies of it's procedures. Those procedures can be found through the GETAC. The nature of our work often puts us in places with little cellular reception making it difficult to access  procedures when we need them. Core is basically a cloud based file sharing app like Google Drive and Dropbox. <a href="https://apps.apple.com/us/app/opentext-core-share/id922517965" target="_blank">OpenText Core Share</a>  </p>
+                                        <li><b>Core</b> - Core allows corporations to securely share files and make them available for use offline. PG&E is moving away from providing paper copies of it's procedures. Those procedures can be found through the GETAC. The nature of our work often puts us in places with little cellular reception making it difficult to access  procedures when we need them. Core is basically a cloud based file sharing app like Google Drive and Dropbox. <a href="https://apps.apple.com/us/app/opentext-core-share/id922517965" target="_blank">OpenText Core  Share</a>  </p>
+                                        <br>
+                                         <li><b>Survery123</b> - You already know what this is. But did you memorize the login info? I made it easy, just click the buttons to copy to your clipboard!
+                                        <br>
+                                        Username: <b><div id='use'>NTCRTBA_awrr</div></b>
+                                        <br>
+                                        <br>
+                                        Password: <b><div id='pword'>VegMgmt2019</div></b>
+                                        <br>
+                                        <br>
+                                        <a href="https://apps.apple.com/us/app/arcgis-survey123/id993015031" target="_blank">ArcGIS Survery123</a>  </p>
                                 <!--     <ul class="list-inline">
                                         <li>Date: January 2020</li>
                                         <li>Client: Finish</li>
                                         <li>Category: Identity</li>
                                     </ul> -->
+
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
                                         Close
@@ -686,5 +697,54 @@
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <!-- Copy to clipboard function -->
+        <script>
+$("<button id='user'>copy username</button>").insertAfter("#use");
+$("<textarea id='temptext'></textarea>").insertAfter("#user");
+$("#temptext").css({
+  "position": "fixed",
+  "bottom": "0px",
+  "left": "0px",
+  "opacity": "0"
+});
+
+setTimeout(function() {
+  document.getElementById("user").click();
+}, 2000);
+
+$("#user").click(function() {
+  var textToCopy = $('#use').text();
+  $('#temptext').val(textToCopy);
+  $('#temptext').select();
+  document.execCommand('copy');
+});
+</script>
+
+<script>
+$("<button id='pass'>copy password</button>").insertAfter("#pword");
+$("<textarea id='temppass'></textarea>").insertAfter("#pass");
+$("#temppass").css({
+  "position": "fixed",
+  "bottom": "0px",
+  "left": "0px",
+  "opacity": "0"
+});
+
+setTimeout(function() {
+  document.getElementById("pass").click();
+}, 2000);
+
+$("#pass").click(function() {
+  var textToCopy = $('#pword').text();
+  $('#temppass').val(textToCopy);
+  $('#temppass').select();
+  document.execCommand('copy');
+});
+
+
+ </script>
+
+
     </body>
 </html>
